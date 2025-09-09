@@ -19,50 +19,86 @@ const DEFAULT_DATA = {
       learnLang: "es-ES",
       uiLang: "en-US",
       translateLang: "en",
-      chapters: [
-        {
-          id: "es1",
-          title: "Chapter 1: Greetings",
-          color: "from-brand-200 to-brand-50",
-          tips: [
-            { title: "¿Cómo estás? vs ¿Cómo va todo?", text: "Both ask how someone is. '¿Cómo estás?' is general; '¿Cómo va todo?' asks how everything is going." },
-            { title: "Bien vs Estoy bien", text: "Use 'Estoy bien' for 'I am fine' (with verb). 'Bien, gracias' is a short response." }
-          ],
-          items: [
-            { id:"p1", type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
-            { id:"p2", type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
-            { id:"p3", type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
-            { id:"p4", type:"phrase", source:"Estoy bien.", target:"I am fine." },
-            { id:"p5", type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
-            { id:"p6", type:"phrase", source:"¿Y tú?", target:"And you?" },
-            { id:"p7", type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
-            { id:"p8", type:"phrase", source:"Nada mal.", target:"Not bad." },
-            { id:"p9", type:"phrase", source:"No tan bien.", target:"Not so well." },
-            { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." }
-          ],
-          dialogs: [
-            {
-              id:"esd_greetings1",
-              title:"First meeting",
-              roles:[
-                { who:"A", lines:["¡Mucho tiempo sin verte!","¿Cómo estás?"] },
-                { who:"B", lines:["¡Hola!","Estoy bien, gracias. ¿Y tú?"] },
-                { who:"A", lines:["Nada mal. ¿Y qué hay de ti?"] },
-                { who:"B", lines:["No tan bien...","Lo siento escuchar eso."] }
-              ],
-              translation:[
-                "Long time no see!","How are you?",
-                "Hello!","I’m fine, thank you. And you?",
-                "Not bad. And what about you?",
-                "Not so well...","I’m sorry to hear that."
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-};
+chapters: [
+  {
+    id: "es1",
+    title: "Chapter 1: Greetings",
+    color: "from-brand-100 to-brand-50",
+    tips: [
+      { title: "¿Cómo estás? vs ¿Cómo va todo?", text: "Both ask how someone is. '¿Cómo estás?' is general; '¿Cómo va todo?' asks how everything is going." },
+      { title: "Bien vs Estoy bien", text: "Use 'Estoy bien' for 'I am fine' (with verb). 'Bien, gracias' is a short response." }
+    ],
+    items: [
+      { id:"p1", type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
+      { id:"p2", type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
+      { id:"p3", type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
+      { id:"p4", type:"phrase", source:"Estoy bien.", target:"I am fine." },
+      { id:"p5", type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
+      { id:"p6", type:"phrase", source:"¿Y tú?", target:"And you?" },
+      { id:"p7", type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
+      { id:"p8", type:"phrase", source:"Nada mal.", target:"Not bad." },
+      { id:"p9", type:"phrase", source:"No tan bien.", target:"Not so well." },
+      { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." }
+    ],
+    dialogs: [
+      {
+        id:"esd_greetings1",
+        title:"First meeting",
+        roles:[
+          { who:"A", lines:["¡Mucho tiempo sin verte!","¿Cómo estás?"] },
+          { who:"B", lines:["¡Hola!","Estoy bien, gracias. ¿Y tú?"] },
+          { who:"A", lines:["Nada mal. ¿Y qué hay de ti?"] },
+          { who:"B", lines:["No tan bien...","Lo siento escuchar eso."] }
+        ],
+        translation:[
+          "Long time no see!","How are you?",
+          "Hello!","I’m fine, thank you. And you?",
+          "Not bad. And what about you?",
+          "Not so well...","I’m sorry to hear that."
+        ]
+      }
+    ]
+  },
+  {
+    id: "es2",
+    title: "Chapter 2: Everyday Phrases",
+    color: "from-pink-200 to-pink-50",
+    tips: [
+      { title: "Buenos días vs Buenas tardes", text: "Use 'Buenos días' in the morning, 'Buenas tardes' in the afternoon, and 'Buenas noches' in the evening." },
+      { title: "Por favor & Gracias", text: "'Por favor' means please, and 'Gracias' means thank you. Common politeness words you'll use daily." }
+    ],
+    items: [
+      { id: "e1", type: "phrase", source: "Buenos días.", target: "Good morning." },
+      { id: "e2", type: "phrase", source: "Buenas tardes.", target: "Good afternoon." },
+      { id: "e3", type: "phrase", source: "Buenas noches.", target: "Good evening / Good night." },
+      { id: "e4", type: "phrase", source: "Por favor.", target: "Please." },
+      { id: "e5", type: "phrase", source: "Gracias.", target: "Thank you." },
+      { id: "e6", type: "phrase", source: "De nada.", target: "You’re welcome." },
+      { id: "e7", type: "phrase", source: "Perdón.", target: "Excuse me." },
+      { id: "e8", type: "phrase", source: "Disculpe.", target: "Sorry (formal)." },
+      { id: "e9", type: "phrase", source: "Hasta luego.", target: "See you later." },
+      { id: "e10", type: "phrase", source: "Nos vemos.", target: "See you." }
+    ],
+    dialogs: [
+      {
+        id: "esd_everyday1",
+        title: "Polite exchange",
+        roles: [
+          { who: "A", lines: ["¡Buenos días!", "¿Cómo va tu día?"] },
+          { who: "B", lines: ["Muy bien, gracias. ¿Y tú?"] },
+          { who: "A", lines: ["Todo bien, gracias. ¡Hasta luego!"] },
+          { who: "B", lines: ["Nos vemos."] }
+        ],
+        translation: [
+          "Good morning!", "How’s your day going?",
+          "Very well, thank you. And you?",
+          "All good, thank you. See you later!",
+          "See you."
+        ]
+      }
+    ]
+  }
+]
 
 // ---------- Speech ----------
 function pickVoice(langHint) {

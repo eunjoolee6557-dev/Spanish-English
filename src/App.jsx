@@ -578,8 +578,10 @@ function DialogPanel({ chapter, course, setMode }){
 function DataModal({ data, setData }){
   const [show, setShow] = useState(false);
   const [raw, setRaw] = useState(JSON.stringify(data, null, 2));
+
   useEffect(()=>{ setRaw(JSON.stringify(data, null, 2)); }, [show, data]);
   useEffect(()=>{ window.openDataModal = () => setShow(true); }, []);
+
   return (
     <>
       {show && (
@@ -587,35 +589,68 @@ function DataModal({ data, setData }){
           <div className="max-w-3xl w-full bg-white rounded-2xl border p-4 shadow-soft" onClick={e=>e.stopPropagation()}>
             <div className="flex items-center justify-between mb-2">
               <div className="font-medium text-ink">Your Curriculum JSON</div>
-              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>setShow(false)}><X className="w-4 h-4"/></button>
-            </div>
-            <p className="text-sm text-inksoft/80 mb-3">Paste/edit your data. Progress stays on this device.</p>
-            <textarea className="w-full h-80 font-mono text-sm border rounded-xl p-3" value={raw} onChange={e=>setRaw(e.target.value)} />
-            <div className="flex items-center gap-2 mt-3">
-              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>{
-                try { const parsed = JSON.parse(raw); setData(parsed); alert("Imported!"); }
-                catch(e){ alert("Invalid JSON: "+e.message); }
-              }}>
-                <Upload className="inline w-4 h-4 mr-1"/> Import JSON
-              </button>
-              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>{
-                const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-                const url = URL.createObjectURL(blob); const a = document.createElement("a");
-                a.href = url; a.download = "polyglot_data.json"; a.click(); URL.revokeObjectURL(url);
-              }}>
-                <Download className="inline w-4 h-4 mr-1"/> Export JSON
-              </button>
-              {<button
+              <button
                 className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
-                onClick={() => {
-                localStorage.removeItem('polyglot_trainer_data_v1');
-                localStorage.removeItem('polyglot_trainer_state_v1');
-                location.reload();
-              }}
-            >
+                onClick={()=>setShow(false)}
+                aria-label="Close"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            <p className="text-sm text-inksoft/80 mb-3">
+              Paste/edit your data. Progress stays on this device.
+            </p>
+
+            <textarea
+              className="w-full h-80 font-mono text-sm border rounded-xl p-3"
+              value={raw}
+              onChange={e=>setRaw(e.target.value)}
+            />
+
+            <div className="flex items-center gap-2 mt-3 flex-wrap">
+              <button
+                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
+                onClick={()=>{
+                  try {
+                    const parsed = JSON.parse(raw);
+                    setData(parsed);
+                    alert("Imported!");
+                  } catch(e){
+                    alert("Invalid JSON: " + e.message);
+                  }
+                }}
+              >
+                <Upload className="inline w-4 h-4 mr-1" /> Import JSON
+              </button>
+
+              <button
+                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
+                onClick={()=>{
+                  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+                  const url = URL.createObjectURL(blob);
+                  const a = document.createElement("a");
+                  a.href = url;
+                  a.download = "polyglot_data.json";
+                  a.click();
+                  URL.revokeObjectURL(url);
+                }}
+              >
+                <Download className="inline w-4 h-4 mr-1" /> Export JSON
+              </button>
+
+              {/* RESET TO BUILT-IN */}
+              <button
+                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
+                onClick={()=>{
+                  localStorage.removeItem('polyglot_trainer_data_v1');
+                  localStorage.removeItem('polyglot_trainer_state_v1');
+                  location.reload();
+                }}
+              >
                 Reset to built-in
-</button>
-           </div>
+              </button>
+            </div>
           </div>
         </div>
       )}

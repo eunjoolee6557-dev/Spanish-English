@@ -6,12 +6,25 @@ import {
   Sparkles, LayoutGrid, ChevronRight
 } from "lucide-react";
 
+/* =========================
+   Local storage helpers
+   ========================= */
 const LS_KEYS = { DATA: "polyglot_trainer_data_v1", STATE: "polyglot_trainer_state_v1" };
 const saveLS = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 const loadLS = (k, d) => { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d; } catch { return d; } };
 
-// ---------- Curriculum ----------
+/* =========================
+   Content version (AUTO-REFRESH)
+   - Bump this number whenever you change the built-in content.
+   - Devices with older saved data auto-upgrade to the new content.
+   ========================= */
+const CONTENT_VERSION = 2;
+
+/* =========================
+   Built-in curriculum (DEFAULT_DATA)
+   ========================= */
 const DEFAULT_DATA = {
+  contentVersion: CONTENT_VERSION,
   courses: [
     {
       id: "es-en",
@@ -19,88 +32,157 @@ const DEFAULT_DATA = {
       learnLang: "es-ES",
       uiLang: "en-US",
       translateLang: "en",
-chapters: [
-  {
-    id: "es1",
-    title: "Chapter 1: Greetings",
-    color: "from-brand-100 to-brand-50",
-    tips: [
-      { title: "¿Cómo estás? vs ¿Cómo va todo?", text: "Both ask how someone is. '¿Cómo estás?' is general; '¿Cómo va todo?' asks how everything is going." },
-      { title: "Bien vs Estoy bien", text: "Use 'Estoy bien' for 'I am fine' (with verb). 'Bien, gracias' is a short response." }
-    ],
-    items: [
-      { id:"p1", type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
-      { id:"p2", type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
-      { id:"p3", type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
-      { id:"p4", type:"phrase", source:"Estoy bien.", target:"I am fine." },
-      { id:"p5", type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
-      { id:"p6", type:"phrase", source:"¿Y tú?", target:"And you?" },
-      { id:"p7", type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
-      { id:"p8", type:"phrase", source:"Nada mal.", target:"Not bad." },
-      { id:"p9", type:"phrase", source:"No tan bien.", target:"Not so well." },
-      { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." }
-    ],
-    dialogs: [
-      {
-        id:"esd_greetings1",
-        title:"First meeting",
-        roles:[
-          { who:"A", lines:["¡Mucho tiempo sin verte!","¿Cómo estás?"] },
-          { who:"B", lines:["¡Hola!","Estoy bien, gracias. ¿Y tú?"] },
-          { who:"A", lines:["Nada mal. ¿Y qué hay de ti?"] },
-          { who:"B", lines:["No tan bien...","Lo siento escuchar eso."] }
-        ],
-        translation:[
-          "Long time no see!","How are you?",
-          "Hello!","I’m fine, thank you. And you?",
-          "Not bad. And what about you?",
-          "Not so well...","I’m sorry to hear that."
-        ]
-      }
-    ]
-  },
-  {
-    id: "es2",
-    title: "Chapter 2: Everyday Phrases",
-    color: "from-pink-200 to-pink-50",
-    tips: [
-      { title: "Buenos días vs Buenas tardes", text: "Use 'Buenos días' in the morning, 'Buenas tardes' in the afternoon, and 'Buenas noches' in the evening." },
-      { title: "Por favor & Gracias", text: "'Por favor' means please, and 'Gracias' means thank you. Common politeness words you'll use daily." }
-    ],
-    items: [
-      { id: "e1", type: "phrase", source: "Buenos días.", target: "Good morning." },
-      { id: "e2", type: "phrase", source: "Buenas tardes.", target: "Good afternoon." },
-      { id: "e3", type: "phrase", source: "Buenas noches.", target: "Good evening / Good night." },
-      { id: "e4", type: "phrase", source: "Por favor.", target: "Please." },
-      { id: "e5", type: "phrase", source: "Gracias.", target: "Thank you." },
-      { id: "e6", type: "phrase", source: "De nada.", target: "You’re welcome." },
-      { id: "e7", type: "phrase", source: "Perdón.", target: "Excuse me." },
-      { id: "e8", type: "phrase", source: "Disculpe.", target: "Sorry (formal)." },
-      { id: "e9", type: "phrase", source: "Hasta luego.", target: "See you later." },
-      { id: "e10", type: "phrase", source: "Nos vemos.", target: "See you." }
-    ],
-    dialogs: [
-      {
-        id: "esd_everyday1",
-        title: "Polite exchange",
-        roles: [
-          { who: "A", lines: ["¡Buenos días!", "¿Cómo va tu día?"] },
-          { who: "B", lines: ["Muy bien, gracias. ¿Y tú?"] },
-          { who: "A", lines: ["Todo bien, gracias. ¡Hasta luego!"] },
-          { who: "B", lines: ["Nos vemos."] }
-        ],
-        translation: [
-          "Good morning!", "How’s your day going?",
-          "Very well, thank you. And you?",
-          "All good, thank you. See you later!",
-          "See you."
-        ]
-      }
-    ]
-  }
-]
+      chapters: [
+        {
+          id: "es1",
+          title: "Chapter 1: Greetings & Introductions",
+          color: "from-brand-100 to-brand-50",
+          tips: [
+            { title: "Hola / Adiós", text: "Use 'Hola' any time of day for hello, and 'Adiós' for goodbye (or 'Hasta luego' for 'see you later')." },
+            { title: "¿Cómo te llamas?", text: "Literally 'How do you call yourself?'; answer with 'Me llamo + name'." },
+            { title: "Mucho gusto", text: "Natural ways to meet: 'Mucho gusto (en conocerte)' or 'Encantado/a'." }
+          ],
+          items: [
+            { id:"p1",  type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
+            { id:"p2",  type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
+            { id:"p3",  type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
+            { id:"p4",  type:"phrase", source:"Estoy bien.", target:"I am fine." },
+            { id:"p5",  type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
+            { id:"p6",  type:"phrase", source:"¿Y tú?", target:"And you?" },
+            { id:"p7",  type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
+            { id:"p8",  type:"phrase", source:"Nada mal.", target:"Not bad." },
+            { id:"p9",  type:"phrase", source:"No tan bien.", target:"Not so well." },
+            { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." },
 
-// ---------- Speech ----------
+            { id:"p11", type:"phrase", source:"Hola.", target:"Hello." },
+            { id:"p12", type:"phrase", source:"Adiós.", target:"Goodbye." },
+            { id:"p13", type:"phrase", source:"Duerme bien.", target:"Sleep well." },
+            { id:"p14", type:"phrase", source:"Feliz cumpleaños.", target:"Happy birthday." },
+            { id:"p15", type:"phrase", source:"Mucho gusto en conocerte.", target:"Nice to meet you." },
+            { id:"p16", type:"phrase", source:"Estoy feliz de conocerte.", target:"I’m happy to meet you." },
+            { id:"p17", type:"phrase", source:"¿Cómo te llamas?", target:"What’s your name?" },
+            { id:"p18", type:"phrase", source:"Me llamo Iris.", target:"My name is Iris." }
+          ],
+          dialogs: [
+            {
+              id: "esd_greetings_updated1",
+              title: "First hello",
+              roles: [
+                { who: "A", lines: ["Hola, ¿cómo te llamas?"] },
+                { who: "B", lines: ["Hola, me llamo Iris. Mucho gusto en conocerte."] },
+                { who: "A", lines: ["Mucho gusto, Iris. Estoy feliz de conocerte también. ¿Cómo estás?"] },
+                { who: "B", lines: ["Estoy bien, gracias. ¿Y tú?"] },
+                { who: "A", lines: ["Nada mal."] }
+              ],
+              translation: [
+                "Hi, what’s your name?",
+                "Hi, my name is Iris. Nice to meet you.",
+                "Nice to meet you, Iris. I’m happy to meet you too. How are you?",
+                "I’m fine, thank you. And you?",
+                "Not bad."
+              ]
+            },
+            {
+              id: "esd_greetings_updated2",
+              title: "Goodbyes & well-wishes",
+              roles: [
+                { who: "A", lines: ["Hoy es tu cumpleaños, ¿verdad? ¡Feliz cumpleaños!"] },
+                { who: "B", lines: ["¡Gracias!"] },
+                { who: "A", lines: ["Ya me voy. Adiós. ¡Duerme bien!"] },
+                { who: "B", lines: ["Adiós, gracias."] }
+              ],
+              translation: [
+                "Today is your birthday, right? Happy birthday!",
+                "Thanks!",
+                "I’m heading out now. Goodbye. Sleep well!",
+                "Bye, thanks."
+              ]
+            }
+          ]
+        },
+        {
+          id: "es2",
+          title: "Chapter 2: Everyday & Social Phrases",
+          color: "from-pink-200 to-pink-50",
+          tips: [
+            { title: "Disculpa / Perdón", text: "Both can mean 'excuse me' or 'sorry'; 'disculpe' is more formal, 'perdón' is common." },
+            { title: "No te preocupes", text: "Use 'No te preocupes' / 'No hay problema' to reassure someone." }
+          ],
+          items: [
+            { id:"e1",  type:"phrase", source:"Buenos días.", target:"Good morning." },
+            { id:"e2",  type:"phrase", source:"Buenas tardes.", target:"Good afternoon." },
+            { id:"e3",  type:"phrase", source:"Buenas noches.", target:"Good evening / Good night." },
+            { id:"e4",  type:"phrase", source:"Por favor.", target:"Please." },
+            { id:"e5",  type:"phrase", source:"Gracias.", target:"Thank you." },
+            { id:"e6",  type:"phrase", source:"De nada.", target:"You’re welcome." },
+            { id:"e7",  type:"phrase", source:"Perdón.", target:"Excuse me." },
+            { id:"e8",  type:"phrase", source:"Disculpe.", target:"Sorry (formal)." },
+            { id:"e9",  type:"phrase", source:"Hasta luego.", target:"See you later." },
+            { id:"e10", type:"phrase", source:"Nos vemos.", target:"See you." },
+
+            { id:"e11", type:"phrase", source:"¿A qué te dedicas?", target:"What do you do?" },
+            { id:"e12", type:"phrase", source:"Yo soy presidente de una compañía.", target:"I am president of a company." },
+            { id:"e13", type:"phrase", source:"¿Cuántos años tienes?", target:"How old are you?" },
+            { id:"e14", type:"phrase", source:"Disculpa.", target:"Excuse me." },
+            { id:"e15", type:"phrase", source:"Lo siento mucho.", target:"I’m very sorry." },
+            { id:"e16", type:"phrase", source:"Está bien.", target:"It’s okay." },
+            { id:"e17", type:"phrase", source:"¿Te estoy molestando?", target:"Am I bothering you?" },
+            { id:"e18", type:"phrase", source:"No te preocupes.", target:"Don’t worry." },
+            { id:"e19", type:"phrase", source:"No hay problema.", target:"No problem." },
+            { id:"e20", type:"phrase", source:"Siento mucho por ti.", target:"I feel very sorry for you." },
+            { id:"e21", type:"phrase", source:"Felicidades.", target:"Congratulations." }
+          ],
+          dialogs: [
+            {
+              id: "esd_everyday_updated1",
+              title: "Work & age (small talk)",
+              roles: [
+                { who: "A", lines: ["¿A qué te dedicas?"] },
+                { who: "B", lines: ["Yo soy presidente de una compañía. ¿Y tú?"] },
+                { who: "A", lines: ["Soy estudiante. ¿Cuántos años tienes?"] },
+                { who: "B", lines: ["Tengo cincuenta y cinco años."] },
+                { who: "A", lines: ["¡Felicidades atrasadas por tu cumpleaños!"] },
+                { who: "B", lines: ["¡Gracias!"] }
+              ],
+              translation: [
+                "What do you do?",
+                "I am president of a company. And you?",
+                "I’m a student. How old are you?",
+                "I’m fifty-five years old.",
+                "Belated happy birthday!",
+                "Thanks!"
+              ]
+            },
+            {
+              id: "esd_everyday_updated2",
+              title: "Apology & reassurance",
+              roles: [
+                { who: "A", lines: ["Disculpa, ¿te estoy molestando?"] },
+                { who: "B", lines: ["No te preocupes, no hay problema."] },
+                { who: "A", lines: ["Lo siento mucho."] },
+                { who: "B", lines: ["Está bien."] },
+                { who: "A", lines: ["Siento mucho por ti."] },
+                { who: "B", lines: ["Gracias."] }
+              ],
+              translation: [
+                "Excuse me, am I bothering you?",
+                "Don’t worry, no problem.",
+                "I’m very sorry.",
+                "It’s okay.",
+                "I’m very sorry for you.",
+                "Thank you."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};
+
+/* =========================
+   Speech utilities
+   ========================= */
 function pickVoice(langHint) {
   const voices = window.speechSynthesis?.getVoices?.() || [];
   return voices.find(v => v.lang === langHint)
@@ -140,7 +222,9 @@ function useSpeechRecognizer(lang = "en-US") {
   return { supported, listening, listen };
 }
 
-// ---------- Quiz helpers & progress ----------
+/* =========================
+   Quiz helpers & progress
+   ========================= */
 function nextItemQueue(items, history, proficiency) {
   const avoid = new Set(history);
   const scored = items.map(it => ({ it, score: proficiency[it.id] ?? 0 }))
@@ -159,9 +243,20 @@ function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=
 function sample(arr, n){ const c=[...arr]; const out=[]; while(n-- > 0 && c.length){ out.push(c.splice(Math.floor(Math.random()*c.length),1)[0]); } return out; }
 function mcOptions(items, correct){ return shuffle([correct, ...sample(items.filter(i=>i.id!==correct.id), Math.min(3, items.length-1))]); }
 
-// ---------- App ----------
+/* =========================
+   App
+   ========================= */
 export default function App(){
-  const [data, setData] = useState(()=>loadLS(LS_KEYS.DATA, DEFAULT_DATA));
+  // Load saved, but auto-upgrade to newer built-in content
+  const [data, setData] = useState(() => {
+    const saved = loadLS(LS_KEYS.DATA, null);
+    if (saved && (saved.contentVersion ?? 0) >= CONTENT_VERSION) {
+      return saved;
+    }
+    // Use the built-in content (this also upgrades old devices)
+    return { ...DEFAULT_DATA, contentVersion: CONTENT_VERSION };
+  });
+
   const [courseId, setCourseId] = useState("es-en");
   const [chapterId, setChapterId] = useState("es1");
   const [mode, setMode] = useState("home"); // home | learn | quiz | dialog
@@ -172,7 +267,7 @@ export default function App(){
   const [history, setHistory] = useState([]);
   const [toast, setToast] = useState(null);
 
-  // streak day rollover
+  // streak rollover
   useEffect(()=>{
     const today = new Date().toISOString().slice(0,10);
     if (lastDay !== today){
@@ -184,8 +279,8 @@ export default function App(){
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // persist
-  useEffect(()=>{ saveLS(LS_KEYS.DATA, data); }, [data]);
+  // persist data & state
+  useEffect(()=>{ saveLS(LS_KEYS.DATA, { ...data, contentVersion: data.contentVersion ?? CONTENT_VERSION }); }, [data]);
   useEffect(()=>{ saveLS(LS_KEYS.STATE, { courseId, chapterId, xp, streak, lastDay, proficiency }); }, [courseId, chapterId, xp, streak, lastDay, proficiency]);
 
   const course = useMemo(()=>data.courses.find(c=>c.id===courseId) || data.courses[0],[data, courseId]);
@@ -201,7 +296,7 @@ export default function App(){
             <div className="w-9 h-9 rounded-xl bg-ink text-white grid place-items-center font-semibold shadow-soft">PL</div>
             <div>
               <div className="text-sm text-inksoft">Polyglot Trainer</div>
-              <div className="text-xs text-inksoft/70">Elegant · Colorful — Spanish · English</div>
+              <div className="text-xs text-inksoft/70">Elegant · Auto-refresh content</div>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -271,7 +366,9 @@ export default function App(){
   );
 }
 
-// ---------- UI blocks ----------
+/* =========================
+   UI blocks
+   ========================= */
 function Badge({children}) {
   return <span className="text-xs px-2 py-1 rounded-full bg-white border shadow-soft">{children}</span>;
 }
@@ -578,10 +675,8 @@ function DialogPanel({ chapter, course, setMode }){
 function DataModal({ data, setData }){
   const [show, setShow] = useState(false);
   const [raw, setRaw] = useState(JSON.stringify(data, null, 2));
-
   useEffect(()=>{ setRaw(JSON.stringify(data, null, 2)); }, [show, data]);
   useEffect(()=>{ window.openDataModal = () => setShow(true); }, []);
-
   return (
     <>
       {show && (
@@ -589,65 +684,32 @@ function DataModal({ data, setData }){
           <div className="max-w-3xl w-full bg-white rounded-2xl border p-4 shadow-soft" onClick={e=>e.stopPropagation()}>
             <div className="flex items-center justify-between mb-2">
               <div className="font-medium text-ink">Your Curriculum JSON</div>
-              <button
-                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
-                onClick={()=>setShow(false)}
-                aria-label="Close"
-              >
-                <X className="w-4 h-4" />
+              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>setShow(false)} aria-label="Close">
+                <X className="w-4 h-4"/>
               </button>
             </div>
-
-            <p className="text-sm text-inksoft/80 mb-3">
-              Paste/edit your data. Progress stays on this device.
-            </p>
-
-            <textarea
-              className="w-full h-80 font-mono text-sm border rounded-xl p-3"
-              value={raw}
-              onChange={e=>setRaw(e.target.value)}
-            />
-
+            <p className="text-sm text-inksoft/80 mb-3">Paste/edit your data. Progress stays on this device.</p>
+            <textarea className="w-full h-80 font-mono text-sm border rounded-xl p-3" value={raw} onChange={e=>setRaw(e.target.value)} />
             <div className="flex items-center gap-2 mt-3 flex-wrap">
-              <button
-                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
-                onClick={()=>{
-                  try {
-                    const parsed = JSON.parse(raw);
-                    setData(parsed);
-                    alert("Imported!");
-                  } catch(e){
-                    alert("Invalid JSON: " + e.message);
-                  }
-                }}
-              >
-                <Upload className="inline w-4 h-4 mr-1" /> Import JSON
+              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>{
+                try { const parsed = JSON.parse(raw); setData(parsed); alert("Imported!"); }
+                catch(e){ alert("Invalid JSON: "+e.message); }
+              }}>
+                <Upload className="inline w-4 h-4 mr-1"/> Import JSON
               </button>
-
-              <button
-                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
-                onClick={()=>{
-                  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-                  const url = URL.createObjectURL(blob);
-                  const a = document.createElement("a");
-                  a.href = url;
-                  a.download = "polyglot_data.json";
-                  a.click();
-                  URL.revokeObjectURL(url);
-                }}
-              >
-                <Download className="inline w-4 h-4 mr-1" /> Export JSON
+              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>{
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+                const url = URL.createObjectURL(blob); const a = document.createElement("a");
+                a.href = url; a.download = "polyglot_data.json"; a.click(); URL.revokeObjectURL(url);
+              }}>
+                <Download className="inline w-4 h-4 mr-1"/> Export JSON
               </button>
-
-              {/* RESET TO BUILT-IN */}
-              <button
-                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
-                onClick={()=>{
-                  localStorage.removeItem('polyglot_trainer_data_v1');
-                  localStorage.removeItem('polyglot_trainer_state_v1');
-                  location.reload();
-                }}
-              >
+              {/* One-tap RESET to built-in */}
+              <button className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft" onClick={()=>{
+                localStorage.removeItem(LS_KEYS.DATA);
+                localStorage.removeItem(LS_KEYS.STATE);
+                location.reload();
+              }}>
                 Reset to built-in
               </button>
             </div>
@@ -658,5 +720,5 @@ function DataModal({ data, setData }){
   );
 }
 
-// global opener for Data modal
+// Global opener for Data modal
 function openDataModal(){ if (typeof window !== 'undefined' && window.openDataModal) window.openDataModal(); }

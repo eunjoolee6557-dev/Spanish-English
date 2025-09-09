@@ -605,7 +605,17 @@ function DataModal({ data, setData }){
               }}>
                 <Download className="inline w-4 h-4 mr-1"/> Export JSON
               </button>
-            </div>
+              {<button
+                className="px-3 py-2 rounded-xl border bg-white hover:shadow-soft"
+                onClick={() => {
+                localStorage.removeItem('polyglot_trainer_data_v1');
+                localStorage.removeItem('polyglot_trainer_state_v1');
+                location.reload();
+              }}
+            >
+                Reset to built-in
+</button>
+           </div>
           </div>
         </div>
       )}

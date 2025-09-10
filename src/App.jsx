@@ -6,6 +6,9 @@ import {
   Sparkles, LayoutGrid, ChevronRight
 } from "lucide-react";
 
+import esEn from "./content/es-en.json";
+import jaKo from "./content/ja-ko.json";
+
 /* =========================
    Local storage helpers
    ========================= */
@@ -13,173 +16,182 @@ const LS_KEYS = { DATA: "polyglot_trainer_data_v1", STATE: "polyglot_trainer_sta
 const saveLS = (k, v) => localStorage.setItem(k, JSON.stringify(v));
 const loadLS = (k, d) => { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d; } catch { return d; } };
 
-/* =========================
-   Content version (AUTO-REFRESH)
-   - Bump this number whenever you change the built-in content.
-   - Devices with older saved data auto-upgrade to the new content.
-   ========================= */
+// =========================
+//   Content version (AUTO-REFRESH)
+//   - Bump this number whenever you change the built-in content.
+//   - Devices with older saved data auto-upgrade to the new content.
+// =========================
 const CONTENT_VERSION = 2;
 
-/* =========================
-   Built-in curriculum (DEFAULT_DATA)
-   ========================= */
+// 👉 NEW: bring in your JSON course files
+import esEn from "./content/es-en.json";
+import jaKo from "./content/ja-ko.json";
+
+// =========================
+//   Built-in curriculum (DEFAULT_DATA)
+// =========================
 const DEFAULT_DATA = {
   contentVersion: CONTENT_VERSION,
-  courses: [
-    {
-      id: "es-en",
-      label: "Spanish → English",
-      learnLang: "es-ES",
-      uiLang: "en-US",
-      translateLang: "en",
-      chapters: [
-        {
-          id: "es1",
-          title: "Chapter 1: Greetings & Introductions",
-          color: "from-brand-100 to-brand-50",
-          tips: [
-            { title: "Hola / Adiós", text: "Use 'Hola' any time of day for hello, and 'Adiós' for goodbye (or 'Hasta luego' for 'see you later')." },
-            { title: "¿Cómo te llamas?", text: "Literally 'How do you call yourself?'; answer with 'Me llamo + name'." },
-            { title: "Mucho gusto", text: "Natural ways to meet: 'Mucho gusto (en conocerte)' or 'Encantado/a'." }
-          ],
-          items: [
-            { id:"p1",  type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
-            { id:"p2",  type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
-            { id:"p3",  type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
-            { id:"p4",  type:"phrase", source:"Estoy bien.", target:"I am fine." },
-            { id:"p5",  type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
-            { id:"p6",  type:"phrase", source:"¿Y tú?", target:"And you?" },
-            { id:"p7",  type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
-            { id:"p8",  type:"phrase", source:"Nada mal.", target:"Not bad." },
-            { id:"p9",  type:"phrase", source:"No tan bien.", target:"Not so well." },
-            { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." },
-
-            { id:"p11", type:"phrase", source:"Hola.", target:"Hello." },
-            { id:"p12", type:"phrase", source:"Adiós.", target:"Goodbye." },
-            { id:"p13", type:"phrase", source:"Duerme bien.", target:"Sleep well." },
-            { id:"p14", type:"phrase", source:"Feliz cumpleaños.", target:"Happy birthday." },
-            { id:"p15", type:"phrase", source:"Mucho gusto en conocerte.", target:"Nice to meet you." },
-            { id:"p16", type:"phrase", source:"Estoy feliz de conocerte.", target:"I’m happy to meet you." },
-            { id:"p17", type:"phrase", source:"¿Cómo te llamas?", target:"What’s your name?" },
-            { id:"p18", type:"phrase", source:"Me llamo Iris.", target:"My name is Iris." }
-          ],
-          dialogs: [
-            {
-              id: "esd_greetings_updated1",
-              title: "First hello",
-              roles: [
-                { who: "A", lines: ["Hola, ¿cómo te llamas?"] },
-                { who: "B", lines: ["Hola, me llamo Iris. Mucho gusto en conocerte."] },
-                { who: "A", lines: ["Mucho gusto, Iris. Estoy feliz de conocerte también. ¿Cómo estás?"] },
-                { who: "B", lines: ["Estoy bien, gracias. ¿Y tú?"] },
-                { who: "A", lines: ["Nada mal."] }
-              ],
-              translation: [
-                "Hi, what’s your name?",
-                "Hi, my name is Iris. Nice to meet you.",
-                "Nice to meet you, Iris. I’m happy to meet you too. How are you?",
-                "I’m fine, thank you. And you?",
-                "Not bad."
-              ]
-            },
-            {
-              id: "esd_greetings_updated2",
-              title: "Goodbyes & well-wishes",
-              roles: [
-                { who: "A", lines: ["Hoy es tu cumpleaños, ¿verdad? ¡Feliz cumpleaños!"] },
-                { who: "B", lines: ["¡Gracias!"] },
-                { who: "A", lines: ["Ya me voy. Adiós. ¡Duerme bien!"] },
-                { who: "B", lines: ["Adiós, gracias."] }
-              ],
-              translation: [
-                "Today is your birthday, right? Happy birthday!",
-                "Thanks!",
-                "I’m heading out now. Goodbye. Sleep well!",
-                "Bye, thanks."
-              ]
-            }
-          ]
-        },
-        {
-          id: "es2",
-          title: "Chapter 2: Everyday & Social Phrases",
-          color: "from-pink-200 to-pink-50",
-          tips: [
-            { title: "Disculpa / Perdón", text: "Both can mean 'excuse me' or 'sorry'; 'disculpe' is more formal, 'perdón' is common." },
-            { title: "No te preocupes", text: "Use 'No te preocupes' / 'No hay problema' to reassure someone." }
-          ],
-          items: [
-            { id:"e1",  type:"phrase", source:"Buenos días.", target:"Good morning." },
-            { id:"e2",  type:"phrase", source:"Buenas tardes.", target:"Good afternoon." },
-            { id:"e3",  type:"phrase", source:"Buenas noches.", target:"Good evening / Good night." },
-            { id:"e4",  type:"phrase", source:"Por favor.", target:"Please." },
-            { id:"e5",  type:"phrase", source:"Gracias.", target:"Thank you." },
-            { id:"e6",  type:"phrase", source:"De nada.", target:"You’re welcome." },
-            { id:"e7",  type:"phrase", source:"Perdón.", target:"Excuse me." },
-            { id:"e8",  type:"phrase", source:"Disculpe.", target:"Sorry (formal)." },
-            { id:"e9",  type:"phrase", source:"Hasta luego.", target:"See you later." },
-            { id:"e10", type:"phrase", source:"Nos vemos.", target:"See you." },
-
-            { id:"e11", type:"phrase", source:"¿A qué te dedicas?", target:"What do you do?" },
-            { id:"e12", type:"phrase", source:"Yo soy presidente de una compañía.", target:"I am president of a company." },
-            { id:"e13", type:"phrase", source:"¿Cuántos años tienes?", target:"How old are you?" },
-            { id:"e14", type:"phrase", source:"Disculpa.", target:"Excuse me." },
-            { id:"e15", type:"phrase", source:"Lo siento mucho.", target:"I’m very sorry." },
-            { id:"e16", type:"phrase", source:"Está bien.", target:"It’s okay." },
-            { id:"e17", type:"phrase", source:"¿Te estoy molestando?", target:"Am I bothering you?" },
-            { id:"e18", type:"phrase", source:"No te preocupes.", target:"Don’t worry." },
-            { id:"e19", type:"phrase", source:"No hay problema.", target:"No problem." },
-            { id:"e20", type:"phrase", source:"Siento mucho por ti.", target:"I feel very sorry for you." },
-            { id:"e21", type:"phrase", source:"Felicidades.", target:"Congratulations." }
-          ],
-          dialogs: [
-            {
-              id: "esd_everyday_updated1",
-              title: "Work & age (small talk)",
-              roles: [
-                { who: "A", lines: ["¿A qué te dedicas?"] },
-                { who: "B", lines: ["Yo soy presidente de una compañía. ¿Y tú?"] },
-                { who: "A", lines: ["Soy estudiante. ¿Cuántos años tienes?"] },
-                { who: "B", lines: ["Tengo cincuenta y cinco años."] },
-                { who: "A", lines: ["¡Felicidades atrasadas por tu cumpleaños!"] },
-                { who: "B", lines: ["¡Gracias!"] }
-              ],
-              translation: [
-                "What do you do?",
-                "I am president of a company. And you?",
-                "I’m a student. How old are you?",
-                "I’m fifty-five years old.",
-                "Belated happy birthday!",
-                "Thanks!"
-              ]
-            },
-            {
-              id: "esd_everyday_updated2",
-              title: "Apology & reassurance",
-              roles: [
-                { who: "A", lines: ["Disculpa, ¿te estoy molestando?"] },
-                { who: "B", lines: ["No te preocupes, no hay problema."] },
-                { who: "A", lines: ["Lo siento mucho."] },
-                { who: "B", lines: ["Está bien."] },
-                { who: "A", lines: ["Siento mucho por ti."] },
-                { who: "B", lines: ["Gracias."] }
-              ],
-              translation: [
-                "Excuse me, am I bothering you?",
-                "Don’t worry, no problem.",
-                "I’m very sorry.",
-                "It’s okay.",
-                "I’m very sorry for you.",
-                "Thank you."
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ]
+  courses: [esEn, jaKo]
 };
 
+//const DEFAULT_DATA = {
+//  contentVersion: CONTENT_VERSION,
+//  courses: [
+//    {
+//      id: "es-en",
+//      label: "Spanish → English",
+//      learnLang: "es-ES",
+//      uiLang: "en-US",
+//      translateLang: "en",
+//      chapters: [
+//        {
+//          id: "es1",
+//          title: "Chapter 1: Greetings & Introductions",
+//          color: "from-brand-100 to-brand-50",
+//          tips: [
+//            { title: "Hola / Adiós", text: "Use 'Hola' any time of day for hello, and 'Adiós' for goodbye (or 'Hasta luego' for 'see you later')." },
+//            { title: "¿Cómo te llamas?", text: "Literally 'How do you call yourself?'; answer with 'Me llamo + name'." },
+//            { title: "Mucho gusto", text: "Natural ways to meet: 'Mucho gusto (en conocerte)' or 'Encantado/a'." }
+//          ],
+//          items: [
+//            { id:"p1",  type:"phrase", source:"Mucho tiempo sin verte.", target:"Long time no see." },
+//            { id:"p2",  type:"phrase", source:"¿Cómo estás?", target:"How are you?" },
+//            { id:"p3",  type:"phrase", source:"¿Cómo va todo?", target:"How's everything going?" },
+//            { id:"p4",  type:"phrase", source:"Estoy bien.", target:"I am fine." },
+//            { id:"p5",  type:"phrase", source:"Bien, gracias.", target:"Fine, thank you." },
+//            { id:"p6",  type:"phrase", source:"¿Y tú?", target:"And you?" },
+//            { id:"p7",  type:"phrase", source:"¿Y qué hay de ti?", target:"And what about you?" },
+//            { id:"p8",  type:"phrase", source:"Nada mal.", target:"Not bad." },
+//            { id:"p9",  type:"phrase", source:"No tan bien.", target:"Not so well." },
+//            { id:"p10", type:"phrase", source:"Lo siento escuchar eso.", target:"I’m sorry to hear that." },
+//
+//            { id:"p11", type:"phrase", source:"Hola.", target:"Hello." },
+//            { id:"p12", type:"phrase", source:"Adiós.", target:"Goodbye." },
+//            { id:"p13", type:"phrase", source:"Duerme bien.", target:"Sleep well." },
+//            { id:"p14", type:"phrase", source:"Feliz cumpleaños.", target:"Happy birthday." },
+//            { id:"p15", type:"phrase", source:"Mucho gusto en conocerte.", target:"Nice to meet you." },
+//            { id:"p16", type:"phrase", source:"Estoy feliz de conocerte.", target:"I’m happy to meet you." },
+//            { id:"p17", type:"phrase", source:"¿Cómo te llamas?", target:"What’s your name?" },
+//            { id:"p18", type:"phrase", source:"Me llamo Iris.", target:"My name is Iris." }
+//          ],
+//          dialogs: [
+//            {
+//              id: "esd_greetings_updated1",
+//              title: "First hello",
+//              roles: [
+//                { who: "A", lines: ["Hola, ¿cómo te llamas?"] },
+//                { who: "B", lines: ["Hola, me llamo Iris. Mucho gusto en conocerte."] },
+//                { who: "A", lines: ["Mucho gusto, Iris. Estoy feliz de conocerte también. ¿Cómo estás?"] },
+//                { who: "B", lines: ["Estoy bien, gracias. ¿Y tú?"] },
+//                { who: "A", lines: ["Nada mal."] }
+//              ],
+//              translation: [
+//                "Hi, what’s your name?",
+//                "Hi, my name is Iris. Nice to meet you.",
+//                "Nice to meet you, Iris. I’m happy to meet you too. How are you?",
+//                "I’m fine, thank you. And you?",
+//                "Not bad."
+//              ]
+//            },
+//            {
+//              id: "esd_greetings_updated2",
+//              title: "Goodbyes & well-wishes",
+//              roles: [
+//                { who: "A", lines: ["Hoy es tu cumpleaños, ¿verdad? ¡Feliz cumpleaños!"] },
+//                { who: "B", lines: ["¡Gracias!"] },
+//                { who: "A", lines: ["Ya me voy. Adiós. ¡Duerme bien!"] },
+//                { who: "B", lines: ["Adiós, gracias."] }
+//              ],
+//              translation: [
+//                "Today is your birthday, right? Happy birthday!",
+//                "Thanks!",
+//                "I’m heading out now. Goodbye. Sleep well!",
+//                "Bye, thanks."
+//              ]
+//            }
+//          ]
+//        },
+//        {
+//          id: "es2",
+//          title: "Chapter 2: Everyday & Social Phrases",
+//          color: "from-pink-200 to-pink-50",
+//          tips: [
+//            { title: "Disculpa / Perdón", text: "Both can mean 'excuse me' or 'sorry'; 'disculpe' is more formal, 'perdón' is common." },
+//            { title: "No te preocupes", text: "Use 'No te preocupes' / 'No hay problema' to reassure someone." }
+//          ],
+//          items: [
+//            { id:"e1",  type:"phrase", source:"Buenos días.", target:"Good morning." },
+//            { id:"e2",  type:"phrase", source:"Buenas tardes.", target:"Good afternoon." },
+//            { id:"e3",  type:"phrase", source:"Buenas noches.", target:"Good evening / Good night." },
+//            { id:"e4",  type:"phrase", source:"Por favor.", target:"Please." },
+//            { id:"e5",  type:"phrase", source:"Gracias.", target:"Thank you." },
+//            { id:"e6",  type:"phrase", source:"De nada.", target:"You’re welcome." },
+//            { id:"e7",  type:"phrase", source:"Perdón.", target:"Excuse me." },
+//            { id:"e8",  type:"phrase", source:"Disculpe.", target:"Sorry (formal)." },
+//            { id:"e9",  type:"phrase", source:"Hasta luego.", target:"See you later." },
+//            { id:"e10", type:"phrase", source:"Nos vemos.", target:"See you." },
+//
+//            { id:"e11", type:"phrase", source:"¿A qué te dedicas?", target:"What do you do?" },
+//            { id:"e12", type:"phrase", source:"Yo soy presidente de una compañía.", target:"I am president of a company." },
+//            { id:"e13", type:"phrase", source:"¿Cuántos años tienes?", target:"How old are you?" },
+//            { id:"e14", type:"phrase", source:"Disculpa.", target:"Excuse me." },
+//            { id:"e15", type:"phrase", source:"Lo siento mucho.", target:"I’m very sorry." },
+//            { id:"e16", type:"phrase", source:"Está bien.", target:"It’s okay." },
+//            { id:"e17", type:"phrase", source:"¿Te estoy molestando?", target:"Am I bothering you?" },
+//            { id:"e18", type:"phrase", source:"No te preocupes.", target:"Don’t worry." },
+//            { id:"e19", type:"phrase", source:"No hay problema.", target:"No problem." },
+//            { id:"e20", type:"phrase", source:"Siento mucho por ti.", target:"I feel very sorry for you." },
+//            { id:"e21", type:"phrase", source:"Felicidades.", target:"Congratulations." }
+//          ],
+//          dialogs: [
+//            {
+//              id: "esd_everyday_updated1",
+//              title: "Work & age (small talk)",
+//              roles: [
+//                { who: "A", lines: ["¿A qué te dedicas?"] },
+//                { who: "B", lines: ["Yo soy presidente de una compañía. ¿Y tú?"] },
+//                { who: "A", lines: ["Soy estudiante. ¿Cuántos años tienes?"] },
+//                { who: "B", lines: ["Tengo cincuenta y cinco años."] },
+//                { who: "A", lines: ["¡Felicidades atrasadas por tu cumpleaños!"] },
+//                { who: "B", lines: ["¡Gracias!"] }
+//              ],
+//              translation: [
+//                "What do you do?",
+//                "I am president of a company. And you?",
+//                "I’m a student. How old are you?",
+//                "I’m fifty-five years old.",
+//                "Belated happy birthday!",
+//                "Thanks!"
+//              ]
+//            },
+//            {
+//              id: "esd_everyday_updated2",
+//              title: "Apology & reassurance",
+//              roles: [
+//                { who: "A", lines: ["Disculpa, ¿te estoy molestando?"] },
+//                { who: "B", lines: ["No te preocupes, no hay problema."] },
+//                { who: "A", lines: ["Lo siento mucho."] },
+//                { who: "B", lines: ["Está bien."] },
+//                { who: "A", lines: ["Siento mucho por ti."] },
+//                { who: "B", lines: ["Gracias."] }
+//              ],
+//              translation: [
+//                "Excuse me, am I bothering you?",
+//                "Don’t worry, no problem.",
+//                "I’m very sorry.",
+//                "It’s okay.",
+//                "I’m very sorry for you.",
+//                "Thank you."
+//              ]
+//            }
+//          ]
+//        }
+//      ]
+//    }
+//  ]
+//};
+//
 /* =========================
    Speech utilities
    ========================= */

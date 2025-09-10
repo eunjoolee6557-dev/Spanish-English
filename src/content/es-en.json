@@ -1,0 +1,230 @@
+{
+  "id": "es-en",
+  "label": "Spanish → English",
+  "learnLang": "es-ES",
+  "uiLang": "en-US",
+  "translateLang": "en",
+  "chapters": [
+    {
+      "id": "es1",
+      "title": "Chapter 1: Greetings & Introductions",
+      "color": "from-brand-100 to-brand-50",
+      "tips": [
+        { "title": "Hola / Adiós", "text": "General hello and goodbye at any time of day." },
+        { "title": "¿Cómo te llamas?", "text": "Answer with “Me llamo + nombre”. Informal; formal is “¿Cómo se llama?”." },
+        { "title": "Mucho gusto", "text": "Natural meeting phrases: “Mucho gusto (en conocerte)” or “Encantado/a”." }
+      ],
+      "vocab": [
+        { "id": "v1", "type": "phrase", "source": "Hola.", "target": "Hello." },
+        { "id": "v2", "type": "phrase", "source": "Adiós.", "target": "Goodbye." },
+        { "id": "v3", "type": "phrase", "source": "Mucho tiempo sin verte.", "target": "Long time no see." },
+        { "id": "v4", "type": "phrase", "source": "¿Cómo estás?", "target": "How are you?" },
+        { "id": "v5", "type": "phrase", "source": "¿Cómo va todo?", "target": "How's everything going?" },
+        { "id": "v6", "type": "phrase", "source": "Estoy bien.", "target": "I am fine." },
+        { "id": "v7", "type": "phrase", "source": "Bien, gracias.", "target": "Fine, thank you." },
+        { "id": "v8", "type": "phrase", "source": "¿Y tú?", "target": "And you?" },
+        { "id": "v9", "type": "phrase", "source": "¿Y qué hay de ti?", "target": "And what about you?" },
+        { "id": "v10", "type": "phrase", "source": "Nada mal.", "target": "Not bad." },
+        { "id": "v11", "type": "phrase", "source": "No tan bien.", "target": "Not so well." },
+        { "id": "v12", "type": "phrase", "source": "Lo siento escuchar eso.", "target": "I'm sorry to hear that." },
+        { "id": "v13", "type": "phrase", "source": "Duerme bien.", "target": "Sleep well." },
+        { "id": "v14", "type": "phrase", "source": "Feliz cumpleaños.", "target": "Happy birthday." },
+        { "id": "v15", "type": "phrase", "source": "Mucho gusto en conocerte.", "target": "Nice to meet you." },
+        { "id": "v16", "type": "phrase", "source": "Estoy feliz de conocerte.", "target": "I'm happy to meet you." },
+        { "id": "v17", "type": "phrase", "source": "¿Cómo te llamas?", "target": "What's your name?" },
+        { "id": "v18", "type": "phrase", "source": "Me llamo Iris.", "target": "My name is Iris." }
+      ],
+      "dialogs": [
+        {
+          "id": "es1_d1",
+          "title": "First hello",
+          "roles": [
+            { "who": "A", "lines": ["Hola, ¿cómo te llamas?"] },
+            { "who": "B", "lines": ["Hola, me llamo Iris. Mucho gusto en conocerte."] },
+            { "who": "A", "lines": ["Mucho gusto, Iris. ¿Cómo estás?"] },
+            { "who": "B", "lines": ["Estoy bien, gracias. ¿Y tú?"] },
+            { "who": "A", "lines": ["Nada mal."] }
+          ],
+          "translation": [
+            "Hi, what's your name?",
+            "Hi, my name is Iris. Nice to meet you.",
+            "Nice to meet you, Iris. How are you?",
+            "I'm fine, thanks. And you?",
+            "Not bad."
+          ]
+        },
+        {
+          "id": "es1_d2",
+          "title": "Goodbyes & well-wishes",
+          "roles": [
+            { "who": "A", "lines": ["Hoy es tu cumpleaños, ¿verdad? ¡Feliz cumpleaños!"] },
+            { "who": "B", "lines": ["¡Gracias!"] },
+            { "who": "A", "lines": ["Ya me voy. Adiós. ¡Duerme bien!"] },
+            { "who": "B", "lines": ["Adiós, gracias."] }
+          ],
+          "translation": [
+            "Today is your birthday, right? Happy birthday!",
+            "Thanks!",
+            "I'm heading out now. Bye. Sleep well!",
+            "Bye, thanks."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "Verbs: ser vs. estar (present)",
+          "notes": "Both mean 'to be'. Use 'ser' for identity/profession/traits; 'estar' for states/location.",
+          "forms": {
+            "present": {
+              "ser": { "yo": "soy", "tú": "eres", "él/ella/usted": "es", "nosotros": "somos", "vosotros": "sois", "ellos/ellas/ustedes": "son" },
+              "estar": { "yo": "estoy", "tú": "estás", "él/ella/usted": "está", "nosotros": "estamos", "vosotros": "estáis", "ellos/ellas/ustedes": "están" }
+            }
+          },
+          "examples": [
+            { "source": "Soy presidenta de una compañía.", "target": "I am president of a company." },
+            { "source": "Estoy feliz de conocerte.", "target": "I’m happy to meet you." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es2",
+      "title": "Chapter 2: Everyday & Social Phrases",
+      "color": "from-pink-200 to-pink-50",
+      "tips": [
+        { "title": "Disculpa / Perdón", "text": "Both 'excuse me/sorry'; 'disculpe' is more formal." },
+        { "title": "Reassurance", "text": "Use 'No te preocupes' or 'No hay problema' to reassure." }
+      ],
+      "vocab": [
+        { "id": "e1", "type": "phrase", "source": "Buenos días.", "target": "Good morning." },
+        { "id": "e2", "type": "phrase", "source": "Buenas tardes.", "target": "Good afternoon." },
+        { "id": "e3", "type": "phrase", "source": "Buenas noches.", "target": "Good evening / Good night." },
+        { "id": "e4", "type": "phrase", "source": "Por favor.", "target": "Please." },
+        { "id": "e5", "type": "phrase", "source": "Gracias.", "target": "Thank you." },
+        { "id": "e6", "type": "phrase", "source": "De nada.", "target": "You're welcome." },
+        { "id": "e7", "type": "phrase", "source": "Perdón.", "target": "Excuse me." },
+        { "id": "e8", "type": "phrase", "source": "Disculpe.", "target": "Sorry (formal)." },
+        { "id": "e9", "type": "phrase", "source": "Hasta luego.", "target": "See you later." },
+        { "id": "e10", "type": "phrase", "source": "Nos vemos.", "target": "See you." },
+        { "id": "e11", "type": "phrase", "source": "¿A qué te dedicas?", "target": "What do you do?" },
+        { "id": "e12", "type": "phrase", "source": "Yo soy presidente de una compañía.", "target": "I am president of a company." },
+        { "id": "e13", "type": "phrase", "source": "¿Cuántos años tienes?", "target": "How old are you?" },
+        { "id": "e14", "type": "phrase", "source": "Está bien.", "target": "It’s okay." },
+        { "id": "e15", "type": "phrase", "source": "¿Te estoy molestando?", "target": "Am I bothering you?" },
+        { "id": "e16", "type": "phrase", "source": "No te preocupes.", "target": "Don’t worry." },
+        { "id": "e17", "type": "phrase", "source": "No hay problema.", "target": "No problem." },
+        { "id": "e18", "type": "phrase", "source": "Siento mucho por ti.", "target": "I’m very sorry for you." },
+        { "id": "e19", "type": "phrase", "source": "Felicidades.", "target": "Congratulations." }
+      ],
+      "dialogs": [
+        {
+          "id": "es2_d1",
+          "title": "Work & age (small talk)",
+          "roles": [
+            { "who": "A", "lines": ["¿A qué te dedicas?"] },
+            { "who": "B", "lines": ["Yo soy presidente de una compañía. ¿Y tú?"] },
+            { "who": "A", "lines": ["Soy estudiante. ¿Cuántos años tienes?"] },
+            { "who": "B", "lines": ["Tengo cincuenta y cinco años."] },
+            { "who": "A", "lines": ["¡Felicidades atrasadas por tu cumpleaños!"] },
+            { "who": "B", "lines": ["¡Gracias!"] }
+          ],
+          "translation": [
+            "What do you do?",
+            "I am president of a company. And you?",
+            "I’m a student. How old are you?",
+            "I’m fifty-five years old.",
+            "Belated happy birthday!",
+            "Thanks!"
+          ]
+        },
+        {
+          "id": "es2_d2",
+          "title": "Apology & reassurance",
+          "roles": [
+            { "who": "A", "lines": ["Disculpa, ¿te estoy molestando?"] },
+            { "who": "B", "lines": ["No te preocupes, no hay problema."] },
+            { "who": "A", "lines": ["Lo siento mucho."] },
+            { "who": "B", "lines": ["Está bien."] },
+            { "who": "A", "lines": ["Siento mucho por ti."] },
+            { "who": "B", "lines": ["Gracias."] }
+          ],
+          "translation": [
+            "Excuse me, am I bothering you?",
+            "Don’t worry, no problem.",
+            "I’m very sorry.",
+            "It’s okay.",
+            "I’m very sorry for you.",
+            "Thank you."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "Verb: tener (present, irregular yo; stem e→ie)",
+          "notes": "Useful for age/possession. 'yo tengo'; e→ie in stressed forms.",
+          "forms": {
+            "present": {
+              "yo": "tengo",
+              "tú": "tienes",
+              "él/ella/usted": "tiene",
+              "nosotros": "tenemos",
+              "vosotros": "tenéis",
+              "ellos/ellas/ustedes": "tienen"
+            }
+          },
+          "examples": [
+            { "source": "Tengo cincuenta y cinco años.", "target": "I am fifty-five years old." },
+            { "source": "¿Tienes tiempo hoy?", "target": "Do you have time today?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "es3",
+      "title": "Chapter 3: Verbs & Daily Routines",
+      "color": "from-green-200 to-green-50",
+      "tips": [
+        { "title": "Regular AR verbs", "text": "Present endings: -o, -as, -a, -amos, -áis, -an." },
+        { "title": "Irregular verbs", "text": "Some verbs have stem changes (e→ie, o→ue) or irregular 'yo' forms." }
+      ],
+      "vocab": [
+        { "id": "es3_v1", "type": "verb", "source": "hablar", "target": "to speak" },
+        { "id": "es3_v2", "type": "verb", "source": "comer", "target": "to eat" },
+        { "id": "es3_v3", "type": "verb", "source": "vivir", "target": "to live" }
+      ],
+      "dialogs": [
+        {
+          "id": "es3_d1",
+          "title": "Morning routine",
+          "roles": [
+            { "who": "A", "lines": ["¿Qué haces por la mañana?"] },
+            { "who": "B", "lines": ["Hablo con mi familia y como desayuno."] }
+          ],
+          "translation": [
+            "What do you do in the morning?",
+            "I talk with my family and eat breakfast."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "Verb: hablar (regular -ar, present)",
+          "notes": "Model for regular -ar verbs.",
+          "forms": {
+            "present": {
+              "yo": "hablo",
+              "tú": "hablas",
+              "él/ella/usted": "habla",
+              "nosotros": "hablamos",
+              "vosotros": "habláis",
+              "ellos/ellas/ustedes": "hablan"
+            }
+          },
+          "examples": [
+            { "source": "Yo hablo español.", "target": "I speak Spanish." }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "id": "ja-ko",
+  "label": "Japanese → Korean",
+  "learnLang": "ja-JP",
+  "uiLang": "ko-KR",
+  "translateLang": "ko",
+  "chapters": [
+    {
+      "id": "ja1",
+      "title": "Chapter 1: 인사와 소개",
+      "color": "from-indigo-100 to-indigo-50",
+      "tips": [
+        { "title": "こんにちは / さようなら", "text": "하루 종일 쓸 수 있는 기본 인사 / 작별 인사." },
+        { "title": "おなまえは？", "text": "정중형: お名前（なまえ）は？ 답: 〜と申（もう）します / 〜です。" }
+      ],
+      "vocab": [
+        { "id": "j1", "type": "phrase", "source": "こんにちは。", "target": "안녕하세요." },
+        { "id": "j2", "type": "phrase", "source": "さようなら。", "target": "안녕히 가세요/계세요." },
+        { "id": "j3", "type": "phrase", "source": "はじめまして。", "target": "처음 뵙겠습니다." },
+        { "id": "j4", "type": "phrase", "source": "よろしくお願いします。", "target": "잘 부탁드립니다." },
+        { "id": "j5", "type": "phrase", "source": "お名前は？", "target": "이름이 뭐예요?" },
+        { "id": "j6", "type": "phrase", "source": "アイリスと申します。", "target": "아이리스라고 합니다." },
+        { "id": "j7", "type": "phrase", "source": "お会いできてうれしいです。", "target": "만나서 반갑습니다." }
+      ],
+      "dialogs": [
+        {
+          "id": "ja1_d1",
+          "title": "첫 만남",
+          "roles": [
+            { "who": "A", "lines": ["はじめまして。", "お名前は？"] },
+            { "who": "B", "lines": ["はじめまして。", "アイリスと申します。よろしくお願いします。"] },
+            { "who": "A", "lines": ["こちらこそ、よろしくお願いします。"] }
+          ],
+          "translation": [
+            "처음 뵙겠습니다.",
+            "이름이 뭐예요?",
+            "처음 뵙겠습니다.",
+            "아이리스라고 합니다. 잘 부탁드립니다.",
+            "저야말로 잘 부탁드립니다."
+          ]
+        },
+        {
+          "id": "ja1_d2",
+          "title": "작별 인사",
+          "roles": [
+            { "who": "A", "lines": ["では、そろそろ失礼します。"] },
+            { "who": "B", "lines": ["はい、さようなら。"] }
+          ],
+          "translation": [
+            "그럼, 이만 실례하겠습니다.",
+            "네, 안녕히 가세요."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "이다(です) 기본형",
+          "notes": "정중체 です는 상태·정체를 말할 때 사용. 과거는 でした, 부정은 ではありません.",
+          "forms": {
+            "present": { "예": "〜です" },
+            "past": { "예": "〜でした" },
+            "negative": { "예": "〜ではありません" }
+          },
+          "examples": [
+            { "source": "学生です.", "target": "학생입니다." },
+            { "source": "アイリスです.", "target": "아이리스입니다." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ja2",
+      "title": "Chapter 2: 일상 표현",
+      "color": "from-pink-200 to-pink-50",
+      "tips": [
+        { "title": "お願いします / すみません", "text": "부탁/요청 vs. 사과/호출(실례합니다)." },
+        { "title": "〜ます형", "text": "정중 동사 어미. 현재·습관: 〜ます / 부정: 〜ません." }
+      ],
+      "vocab": [
+        { "id": "k1", "type": "phrase", "source": "おはようございます。", "target": "좋은 아침입니다." },
+        { "id": "k2", "type": "phrase", "source": "こんばんは。", "target": "안녕하세요(저녁)." },
+        { "id": "k3", "type": "phrase", "source": "お願いします。", "target": "부탁드립니다/제발." },
+        { "id": "k4", "type": "phrase", "source": "ありがとうございます。", "target": "감사합니다." },
+        { "id": "k5", "type": "phrase", "source": "どういたしまして。", "target": "천만에요." },
+        { "id": "k6", "type": "phrase", "source": "すみません。", "target": "죄송합니다/실례합니다." },
+        { "id": "k7", "type": "phrase", "source": "またね。", "target": "또 봐요." },
+        { "id": "k8", "type": "phrase", "source": "おしごとは何ですか。", "target": "직업이 무엇인가요?" },
+        { "id": "k9", "type": "phrase", "source": "社長です。", "target": "사장(사장님)입니다." },
+        { "id": "k10", "type": "phrase", "source": "何歳ですか。", "target": "몇 살이에요?" }
+      ],
+      "dialogs": [
+        {
+          "id": "ja2_d1",
+          "title": "직업과 나이",
+          "roles": [
+            { "who": "A", "lines": ["おしごとは何ですか。"] },
+            { "who": "B", "lines": ["社長です。あなたは？"] },
+            { "who": "A", "lines": ["学生です。何歳ですか。"] },
+            { "who": "B", "lines": ["五十五歳です。"] }
+          ],
+          "translation": [
+            "직업이 무엇인가요?",
+            "사장입니다. 당신은요?",
+            "학생입니다. 몇 살이에요?",
+            "쉰다섯 살입니다."
+          ]
+        },
+        {
+          "id": "ja2_d2",
+          "title": "사과와 괜찮아요",
+          "roles": [
+            { "who": "A", "lines": ["すみません、じゃまですか。"] },
+            { "who": "B", "lines": ["いいえ、だいじょうぶです。"] },
+            { "who": "A", "lines": ["ありがとうございます。"] },
+            { "who": "B", "lines": ["どういたしまして。"] }
+          ],
+          "translation": [
+            "죄송한데, 방해가 되나요?",
+            "아니요, 괜찮습니다.",
+            "감사합니다.",
+            "천만에요."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "동사: する / くる (현재, 불규칙)",
+          "notes": "대표적 불규칙 동사. 정중형은 します / きます.",
+          "forms": {
+            "present": {
+              "する": { "plain": "する", "polite": "します" },
+              "くる": { "plain": "くる", "polite": "きます" }
+            },
+            "negative": {
+              "する": { "plain": "しない", "polite": "しません" },
+              "くる": { "plain": "こない", "polite": "きません" }
+            }
+          },
+          "examples": [
+            { "source": "勉強します。", "target": "공부합니다." },
+            { "source": "友だちが来ます。", "target": "친구가 옵니다." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ja3",
+      "title": "Chapter 3: 동사와 일상 생활",
+      "color": "from-green-200 to-green-50",
+      "tips": [
+        { "title": "동사의 기본형", "text": "사전형으로 끝남: -る, -う, -く 등." },
+        { "title": "ます형", "text": "정중체 현재: 〜ます / 부정: 〜ません." }
+      ],
+      "vocab": [
+        { "id": "ja3_v1", "type": "verb", "source": "たべる", "target": "먹다" },
+        { "id": "ja3_v2", "type": "verb", "source": "のむ", "target": "마시다" },
+        { "id": "ja3_v3", "type": "verb", "source": "いく", "target": "가다" }
+      ],
+      "dialogs": [
+        {
+          "id": "ja3_d1",
+          "title": "아침 일과",
+          "roles": [
+            { "who": "A", "lines": ["朝ごはんを食べますか。"] },
+            { "who": "B", "lines": ["はい、パンを食べます。"] }
+          ],
+          "translation": [
+            "아침 식사를 합니까?",
+            "네, 빵을 먹습니다."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "동사: たべる (먹다)",
+          "notes": "정중체 현재는 たべます, 부정은 たべません.",
+          "forms": {
+            "present": { "plain": "たべる", "polite": "たべます" },
+            "negative": { "plain": "たべない", "polite": "たべません" }
+          },
+          "examples": [
+            { "source": "ごはん을食べます。", "target": "밥을 먹습니다." },
+            { "source": "私はりんごを食べない。", "target": "나는 사과를 먹지 않는다." }
+          ]
+        }
+      ]
+    }
+  ]
+}

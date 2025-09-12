@@ -6,12 +6,11 @@ import {
 
 /* =========================
    Content version (AUTO-REFRESH)
-   - Bump this when built-in JSON changes
    ========================= */
 const CONTENT_VERSION = 2;
 
 /* =========================
-   Load course JSONs (Spanish → English, Japanese → Korean)
+   Load course JSONs
    ========================= */
 import esEn from "./content/es-en.json";
 import jaKo from "./content/ja-ko.json";
@@ -22,13 +21,13 @@ import jaKo from "./content/ja-ko.json";
 const LS_KEYS = {
   DATA: "polyglot_trainer_data_v1",
   STATE: "polyglot_trainer_state_v1",
-  MASTERY: "polyglot_trainer_mastery_v1"
+  MASTERY: "polyglot_trainer_mastery_v1",
 };
 const saveLS = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} };
 const loadLS = (k, d) => { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d; } catch { return d; } };
 
 /* =========================
-   Built-in curriculum (from JSON files)
+   Built-in curriculum
    ========================= */
 const DEFAULT_DATA = {
   contentVersion: CONTENT_VERSION,
@@ -36,7 +35,7 @@ const DEFAULT_DATA = {
 };
 
 /* =========================
-   Speech (TTS) helpers
+   Speech (TTS)
    ========================= */
 function pickVoice(langHint) {
   const voices = window.speechSynthesis?.getVoices?.() || [];
@@ -44,8 +43,8 @@ function pickVoice(langHint) {
   if (langHint) {
     const exact = voices.find(v => v.lang === langHint);
     if (exact) return exact;
-    const prefix = langHint.split("-")[0];
-    const pref = voices.find(v => v.lang?.startsWith(prefix));
+    const prefCode = langHint.split("-")[0];
+    const pref = voices.find(v => v.lang?.startsWith(prefCode));
     if (pref) return pref;
   }
   return voices[0] || null;
@@ -62,7 +61,7 @@ function speak(text, langHint) {
 }
 
 /* =========================
-   String helpers (for grammar & fill-in)
+   String helpers
    ========================= */
 function stripDiacritics(s = "") {
   return s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -110,9 +109,14 @@ export default function App() {
 
   const openData = () => window.openDataModal && window.openDataModal();
 
+  // Safe selection
   const currentCourse = sel.course == null ? null : data.courses[sel.course];
-  const currentChapter = currentCourse && sel.chapter != null
-    ? currentCourse.chapters[sel.chapter]
+  const safeChapterIndex =
+    currentCourse && sel.chapter != null && sel.chapter < (currentCourse.chapters?.length || 0)
+      ? sel.chapter
+      : null;
+  const currentChapter = currentCourse && safeChapterIndex != null
+    ? currentCourse.chapters[safeChapterIndex]
     : null;
 
   return (
@@ -136,7 +140,7 @@ export default function App() {
 
       {/* Main body */}
       <main className="max-w-5xl mx-auto px-4 py-6">
-        {/* Course dashboard with Learn / Quiz / Talk per chapter */}
+        {/* Dashboard: all courses with chapter tiles */}
         {sel.course === null && (
           <>
             <h2 className="text-lg font-semibold mb-3">Welcome back</h2>
@@ -190,6 +194,16 @@ export default function App() {
           </>
         )}
 
+        {/* Course -> Chapters screen (Back target) */}
+        {currentCourse && sel.chapter === null && sel.course !== null && (
+          <CourseChapters
+            course={currentCourse}
+            mastery={mastery}
+            onBack={() => setSel({ course: null, chapter: null, mode: "learn" })}
+            onOpen={(chapterIdx, mode) => setSel({ course: sel.course, chapter: chapterIdx, mode })}
+          />
+        )}
+
         {/* Learn / Quiz / Talk views */}
         {currentCourse && currentChapter && sel.mode === "learn" && (
           <LessonView
@@ -207,7 +221,10 @@ export default function App() {
               setMastery(prev => {
                 const copy = { ...prev };
                 copy[currentCourse.id] = copy[currentCourse.id] || {};
-                copy[currentCourse.id][currentChapter.id] = Math.max(percent, copy[currentCourse.id][currentChapter.id] || 0);
+                copy[currentCourse.id][currentChapter.id] = Math.max(
+                  percent,
+                  copy[currentCourse.id][currentChapter.id] || 0
+                );
                 return copy;
               });
               setSel({ course: sel.course, chapter: null, mode: "learn" });
@@ -225,6 +242,43 @@ export default function App() {
 
       {/* Modals */}
       <DataModal data={data} setData={setData} />
+    </div>
+  );
+}
+
+/* =========================
+   Course -> Chapters screen
+   ========================= */
+function CourseChapters({ course, mastery, onBack, onOpen }) {
+  const chapters = course.chapters || [];
+  return (
+    <div>
+      <div className="flex items-center gap-2 mb-4">
+        <button onClick={onBack} className="px-3 py-1.5 rounded-xl border bg-white hover:shadow">
+          <ChevronLeft className="w-4 h-4 inline -mt-0.5" /> Back
+        </button>
+        <h2 className="text-lg font-semibold">{course.label}</h2>
+      </div>
+
+      <div className="grid sm:grid-cols-2 gap-3">
+        {chapters.map((ch, idx) => {
+          const m = mastery?.[course.id]?.[ch.id] ?? 0;
+          return (
+            <div key={ch.id} className="p-3 rounded-2xl border bg-white">
+              <div className="flex items-center justify-between">
+                <div className="text-base font-medium">{ch.title}</div>
+                <div className="text-xs text-gray-500">{m}% mastered</div>
+              </div>
+              <div className={`mt-2 h-2 w-24 rounded-full bg-gradient-to-r ${ch.color || "from-gray-200 to-gray-50"}`} />
+              <div className="mt-3 grid grid-cols-3 gap-2">
+                <button className="px-3 py-1.5 rounded-xl border bg-white hover:shadow text-sm" onClick={() => onOpen(idx, "learn")}>Learn</button>
+                <button className="px-3 py-1.5 rounded-xl border bg-white hover:shadow text-sm" onClick={() => onOpen(idx, "quiz")}>Quiz</button>
+                <button className="px-3 py-1.5 rounded-xl border bg-white hover:shadow text-sm" onClick={() => onOpen(idx, "talk")}>Talk</button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
@@ -447,9 +501,7 @@ function MCQQuiz({ course, chapter, onFinish }) {
     });
   }
 
-  if (pool.length < 4) {
-    return <GuardPanel text="Not enough phrases to build a multiple choice quiz." />;
-  }
+  if (pool.length < 4) return <GuardPanel text="Not enough phrases to build a multiple choice quiz." />;
 
   const q = questions[qIndex];
   const percent = Math.round((score / questions.length) * 100);
@@ -512,7 +564,7 @@ function MCQQuiz({ course, chapter, onFinish }) {
 /* ---------- Fill-in (type the answer) ---------- */
 function FillQuiz({ course, chapter, onFinish }) {
   const vocab = chapter.vocab || chapter.items || [];
-  const pool = vocab.filter(v => v.source && v.target);
+  the pool = vocab.filter(v => v.source && v.target);
   const questionCount = Math.min(8, Math.max(4, pool.length));
   const [qIndex, setQIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -521,10 +573,9 @@ function FillQuiz({ course, chapter, onFinish }) {
   const [reveal, setReveal] = useState(false);
 
   const [questions, setQuestions] = useState(() => {
-    // Prompt with translation (target), expect the learn-language phrase (source)
     return [...pool].sort(()=>Math.random()-0.5).slice(0, questionCount).map(item => ({
-      prompt: item.target,   // e.g., "How are you?"
-      expected: item.source, // e.g., "¿Cómo estás?"
+      prompt: item.target,   // English/Korean
+      expected: item.source, // Spanish/Japanese
     }));
   });
 
@@ -740,7 +791,7 @@ function TalkView({ course, chapter, onBack }) {
                     <ChevronLeft className="w-4 h-4" />
                   </button>
                   <button className="px-3 py-2 rounded-xl border bg-white hover:shadow" onClick={play}>
-                    <Play className="w-4 h-4" /> 
+                    <Play className="w-4 h-4" />
                   </button>
                   <button className="px-3 py-2 rounded-xl border bg-white hover:shadow" onClick={next}>
                     <ChevronRight className="w-4 h-4" />

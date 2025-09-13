@@ -227,6 +227,97 @@
       ]
     },
     {
+  "id": "es4_weather",
+  "title": "Chapter 4: Weather & Seasons",
+  "color": "from-emerald-200 to-emerald-50",
+  "tips": [
+    { "title": "Three common patterns", "text": "Use 'hace + noun' (hace frío), 'está + gerund/adjective' (está lloviendo, está nublado), and 'hay + noun' (hay viento)." },
+    { "title": "Temperature", "text": "Se dice: '¿Cuál es la temperatura?' o 'Estamos a 20 grados'." }
+  ],
+  "items": [
+    { "id":"w01","type":"word","source":"el tiempo (el clima)","target":"weather / climate" },
+    { "id":"w02","type":"phrase","source":"¿Qué tiempo hace?","target":"What’s the weather like?" },
+    { "id":"w03","type":"phrase","source":"hace sol","target":"it’s sunny" },
+    { "id":"w04","type":"phrase","source":"hace frío","target":"it’s cold" },
+    { "id":"w05","type":"phrase","source":"hace calor","target":"it’s hot" },
+    { "id":"w06","type":"phrase","source":"hace viento","target":"it’s windy" },
+    { "id":"w07","type":"phrase","source":"está nublado","target":"it’s cloudy" },
+    { "id":"w08","type":"phrase","source":"está lloviendo","target":"it’s raining" },
+    { "id":"w09","type":"phrase","source":"está nevando","target":"it’s snowing" },
+    { "id":"w10","type":"word","source":"la temperatura","target":"temperature" },
+    { "id":"w11","type":"phrase","source":"¿Cuál es la temperatura?","target":"What’s the temperature?" },
+    { "id":"w12","type":"phrase","source":"Estamos a 20 grados.","target":"It’s 20 degrees." },
+    { "id":"w13","type":"phrase","source":"Está despejado.","target":"It’s clear (skies)." },
+    { "id":"w14","type":"phrase","source":"Hay niebla.","target":"It’s foggy. (There is fog.)" }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_weather_1",
+      "title":"Small talk about weather",
+      "roles":[
+        { "who":"A","lines":["¿Qué tiempo hace hoy?"] },
+        { "who":"B","lines":["Hace sol pero hace viento."] },
+        { "who":"A","lines":["¿Y mañana?"] },
+        { "who":"B","lines":["Dicen que va a llover."] }
+      ],
+      "translation":[
+        "What’s the weather like today?",
+        "It’s sunny but windy.",
+        "And tomorrow?",
+        "They say it’s going to rain."
+      ]
+    },
+    {
+      "id":"esd_weather_2",
+      "title":"Cold day",
+      "roles":[
+        { "who":"A","lines":["Estoy temblando, hace mucho frío."] },
+        { "who":"B","lines":["Sí, y está nublado. ¿Cuál es la temperatura?"] },
+        { "who":"A","lines":["Estamos a cuatro grados."] }
+      ],
+      "translation":[
+        "I’m shivering, it’s very cold.",
+        "Yes, and it’s cloudy. What’s the temperature?",
+        "It’s four degrees."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Weather expressions (hacer / estar / hay)",
+      "notes":"Use 'hacer' with general conditions (hace frío/calor/viento), 'estar' with adjectives or -ndo forms (está nublado/lloviendo), and 'hay' with nouns (hay niebla).",
+      "examples":[
+        { "source":"Hace calor en verano.","target":"It’s hot in summer." },
+        { "source":"Está lloviendo ahora mismo.","target":"It’s raining right now." },
+        { "source":"Hay mucho viento hoy.","target":"It’s very windy today." }
+      ]
+    },
+    {
+      "topic":"Present tense: hacer / estar (irregular yo)",
+      "forms":{
+        "present":{
+          "yo":"hago / estoy",
+          "tú":"haces / estás",
+          "él_ella_usted":"hace / está",
+          "nosotros":"hacemos / estamos",
+          "vosotros":"hacéis / estáis",
+          "ellos_ellas_ustedes":"hacen / están"
+        }
+      },
+      "examples":[
+        { "source":"Yo hago ejercicio cuando no está lloviendo.","target":"I exercise when it isn’t raining." }
+      ]
+    },
+    {
+      "topic":"Impersonal 'hay' (from 'haber')",
+      "notes":"'Hay' means 'there is/are' for existence or weather: 'Hay niebla', 'Hay nubes'.",
+      "examples":[
+        { "source":"Hay nubes en el norte.","target":"There are clouds in the north." }
+      ]
+    }
+  ]
+},
+    {
   "id": "es5_colors_sizes",
   "title": "Chapter 5: Colors & Sizes",
   "color": "from-fuchsia-200 to-fuchsia-50",

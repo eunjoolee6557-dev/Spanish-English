@@ -330,6 +330,140 @@
           ]
         }
       ]
+    },
+    {
+  "id": "es6_adjectives_people_things",
+  "title": "Chapter 6: Adjectives for People & Things",
+  "color": "from-amber-200 to-amber-50",
+  "tips": [
+    { "title": "SER vs ESTAR (quick guide)", "text": "Use SER for essential traits (es simpático), and ESTAR for states/conditions (está cansado). Some adjectives change meaning: es listo (clever) vs está listo (ready)." },
+    { "title": "Muy / bastante / un poco", "text": "Muy (very), bastante (quite), un poco (a little), demasiado (too). Example: muy amable, bastante difícil, un poco caro." }
+  ],
+  "items": [
+    { "id":"a01","type":"word","source":"simpático/simpática","target":"nice / friendly" },
+    { "id":"a02","type":"word","source":"amable","target":"kind" },
+    { "id":"a03","type":"word","source":"generoso/generosa","target":"generous" },
+    { "id":"a04","type":"word","source":"agradable","target":"pleasant" },
+    { "id":"a05","type":"word","source":"desagradable","target":"unpleasant" },
+
+    { "id":"a06","type":"word","source":"trabajador/trabajadora","target":"hard-working" },
+    { "id":"a07","type":"word","source":"estudioso/estudiosa","target":"studious" },
+    { "id":"a08","type":"word","source":"responsable","target":"responsible" },
+    { "id":"a09","type":"word","source":"irresponsable","target":"irresponsible" },
+    { "id":"a10","type":"word","source":"organizado/organizada","target":"organized" },
+    { "id":"a11","type":"word","source":"desorganizado/desorganizada","target":"disorganized" },
+
+    { "id":"a12","type":"word","source":"limpio/limpia","target":"clean" },
+    { "id":"a13","type":"word","source":"sucio/sucia","target":"dirty" },
+    { "id":"a14","type":"word","source":"divertido/divertida","target":"fun / amusing" },
+    { "id":"a15","type":"word","source":"aburrido/aburrida","target":"boring" },
+    { "id":"a16","type":"word","source":"interesante","target":"interesting" },
+    { "id":"a17","type":"word","source":"difícil","target":"difficult" },
+    { "id":"a18","type":"word","source":"fácil","target":"easy" },
+    { "id":"a19","type":"word","source":"bueno/buena","target":"good" },
+    { "id":"a20","type":"word","source":"malo/mala","target":"bad" },
+
+    { "id":"a21","type":"word","source":"tierno/tierna","target":"tender / cute" },
+    { "id":"a22","type":"word","source":"callado/callada","target":"quiet" },
+    { "id":"a23","type":"word","source":"serio/seria","target":"serious" },
+    { "id":"a24","type":"word","source":"hablador/habladora","target":"talkative" },
+    { "id":"a25","type":"word","source":"fuerte","target":"strong" },
+    { "id":"a26","type":"word","source":"débil","target":"weak" },
+    { "id":"a27","type":"word","source":"atractivo/atractiva","target":"attractive" },
+
+    { "id":"a28","type":"word","source":"nuevo/nueva","target":"new" },
+    { "id":"a29","type":"word","source":"viejo/vieja","target":"old" },
+    { "id":"a30","type":"word","source":"antiguo/antigua","target":"old/ancient (often 'former' before noun)" },
+    { "id":"a31","type":"word","source":"luminoso/luminosa","target":"bright / full of light" },
+    { "id":"a32","type":"word","source":"oscuro/oscura","target":"dark" },
+
+    { "id":"a33","type":"word","source":"inteligente","target":"intelligent" },
+    { "id":"a34","type":"word","source":"listo/lista","target":"clever; ready (with ESTAR)" },
+    { "id":"a35","type":"word","source":"gracioso/graciosa","target":"funny / witty" },
+    { "id":"a36","type":"word","source":"sincero/sincera","target":"honest / sincere" },
+    { "id":"a37","type":"word","source":"mentiroso/mentirosa","target":"liar / deceitful" },
+
+    { "id":"ex1","type":"phrase","source":"Es muy organizado.","target":"He is very organized." },
+    { "id":"ex2","type":"phrase","source":"Está listo para salir.","target":"He is ready to go." },
+    { "id":"ex3","type":"phrase","source":"La película fue aburrida, pero el libro es interesante.","target":"The movie was boring, but the book is interesting." }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_adj_1",
+      "title":"Describing a coworker",
+      "roles":[
+        { "who":"A","lines":["¿Cómo es tu gerente?"] },
+        { "who":"B","lines":["Es responsable y muy amable, pero a veces serio."] },
+        { "who":"A","lines":["¿Y hoy está ocupado?"] },
+        { "who":"B","lines":["Sí, está muy ocupado con una reunión."] }
+      ],
+      "translation":[
+        "What is your manager like?",
+        "He is responsible and very kind, but sometimes serious.",
+        "And is he busy today?",
+        "Yes, he is very busy with a meeting."
+      ]
+    },
+    {
+      "id":"esd_adj_2",
+      "title":"Apartment features",
+      "roles":[
+        { "who":"A","lines":["Tu apartamento es muy luminoso."] },
+        { "who":"B","lines":["Sí, y el salón es amplio. El pasillo es un poco estrecho."] },
+        { "who":"A","lines":["Los muebles son nuevos, ¿verdad?"] },
+        { "who":"B","lines":["Sí, pero la mesa es antigua."] }
+      ],
+      "translation":[
+        "Your apartment is very bright.",
+        "Yes, and the living room is spacious. The hallway is a little narrow.",
+        "The furniture is new, right?",
+        "Yes, but the table is old/antique."
+      ]
     }
-  ]
-}
+  ],
+  "grammar": [
+    {
+      "topic":"SER (present)",
+      "forms":{
+        "present":{
+          "yo":"soy",
+          "tú":"eres",
+          "él_ella_usted":"es",
+          "nosotros":"somos",
+          "vosotros":"sois",
+          "ellos_ellas_ustedes":"son"
+        }
+      },
+      "examples":[
+        { "source":"Ella es simpática e inteligente.","target":"She is nice and intelligent." },
+        { "source":"El piso es antiguo pero bonito.","target":"The apartment is old but pretty." }
+      ]
+    },
+    {
+      "topic":"ESTAR (present)",
+      "forms":{
+        "present":{
+          "yo":"estoy",
+          "tú":"estás",
+          "él_ella_usted":"está",
+          "nosotros":"estamos",
+          "vosotros":"estáis",
+          "ellos_ellas_ustedes":"están"
+        }
+      },
+      "examples":[
+        { "source":"Estoy listo para la clase.","target":"I am ready for class." },
+        { "source":"La oficina está limpia hoy.","target":"The office is clean today." }
+      ]
+    },
+    {
+      "topic":"Meaning shift: listo / aburrido",
+      "notes":"Con SER: es listo = clever; es aburrido = boring. Con ESTAR: está listo = ready; está aburrido = bored.",
+      "examples":[
+        { "source":"Mi hijo es listo, pero hoy está aburrido.","target":"My son is clever, but today he is bored." }
+        ]
+      }
+     ]
+    }
+   ]
+  }

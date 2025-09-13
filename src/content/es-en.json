@@ -180,52 +180,95 @@
       ]
     },
     {
-      "id": "es3",
-      "title": "Chapter 3: Verbs & Daily Routines",
-      "color": "from-green-200 to-green-50",
-      "tips": [
-        { "title": "Regular AR verbs", "text": "Present endings: -o, -as, -a, -amos, -áis, -an." },
-        { "title": "Irregular verbs", "text": "Some verbs have stem changes (e→ie, o→ue) or irregular 'yo' forms." }
+  "id": "es3_time",
+  "title": "Chapter 3: Time & Dates",
+  "color": "from-sky-200 to-sky-50",
+  "tips": [
+    { "title": "Lowercase days/months", "text": "In Spanish, days of the week and months are not capitalized: lunes, martes; enero, febrero." },
+    { "title": "Talking about days", "text": "Use 'el' for one specific day (el lunes) and 'los' for habit on that weekday (los lunes)." },
+    { "title": "On + month", "text": "Use 'en' with months and seasons: en enero, en verano." }
+  ],
+  "items": [
+    { "id":"t01","type":"word","source":"el segundo","target":"second" },
+    { "id":"t02","type":"word","source":"el minuto","target":"minute" },
+    { "id":"t03","type":"word","source":"la hora","target":"hour" },
+    { "id":"t04","type":"word","source":"el día","target":"day" },
+    { "id":"t05","type":"word","source":"el mes","target":"month" },
+    { "id":"t06","type":"word","source":"el año","target":"year" },
+
+    { "id":"t10","type":"word","source":"lunes","target":"Monday" },
+    { "id":"t11","type":"word","source":"martes","target":"Tuesday" },
+    { "id":"t12","type":"word","source":"miércoles","target":"Wednesday" },
+    { "id":"t13","type":"word","source":"jueves","target":"Thursday" },
+    { "id":"t14","type":"word","source":"viernes","target":"Friday" },
+    { "id":"t15","type":"word","source":"sábado","target":"Saturday" },
+    { "id":"t16","type":"word","source":"domingo","target":"Sunday" },
+    { "id":"t17","type":"phrase","source":"los días de semana","target":"weekdays" },
+    { "id":"t18","type":"phrase","source":"el fin de semana","target":"the weekend" },
+    { "id":"t19","type":"word","source":"feriado","target":"public holiday" },
+
+    { "id":"t20","type":"word","source":"la primavera","target":"spring" },
+    { "id":"t21","type":"word","source":"el verano","target":"summer" },
+    { "id":"t22","type":"word","source":"el otoño","target":"autumn / fall" },
+    { "id":"t23","type":"word","source":"el invierno","target":"winter" },
+
+    { "id":"t30","type":"word","source":"enero","target":"January" },
+    { "id":"t31","type":"word","source":"febrero","target":"February" },
+    { "id":"t32","type":"word","source":"marzo","target":"March" },
+    { "id":"t33","type":"word","source":"abril","target":"April" },
+    { "id":"t34","type":"word","source":"mayo","target":"May" },
+    { "id":"t35","type":"word","source":"junio","target":"June" },
+    { "id":"t36","type":"word","source":"julio","target":"July" },
+    { "id":"t37","type":"word","source":"agosto","target":"August" },
+    { "id":"t38","type":"word","source":"septiembre","target":"September" },
+    { "id":"t39","type":"word","source":"octubre","target":"October" },
+    { "id":"t40","type":"word","source":"noviembre","target":"November" },
+    { "id":"t41","type":"word","source":"diciembre","target":"December" }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_time_1",
+      "title":"What day is it?",
+      "roles":[
+        { "who":"A","lines":["¿Qué día es hoy?"] },
+        { "who":"B","lines":["Hoy es miércoles."] },
+        { "who":"A","lines":["¿Y mañana?"] },
+        { "who":"B","lines":["Mañana es jueves."] }
       ],
-      "vocab": [
-        { "id": "es3_v1", "type": "verb", "source": "hablar", "target": "to speak" },
-        { "id": "es3_v2", "type": "verb", "source": "comer", "target": "to eat" },
-        { "id": "es3_v3", "type": "verb", "source": "vivir", "target": "to live" }
-      ],
-      "dialogs": [
-        {
-          "id": "es3_d1",
-          "title": "Morning routine",
-          "roles": [
-            { "who": "A", "lines": ["¿Qué haces por la mañana?"] },
-            { "who": "B", "lines": ["Hablo con mi familia y como desayuno."] }
-          ],
-          "translation": [
-            "What do you do in the morning?",
-            "I talk with my family and eat breakfast."
-          ]
-        }
-      ],
-      "grammar": [
-        {
-          "topic": "Verb: hablar (regular -ar, present)",
-          "notes": "Model for regular -ar verbs.",
-          "forms": {
-            "present": {
-              "yo": "hablo",
-              "tú": "hablas",
-              "él/ella/usted": "habla",
-              "nosotros": "hablamos",
-              "vosotros": "habláis",
-              "ellos/ellas/ustedes": "hablan"
-            }
-          },
-          "examples": [
-            { "source": "Yo hablo español.", "target": "I speak Spanish." }
-          ]
-        }
+      "translation":[
+        "What day is it today?",
+        "Today is Wednesday.",
+        "And tomorrow?",
+        "Tomorrow is Thursday."
       ]
     },
+    {
+      "id":"esd_time_2",
+      "title":"Weekend plans",
+      "roles":[
+        { "who":"A","lines":["¿Tienes planes para el fin de semana?"] },
+        { "who":"B","lines":["Sí, el sábado voy al museo."] },
+        { "who":"A","lines":["¡Qué bien! Yo trabajo los domingos."] }
+      ],
+      "translation":[
+        "Do you have plans for the weekend?",
+        "Yes, on Saturday I’m going to the museum.",
+        "Nice! I work on Sundays."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Days & months usage",
+      "notes":"Days and months are lowercase in Spanish. Use 'el' for a specific day and 'los' for habitual actions on that day.",
+      "examples":[
+        { "source":"El lunes tengo reunión.","target":"On Monday I have a meeting." },
+        { "source":"Los lunes estudio español.","target":"On Mondays I study Spanish." },
+        { "source":"Viajo en julio.","target":"I travel in July." }
+      ]
+    }
+  ]
+},
     {
   "id": "es4_weather",
   "title": "Chapter 4: Weather & Seasons",

@@ -180,10 +180,10 @@
       ]
     },
     {
-  "id": "es3_time",
-  "title": "Chapter 3: Time & Dates",
-  "color": "from-sky-200 to-sky-50",
-  "tips": [
+    "id": "es3_time",
+    "title": "Chapter 3: Time & Dates",
+    "color": "from-sky-200 to-sky-50",
+    "tips": [
     { "title": "Lowercase days/months", "text": "In Spanish, days of the week and months are not capitalized: lunes, martes; enero, febrero." },
     { "title": "Talking about days", "text": "Use 'el' for one specific day (el lunes) and 'los' for habit on that weekday (los lunes)." },
     { "title": "On + month", "text": "Use 'en' with months and seasons: en enero, en verano." }
@@ -270,10 +270,10 @@
   ]
 },
     {
-  "id": "es4_weather",
-  "title": "Chapter 4: Weather & Seasons",
-  "color": "from-emerald-200 to-emerald-50",
-  "tips": [
+    "id": "es4_weather",
+    "title": "Chapter 4: Weather & Seasons",
+    "color": "from-emerald-200 to-emerald-50",
+    "tips": [
     { "title": "Three common patterns", "text": "Use 'hace + noun' (hace frío), 'está + gerund/adjective' (está lloviendo, está nublado), and 'hay + noun' (hay viento)." },
     { "title": "Temperature", "text": "Se dice: '¿Cuál es la temperatura?' o 'Estamos a 20 grados'." }
   ],
@@ -361,10 +361,10 @@
   ]
 },
     {
-  "id": "es5_colors_sizes",
-  "title": "Chapter 5: Colors & Sizes",
-  "color": "from-fuchsia-200 to-fuchsia-50",
-  "tips": [
+    "id": "es5_colors_sizes",
+    "title": "Chapter 5: Colors & Sizes",
+    "color": "from-fuchsia-200 to-fuchsia-50",
+    "tips": [
     { "title": "Position of adjectives", "text": "Most adjectives (colors/size) go after the noun: una camisa azul. Some size adjectives can come before: una gran casa (nuance: impressive) vs una casa grande (big)." },
     { "title": "Agreement", "text": "Adjectives match the noun in gender and number: rojo/roja/rojos/rojas. Some color words (naranja, rosa, violeta) are invariable." },
     { "title": "de color + X", "text": "You can say 'de color + color' for clarity or style: una chaqueta de color marrón." }
@@ -466,10 +466,10 @@
       ]
     },
     {
-  "id": "es6_adjectives_people_things",
-  "title": "Chapter 6: Adjectives for People & Things",
-  "color": "from-amber-200 to-amber-50",
-  "tips": [
+    "id": "es6_adjectives_people_things",
+    "title": "Chapter 6: Adjectives for People & Things",
+    "color": "from-amber-200 to-amber-50",
+    "tips": [
     { "title": "SER vs ESTAR (quick guide)", "text": "Use SER for essential traits (es simpático), and ESTAR for states/conditions (está cansado). Some adjectives change meaning: es listo (clever) vs está listo (ready)." },
     { "title": "Muy / bastante / un poco", "text": "Muy (very), bastante (quite), un poco (a little), demasiado (too). Example: muy amable, bastante difícil, un poco caro." }
   ],

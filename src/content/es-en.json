@@ -225,6 +225,111 @@
           ]
         }
       ]
+    },
+    {
+  "id": "es5_colors_sizes",
+  "title": "Chapter 5: Colors & Sizes",
+  "color": "from-fuchsia-200 to-fuchsia-50",
+  "tips": [
+    { "title": "Position of adjectives", "text": "Most adjectives (colors/size) go after the noun: una camisa azul. Some size adjectives can come before: una gran casa (nuance: impressive) vs una casa grande (big)." },
+    { "title": "Agreement", "text": "Adjectives match the noun in gender and number: rojo/roja/rojos/rojas. Some color words (naranja, rosa, violeta) are invariable." },
+    { "title": "de color + X", "text": "You can say 'de color + color' for clarity or style: una chaqueta de color marrón." }
+  ],
+  "items": [
+    { "id":"c00","type":"phrase","source":"el color / los colores","target":"color / colors" },
+
+    { "id":"c01","type":"word","source":"rojo/roja","target":"red" },
+    { "id":"c02","type":"word","source":"verde","target":"green" },
+    { "id":"c03","type":"word","source":"amarillo/amarilla","target":"yellow" },
+    { "id":"c04","type":"word","source":"azul","target":"blue" },
+    { "id":"c05","type":"word","source":"negro/negra","target":"black" },
+    { "id":"c06","type":"word","source":"blanco/blanca","target":"white" },
+    { "id":"c07","type":"word","source":"púrpura / violeta","target":"purple / violet (invariable)" },
+    { "id":"c08","type":"word","source":"marrón","target":"brown (often invariable)" },
+    { "id":"c09","type":"word","source":"rosa","target":"pink (invariable)" },
+    { "id":"c10","type":"word","source":"gris","target":"gray" },
+    { "id":"c11","type":"word","source":"naranja","target":"orange (invariable)" },
+    { "id":"c12","type":"phrase","source":"azul marino","target":"navy blue (invariable)" },
+    { "id":"c13","type":"word","source":"plateado/plateada","target":"silver (colored)" },
+    { "id":"c14","type":"word","source":"dorado/dorada","target":"golden (colored)" },
+
+    { "id":"s01","type":"word","source":"alto/alta","target":"tall" },
+    { "id":"s02","type":"word","source":"bajo/baja","target":"short (height)" },
+    { "id":"s03","type":"word","source":"grande","target":"big / large" },
+    { "id":"s04","type":"word","source":"pequeño/pequeña","target":"small / little" },
+    { "id":"s05","type":"word","source":"largo/larga","target":"long" },
+    { "id":"s06","type":"word","source":"corto/corta","target":"short (length)" },
+    { "id":"s07","type":"word","source":"amplio/amplia","target":"wide / spacious" },
+    { "id":"s08","type":"word","source":"estrecho/estrecha","target":"narrow" },
+
+    { "id":"ex1","type":"phrase","source":"una camisa azul","target":"a blue shirt" },
+    { "id":"ex2","type":"phrase","source":"unos pantalones negros","target":"some black pants" },
+    { "id":"ex3","type":"phrase","source":"una mesa grande","target":"a big table" },
+    { "id":"ex4","type":"phrase","source":"una gran oportunidad","target":"a great chance (pre-nominal nuance)" }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_colors_1",
+      "title":"Choosing a shirt",
+      "roles":[
+        { "who":"A","lines":["¿Te gusta esta camisa azul o la blanca?"] },
+        { "who":"B","lines":["Prefiero la azul. La blanca es muy corta."] },
+        { "who":"A","lines":["Tienes razón. La azul es más larga."] }
+      ],
+      "translation":[
+        "Do you like this blue shirt or the white one?",
+        "I prefer the blue one. The white one is too short.",
+        "You’re right. The blue one is longer."
+      ]
+    },
+    {
+      "id":"esd_colors_2",
+      "title":"Finding the right size",
+      "roles":[
+        { "who":"A","lines":["Busco un abrigo marrón, pero estrecho."] },
+        { "who":"B","lines":["Tenemos uno marrón y otro dorado. ¿Qué talla usas?"] },
+        { "who":"A","lines":["Mediana. ¿Puedo probármelo?"] },
+        { "who":"B","lines":["Claro, los probadores están al fondo."] }
+      ],
+      "translation":[
+        "I’m looking for a brown coat, but a narrow one.",
+        "We have a brown one and a golden one. What size do you wear?",
+        "Medium. Can I try it on?",
+        "Of course, the fitting rooms are in the back."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Adjective agreement (rojo, blanco)",
+      "forms":{
+        "agreement_rojo":{
+          "masculino_singular":"rojo",
+          "femenino_singular":"roja",
+          "masculino_plural":"rojos",
+          "femenino_plural":"rojas"
+        },
+        "agreement_blanco":{
+          "masculino_singular":"blanco",
+          "femenino_singular":"blanca",
+          "masculino_plural":"blancos",
+          "femenino_plural":"blancas"
+        }
+      },
+      "examples":[
+        { "source":"Un coche rojo / dos coches rojos.","target":"A red car / two red cars." },
+        { "source":"Una falda blanca / unas faldas blancas.","target":"A white skirt / some white skirts." }
+      ]
+    },
+    {
+      "topic":"Invariable colors",
+      "notes":"Rosa, violeta/púrpura, naranja, marrón (a menudo) y 'azul marino' suelen mantenerse igual en género; en plural cambian algunos (marrones).",
+      "examples":[
+        { "source":"Una camisa rosa.","target":"A pink shirt." },
+        { "source":"Un bolso azul marino.","target":"A navy blue bag." }
+          ]
+        }
+      ]
     }
   ]
 }

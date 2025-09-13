@@ -598,6 +598,152 @@
         ]
       }
      ]
+    },
+    {
+  "id": "es7_family_people",
+  "title": "Chapter 7: Family & People",
+  "color": "from-rose-200 to-rose-50",
+  "tips": [
+    { "title": "Gender & plural forms", "text": "Words like amigo/amiga change gender. Use -s for plural: amigos, amigas. Mixed groups use the masculine plural (los amigos)." },
+    { "title": "Polite titles", "text": "Señor (Mr.), Señora (Mrs.), Señorita (Miss) are common polite forms of address." }
+  ],
+  "items": [
+    { "id":"f01","type":"word","source":"el amigo / la amiga","target":"friend (m/f)" },
+    { "id":"f02","type":"phrase","source":"el mejor amigo / la mejor amiga","target":"best friend (m/f)" },
+    { "id":"f03","type":"word","source":"el compañero / la compañera de trabajo","target":"coworker (m/f)" },
+    { "id":"f04","type":"word","source":"el cliente / la cliente","target":"client (m/f)" },
+    { "id":"f05","type":"word","source":"el gerente de ventas","target":"sales manager" },
+    { "id":"f06","type":"word","source":"el empleado / la empleada","target":"employee (m/f)" },
+    { "id":"f07","type":"word","source":"el empresario / la empresaria","target":"businessperson (m/f)" },
+
+    { "id":"f10","type":"word","source":"la familia","target":"family" },
+    { "id":"f11","type":"word","source":"el padre / la madre / los padres","target":"father / mother / parents" },
+    { "id":"f12","type":"word","source":"el hermano / la hermana","target":"brother / sister" },
+    { "id":"f13","type":"word","source":"el hijo / la hija / los hijos","target":"son / daughter / children" },
+    { "id":"f14","type":"word","source":"el abuelo / la abuela / los abuelos","target":"grandfather / grandmother / grandparents" },
+    { "id":"f15","type":"word","source":"el tío / la tía / los tíos","target":"uncle / aunt / uncles & aunts" },
+    { "id":"f16","type":"word","source":"el primo / la prima / los primos","target":"cousin (m/f) / cousins" },
+    { "id":"f17","type":"word","source":"el suegro / la suegra / los suegros","target":"father-in-law / mother-in-law / in-laws" },
+    { "id":"f18","type":"word","source":"el cuñado / la cuñada","target":"brother-in-law / sister-in-law" },
+    { "id":"f19","type":"word","source":"el nuero / la nuera","target":"son-in-law / daughter-in-law" }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_family_1",
+      "title":"Talking about family",
+      "roles":[
+        { "who":"A","lines":["¿Tienes hermanos?"] },
+        { "who":"B","lines":["Sí, tengo una hermana y dos hermanos."] },
+        { "who":"A","lines":["¡Qué grande es tu familia!"] }
+      ],
+      "translation":[
+        "Do you have siblings?",
+        "Yes, I have one sister and two brothers.",
+        "What a big family you have!"
+      ]
+    },
+    {
+      "id":"esd_family_2",
+      "title":"Introducing someone",
+      "roles":[
+        { "who":"A","lines":["Él es mi mejor amigo, Carlos."] },
+        { "who":"B","lines":["Mucho gusto, Carlos."] }
+      ],
+      "translation":[
+        "This is my best friend, Carlos.",
+        "Nice to meet you, Carlos."
+      ]
     }
-   ]
+  ],
+  "grammar": [
+    {
+      "topic":"Possessive adjectives",
+      "notes":"Use mi(s), tu(s), su(s), nuestro/a(s), vuestro/a(s).",
+      "examples":[
+        { "source":"Mi madre es simpática.","target":"My mother is nice." },
+        { "source":"Nuestros primos viven en México.","target":"Our cousins live in Mexico." }
+      ]
+    }
+  ]
+},
+    {
+  "id": "es8_work_places",
+  "title": "Chapter 8: Work & Places",
+  "color": "from-teal-200 to-teal-50",
+  "tips": [
+    { "title": "La empresa vs la compañía", "text": "Both mean 'company', but 'empresa' is more common in Spain, while 'compañía' is widely used too." },
+    { "title": "Workplace vocabulary", "text": "Words like oficina (office), escritorio (desk), computadora (computer) are essential for daily work life." }
+  ],
+  "items": [
+    { "id":"w01","type":"word","source":"la empresa","target":"company" },
+    { "id":"w02","type":"word","source":"la compañía","target":"company" },
+    { "id":"w03","type":"word","source":"la oficina","target":"office" },
+    { "id":"w04","type":"word","source":"la computadora","target":"computer" },
+    { "id":"w05","type":"word","source":"la impresora","target":"printer" },
+    { "id":"w06","type":"word","source":"el escritorio","target":"desk" },
+    { "id":"w07","type":"word","source":"el edificio","target":"building" },
+    { "id":"w08","type":"word","source":"el ascensor","target":"elevator" },
+    { "id":"w09","type":"word","source":"la escalera mecánica","target":"escalator" },
+    { "id":"w10","type":"word","source":"las escaleras","target":"stairs" },
+    { "id":"w11","type":"word","source":"el estacionamiento","target":"parking lot" },
+    { "id":"w12","type":"word","source":"la farmacia","target":"pharmacy" },
+    { "id":"w13","type":"word","source":"el banco","target":"bank" },
+    { "id":"w14","type":"word","source":"el supermercado","target":"supermarket" },
+    { "id":"w15","type":"word","source":"la tienda","target":"shop / store" },
+    { "id":"w16","type":"word","source":"el parque","target":"park" },
+    { "id":"w17","type":"word","source":"la playa","target":"beach" },
+    { "id":"w18","type":"word","source":"las montañas","target":"mountains" },
+    { "id":"w19","type":"word","source":"la calle","target":"street" },
+    { "id":"w20","type":"phrase","source":"la tienda libre de impuestos","target":"duty-free shop" },
+    { "id":"w21","type":"word","source":"el centro comercial","target":"shopping mall" },
+    { "id":"w22","type":"word","source":"el restaurante","target":"restaurant" },
+    { "id":"w23","type":"word","source":"el baño","target":"bathroom" },
+    { "id":"w24","type":"word","source":"la habitación","target":"room" },
+    { "id":"w25","type":"word","source":"el hotel","target":"hotel" },
+    { "id":"w26","type":"word","source":"la reservación","target":"reservation" }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_work_1",
+      "title":"At the office",
+      "roles":[
+        { "who":"A","lines":["¿Dónde está la impresora?"] },
+        { "who":"B","lines":["Está al lado de la computadora."] },
+        { "who":"A","lines":["Gracias. Tengo que imprimir un documento."] }
+      ],
+      "translation":[
+        "Where is the printer?",
+        "It’s next to the computer.",
+        "Thanks. I have to print a document."
+      ]
+    },
+    {
+      "id":"esd_work_2",
+      "title":"Booking a hotel",
+      "roles":[
+        { "who":"A","lines":["Buenas tardes, tengo una reservación."] },
+        { "who":"B","lines":["Sí, a nombre de…?"] },
+        { "who":"A","lines":["Lee, por favor."] },
+        { "who":"B","lines":["Aquí está su habitación."] }
+      ],
+      "translation":[
+        "Good afternoon, I have a reservation.",
+        "Yes, under whose name?",
+        "Lee, please.",
+        "Here is your room."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Hay vs Está",
+      "notes":"Use 'hay' for existence (Hay un banco cerca), 'está' for location (El banco está en la esquina).",
+      "examples":[
+        { "source":"Hay un restaurante en este edificio.","target":"There is a restaurant in this building." },
+        { "source":"El restaurante está en el primer piso.","target":"The restaurant is on the first floor." }
+      ]
+     }
+    ]
   }
+ ]
+}

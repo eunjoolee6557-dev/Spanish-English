@@ -6,586 +6,515 @@
   "translateLang": "ko",
   "chapters": [
     {
-      "id": "ja1",
-      "title": "Chapter 1: 인사와 소개",
-      "color": "from-indigo-100 to-indigo-50",
+      "id": "ja1_greetings",
+      "title": "第1課: 인사 & 자기소개 (Greetings & Introductions)",
+      "color": "from-brand-100 to-brand-50",
       "tips": [
-        { "title": "こんにちは / さようなら", "text": "하루 종일 쓸 수 있는 기본 인사 / 작별 인사." },
-        { "title": "おなまえは？", "text": "정중형: お名前（なまえ）は？ 답: 〜と申（もう）します / 〜です。" }
+        { "title": "처음 인사", "text": "처음 뵙겠습니다＝はじめまして. 끝에 잘 부탁드립니다＝よろしくお願いします." },
+        { "title": "자기소개", "text": "～と申します(라고 합니다) / ～です(입니다). 이름 뒤에 ～と申します는 공손." }
       ],
-      "vocab": [
-        { "id": "j1", "type": "phrase", "source": "こんにちは。", "target": "안녕하세요." },
-        { "id": "j2", "type": "phrase", "source": "さようなら。", "target": "안녕히 가세요/계세요." },
-        { "id": "j3", "type": "phrase", "source": "はじめまして。", "target": "처음 뵙겠습니다." },
-        { "id": "j4", "type": "phrase", "source": "よろしくお願いします。", "target": "잘 부탁드립니다." },
-        { "id": "j5", "type": "phrase", "source": "お名前は？", "target": "이름이 뭐예요?" },
-        { "id": "j6", "type": "phrase", "source": "アイリスと申します。", "target": "아이리스라고 합니다." },
-        { "id": "j7", "type": "phrase", "source": "お会いできてうれしいです。", "target": "만나서 반갑습니다." }
+      "items": [
+        { "id": "g01", "type": "phrase", "source": "こんにちは。", "target": "안녕하세요." },
+        { "id": "g02", "type": "phrase", "source": "はじめまして。", "target": "처음 뵙겠습니다." },
+        { "id": "g03", "type": "phrase", "source": "よろしくお願いします。", "target": "잘 부탁드립니다." },
+        { "id": "g04", "type": "phrase", "source": "おはようございます。", "target": "좋은 아침입니다." },
+        { "id": "g05", "type": "phrase", "source": "こんばんは。", "target": "좋은 저녁입니다." },
+        { "id": "g06", "type": "phrase", "source": "さようなら。", "target": "안녕히 가세요/계세요." },
+        { "id": "g07", "type": "phrase", "source": "おやすみなさい。", "target": "안녕히 주무세요." },
+        { "id": "g08", "type": "phrase", "source": "おめでとうございます。", "target": "축하합니다." },
+        { "id": "g09", "type": "phrase", "source": "お名前は何ですか。", "target": "성함이 어떻게 되세요?" },
+        { "id": "g10", "type": "phrase", "source": "私はイリスと申します。", "target": "저는 이리스라고 합니다." },
+        { "id": "g11", "type": "phrase", "source": "お会いできてうれしいです。", "target": "만나서 반갑습니다." }
       ],
       "dialogs": [
         {
-          "id": "ja1_d1",
-          "title": "첫 만남",
+          "id": "jad_greet_1",
+          "title": "처음 만났을 때",
           "roles": [
-            { "who": "A", "lines": ["はじめまして。", "お名前は？"] },
-            { "who": "B", "lines": ["はじめまして。", "アイリスと申します。よろしくお願いします。"] },
+            { "who": "A", "lines": ["はじめまして。お名前は何ですか。"] },
+            { "who": "B", "lines": ["はじめまして。私はイリスと申します。よろしくお願いします。"] },
             { "who": "A", "lines": ["こちらこそ、よろしくお願いします。"] }
           ],
           "translation": [
-            "처음 뵙겠습니다.",
-            "이름이 뭐예요?",
-            "처음 뵙겠습니다.",
-            "아이리스라고 합니다. 잘 부탁드립니다.",
+            "처음 뵙겠습니다. 성함이 어떻게 되세요?",
+            "처음 뵙겠습니다. 저는 이리스라고 합니다. 잘 부탁드립니다.",
             "저야말로 잘 부탁드립니다."
           ]
         },
         {
-          "id": "ja1_d2",
-          "title": "작별 인사",
+          "id": "jad_greet_2",
+          "title": "안부 묻기",
           "roles": [
-            { "who": "A", "lines": ["では、そろそろ失礼します。"] },
-            { "who": "B", "lines": ["はい、さようなら。"] }
+            { "who": "A", "lines": ["お元気ですか。"] },
+            { "who": "B", "lines": ["元気です。あなたは？"] },
+            { "who": "A", "lines": ["私も元気です。"] }
           ],
           "translation": [
-            "그럼, 이만 실례하겠습니다.",
-            "네, 안녕히 가세요."
+            "잘 지내세요?",
+            "잘 지냅니다. 당신은요?",
+            "저도 잘 지냅니다."
           ]
         }
       ],
       "grammar": [
         {
-          "topic": "이다(です) 기본형",
-          "notes": "정중체 です는 상태·정체를 말할 때 사용. 과거는 でした, 부정은 ではありません.",
-          "forms": {
-            "present": { "예": "〜です" },
-            "past": { "예": "〜でした" },
-            "negative": { "예": "〜ではありません" }
-          },
+          "topic": "です / と申します",
+          "notes": "자기소개: ～です(중립), ～と申します(더 공손).",
           "examples": [
-            { "source": "学生です.", "target": "학생입니다." },
-            { "source": "アイリスです.", "target": "아이리스입니다." }
+            { "source": "私はイリスです。", "target": "저는 이리스입니다." },
+            { "source": "イリスと申します。", "target": "이리스라고 합니다." }
           ]
         }
       ]
     },
     {
-      "id": "ja2",
-      "title": "Chapter 2: 일상 표현",
+      "id": "ja2_everyday",
+      "title": "第2課: 일상 표현 (Everyday & Social Phrases)",
       "color": "from-pink-200 to-pink-50",
       "tips": [
-        { "title": "お願いします / すみません", "text": "부탁/요청 vs. 사과/호출(실례합니다)." },
-        { "title": "〜ます형", "text": "정중 동사 어미. 현재·습관: 〜ます / 부정: 〜ません." }
+        { "title": "실례/사과", "text": "すみません(실례/죄송), ごめんなさい(미안). 정중도는 상황에 따라." },
+        { "title": "괜찮아요", "text": "大丈夫です＝괜찮습니다. 문제없음: 問題ありません。" }
       ],
-      "vocab": [
-        { "id": "k1", "type": "phrase", "source": "おはようございます。", "target": "좋은 아침입니다." },
-        { "id": "k2", "type": "phrase", "source": "こんばんは。", "target": "안녕하세요(저녁)." },
-        { "id": "k3", "type": "phrase", "source": "お願いします。", "target": "부탁드립니다/제발." },
-        { "id": "k4", "type": "phrase", "source": "ありがとうございます。", "target": "감사합니다." },
-        { "id": "k5", "type": "phrase", "source": "どういたしまして。", "target": "천만에요." },
-        { "id": "k6", "type": "phrase", "source": "すみません。", "target": "죄송합니다/실례합니다." },
-        { "id": "k7", "type": "phrase", "source": "またね。", "target": "또 봐요." },
-        { "id": "k8", "type": "phrase", "source": "おしごとは何ですか。", "target": "직업이 무엇인가요?" },
-        { "id": "k9", "type": "phrase", "source": "社長です。", "target": "사장(사장님)입니다." },
-        { "id": "k10", "type": "phrase", "source": "何歳ですか。", "target": "몇 살이에요?" }
+      "items": [
+        { "id": "e01", "type": "phrase", "source": "お願いします。", "target": "부탁합니다 / 부탁드려요." },
+        { "id": "e02", "type": "phrase", "source": "ありがとうございます。", "target": "감사합니다." },
+        { "id": "e03", "type": "phrase", "source": "どういたしまして。", "target": "천만에요." },
+        { "id": "e04", "type": "phrase", "source": "すみません。", "target": "실례합니다 / 죄송합니다." },
+        { "id": "e05", "type": "phrase", "source": "ごめんなさい。", "target": "미안합니다." },
+        { "id": "e06", "type": "phrase", "source": "大丈夫です。", "target": "괜찮습니다." },
+        { "id": "e07", "type": "phrase", "source": "問題ありません。", "target": "문제 없습니다." },
+        { "id": "e08", "type": "phrase", "source": "またね。", "target": "또 봐요." },
+        { "id": "e09", "type": "phrase", "source": "行ってきます。", "target": "다녀오겠습니다." },
+        { "id": "e10", "type": "phrase", "source": "行ってらっしゃい。", "target": "다녀오세요." }
       ],
       "dialogs": [
         {
-          "id": "ja2_d1",
-          "title": "직업과 나이",
+          "id": "jad_everyday_1",
+          "title": "실례와 사과",
           "roles": [
-            { "who": "A", "lines": ["おしごとは何ですか。"] },
-            { "who": "B", "lines": ["社長です。あなたは？"] },
-            { "who": "A", "lines": ["学生です。何歳ですか。"] },
-            { "who": "B", "lines": ["五十五歳です。"] }
+            { "who": "A", "lines": ["すみません、今いいですか。"] },
+            { "who": "B", "lines": ["大丈夫です。どうぞ。"] },
+            { "who": "A", "lines": ["ごめんなさい、少し時間を取ります。"] },
+            { "who": "B", "lines": ["問題ありません。"] }
           ],
           "translation": [
-            "직업이 무엇인가요?",
-            "사장입니다. 당신은요?",
-            "학생입니다. 몇 살이에요?",
-            "쉰다섯 살입니다."
+            "실례합니다, 지금 괜찮으세요?",
+            "괜찮습니다. 말씀하세요.",
+            "죄송해요, 시간이 조금 걸립니다.",
+            "문제 없습니다."
           ]
         },
         {
-          "id": "ja2_d2",
-          "title": "사과와 괜찮아요",
+          "id": "jad_everyday_2",
+          "title": "작별 인사",
           "roles": [
-            { "who": "A", "lines": ["すみません、じゃまですか。"] },
-            { "who": "B", "lines": ["いいえ、だいじょうぶです。"] },
-            { "who": "A", "lines": ["ありがとうございます。"] },
-            { "who": "B", "lines": ["どういたしまして。"] }
+            { "who": "A", "lines": ["ありがとうございます。では、またね。"] },
+            { "who": "B", "lines": ["こちらこそ。行ってらっしゃい。"] }
           ],
           "translation": [
-            "죄송한데, 방해가 되나요?",
-            "아니요, 괜찮습니다.",
-            "감사합니다.",
-            "천만에요."
+            "감사합니다. 그럼 또 봐요.",
+            "저야말로요. 다녀오세요."
           ]
         }
       ],
       "grammar": [
         {
-          "topic": "동사: する / くる (현재, 불규칙)",
-          "notes": "대표적 불규칙 동사. 정중형은 します / きます.",
-          "forms": {
-            "present": {
-              "する": { "plain": "する", "polite": "します" },
-              "くる": { "plain": "くる", "polite": "きます" }
-            },
-            "negative": {
-              "する": { "plain": "しない", "polite": "しません" },
-              "くる": { "plain": "こない", "polite": "きません" }
-            }
-          },
+          "topic": "정중 표현",
+          "notes": "～です／ます는 정중체. 사과는 すみません(가볍게/정중), ごめんなさい(사과 중심).",
           "examples": [
-            { "source": "勉強します。", "target": "공부합니다." },
-            { "source": "友だちが来ます。", "target": "친구가 옵니다." }
+            { "source": "今は大丈夫です。", "target": "지금은 괜찮습니다." },
+            { "source": "すみません、遅れました。", "target": "죄송합니다, 늦었습니다." }
           ]
         }
       ]
     },
     {
-      "id": "ja3",
-      "title": "Chapter 3: 동사와 일상 생활",
-      "color": "from-green-200 to-green-50",
+      "id": "ja3_time",
+      "title": "第3課: 시간 & 날짜 (Time & Dates)",
+      "color": "from-sky-200 to-sky-50",
       "tips": [
-        { "title": "동사의 기본형", "text": "사전형으로 끝남: -る, -う, -く 등." },
-        { "title": "ます형", "text": "정중체 현재: 〜ます / 부정: 〜ません." }
+        { "title": "요일/월 표기", "text": "요일: ～曜日, 월: 숫자＋月. 날짜는 특수 읽기 다수(1日 ついたち, 2日 ふつか ...)." },
+        { "title": "말버릇", "text": "오늘/내일/어제: 今日は/明日は/昨日は." }
       ],
-      "vocab": [
-        { "id": "ja3_v1", "type": "verb", "source": "たべる", "target": "먹다" },
-        { "id": "ja3_v2", "type": "verb", "source": "のむ", "target": "마시다" },
-        { "id": "ja3_v3", "type": "verb", "source": "いく", "target": "가다" }
+      "items": [
+        { "id": "t01", "type": "word", "source": "秒 (びょう)", "target": "초" },
+        { "id": "t02", "type": "word", "source": "分 (ふん/ぷん)", "target": "분" },
+        { "id": "t03", "type": "word", "source": "時間 (じかん)", "target": "시간" },
+        { "id": "t04", "type": "word", "source": "日 (ひ/にち)", "target": "날 / 일" },
+        { "id": "t05", "type": "word", "source": "月 (つき/がつ)", "target": "달 / 월" },
+        { "id": "t06", "type": "word", "source": "年 (とし/ねん)", "target": "해 / 년" },
+        { "id": "t10", "type": "word", "source": "月曜日 (げつようび)", "target": "월요일" },
+        { "id": "t11", "type": "word", "source": "火曜日 (かようび)", "target": "화요일" },
+        { "id": "t12", "type": "word", "source": "水曜日 (すいようび)", "target": "수요일" },
+        { "id": "t13", "type": "word", "source": "木曜日 (もくようび)", "target": "목요일" },
+        { "id": "t14", "type": "word", "source": "金曜日 (きんようび)", "target": "금요일" },
+        { "id": "t15", "type": "word", "source": "土曜日 (どようび)", "target": "토요일" },
+        { "id": "t16", "type": "word", "source": "日曜日 (にちようび)", "target": "일요일" },
+        { "id": "t17", "type": "phrase", "source": "平日 (へいじつ)", "target": "평일" },
+        { "id": "t18", "type": "phrase", "source": "週末 (しゅうまつ)", "target": "주말" },
+        { "id": "t19", "type": "word", "source": "祝日 (しゅくじつ)", "target": "공휴일" },
+        { "id": "t20", "type": "word", "source": "春 (はる)", "target": "봄" },
+        { "id": "t21", "type": "word", "source": "夏 (なつ)", "target": "여름" },
+        { "id": "t22", "type": "word", "source": "秋 (あき)", "target": "가을" },
+        { "id": "t23", "type": "word", "source": "冬 (ふゆ)", "target": "겨울" },
+        { "id": "t30", "type": "word", "source": "1月 (いちがつ)", "target": "1월" },
+        { "id": "t31", "type": "word", "source": "2月 (にがつ)", "target": "2월" },
+        { "id": "t32", "type": "word", "source": "3月 (さんがつ)", "target": "3월" },
+        { "id": "t33", "type": "word", "source": "4月 (しがつ)", "target": "4월" },
+        { "id": "t34", "type": "word", "source": "5月 (ごがつ)", "target": "5월" },
+        { "id": "t35", "type": "word", "source": "6月 (ろくがつ)", "target": "6월" },
+        { "id": "t36", "type": "word", "source": "7月 (しちがつ)", "target": "7월" },
+        { "id": "t37", "type": "word", "source": "8月 (はちがつ)", "target": "8월" },
+        { "id": "t38", "type": "word", "source": "9月 (くがつ)", "target": "9월" },
+        { "id": "t39", "type": "word", "source": "10月 (じゅうがつ)", "target": "10월" },
+        { "id": "t40", "type": "word", "source": "11月 (じゅういちがつ)", "target": "11월" },
+        { "id": "t41", "type": "word", "source": "12月 (じゅうにがつ)", "target": "12월" }
       ],
       "dialogs": [
         {
-          "id": "ja3_d1",
-          "title": "아침 일과",
+          "id": "jad_time_1",
+          "title": "오늘은 무슨 요일?",
           "roles": [
-            { "who": "A", "lines": ["朝ごはんを食べますか。"] },
-            { "who": "B", "lines": ["はい、パンを食べます。"] }
+            { "who": "A", "lines": ["今日は何曜日ですか。"] },
+            { "who": "B", "lines": ["水曜日です。"] },
+            { "who": "A", "lines": ["明日は？"] },
+            { "who": "B", "lines": ["木曜日です。"] }
           ],
           "translation": [
-            "아침 식사를 합니까?",
-            "네, 빵을 먹습니다."
+            "오늘은 무슨 요일이에요?",
+            "수요일이에요.",
+            "내일은요?",
+            "목요일이에요."
+          ]
+        },
+        {
+          "id": "jad_time_2",
+          "title": "주말 계획",
+          "roles": [
+            { "who": "A", "lines": ["週末、予定はありますか。"] },
+            { "who": "B", "lines": ["はい、土曜日に美術館へ行きます。"] },
+            { "who": "A", "lines": ["いいですね。私は日曜日に仕事があります。"] }
+          ],
+          "translation": [
+            "주말에 계획 있어요?",
+            "네, 토요일에 미술관에 가요.",
+            "좋네요. 저는 일요일에 일이 있어요."
           ]
         }
       ],
       "grammar": [
         {
-          "topic": "동사: たべる (먹다)",
-          "notes": "정중체 현재는 たべます, 부정은 たべません.",
+          "topic": "요일/월 말하기",
+          "notes": "요일은 ～曜日, 월은 숫자＋月. 날짜는 특수 읽기가 많음(1日 ついたち 등)."
+        }
+      ]
+    },
+    {
+      "id": "ja4_weather",
+      "title": "第4課: 날씨 & 계절 (Weather & Seasons)",
+      "color": "from-emerald-200 to-emerald-50",
+      "tips": [
+        { "title": "기본 패턴", "text": "晴れです(맑아요), 曇りです(흐려요), 雨が降っています(비가 오고 있어요). 온도는 ～度." },
+        { "title": "지금 상태", "text": "진행은 ～ています: 雪が降っています(눈이 오고 있어요)." }
+      ],
+      "items": [
+        { "id": "w01", "type": "word", "source": "天気 (てんき)", "target": "날씨" },
+        { "id": "w02", "type": "phrase", "source": "今日は天気はどうですか。", "target": "오늘 날씨 어때요?" },
+        { "id": "w03", "type": "phrase", "source": "晴れです。", "target": "맑아요." },
+        { "id": "w04", "type": "phrase", "source": "寒いです。", "target": "추워요." },
+        { "id": "w05", "type": "phrase", "source": "暑いです。", "target": "더워요." },
+        { "id": "w06", "type": "phrase", "source": "風が強いです。", "target": "바람이 강해요." },
+        { "id": "w07", "type": "phrase", "source": "曇りです。", "target": "흐려요." },
+        { "id": "w08", "type": "phrase", "source": "雨が降っています。", "target": "비가 오고 있어요." },
+        { "id": "w09", "type": "phrase", "source": "雪が降っています。", "target": "눈이 오고 있어요." },
+        { "id": "w10", "type": "word", "source": "気温 (きおん)", "target": "기온" },
+        { "id": "w11", "type": "phrase", "source": "気温は何度ですか。", "target": "기온이 몇 도예요?" },
+        { "id": "w12", "type": "phrase", "source": "今日は20度です。", "target": "오늘은 20도예요." },
+        { "id": "w13", "type": "phrase", "source": "空はすっきりしています。", "target": "하늘이 개었어요." },
+        { "id": "w14", "type": "phrase", "source": "霧があります。", "target": "안개가 있어요." }
+      ],
+      "dialogs": [
+        {
+          "id": "jad_weather_1",
+          "title": "날씨 잡담",
+          "roles": [
+            { "who": "A", "lines": ["今日は天気はどうですか。"] },
+            { "who": "B", "lines": ["晴れですが、風が強いです。"] },
+            { "who": "A", "lines": ["明日は？"] },
+            { "who": "B", "lines": ["雨が降るそうです。"] }
+          ],
+          "translation": [
+            "오늘 날씨 어때요?",
+            "맑지만 바람이 강해요.",
+            "내일은요?",
+            "비가 올 거라고 해요."
+          ]
+        },
+        {
+          "id": "jad_weather_2",
+          "title": "추운 날",
+          "roles": [
+            { "who": "A", "lines": ["とても寒いですね。"] },
+            { "who": "B", "lines": ["ええ、曇りです。気温は何度ですか。"] },
+            { "who": "A", "lines": ["4度です。"] }
+          ],
+          "translation": [
+            "정말 춥네요.",
+            "네, 흐려요. 기온이 몇 도예요?",
+            "4도예요."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "날씨 표현",
+          "notes": "상태: ～です(晴れです/曇りです), 진행: ～ています(雨が降っています), 존재: ～があります(霧があります)."
+        }
+      ]
+    },
+    {
+      "id": "ja5_colors_sizes",
+      "title": "第5課: 색 & 크기 (Colors & Sizes)",
+      "color": "from-fuchsia-200 to-fuchsia-50",
+      "tips": [
+        { "title": "색 형용사", "text": "青(파랑)/青い(파란)처럼 명사형과 형용사형이 모두 있음." },
+        { "title": "크기/길이", "text": "大きい/小さい/長い/短い/広い/狭い 등 기본 형용사." }
+      ],
+      "items": [
+        { "id": "c01", "type": "word", "source": "赤い (あかい)", "target": "빨간" },
+        { "id": "c02", "type": "word", "source": "青い (あおい)", "target": "파란" },
+        { "id": "c03", "type": "word", "source": "緑 (みどり)", "target": "초록" },
+        { "id": "c04", "type": "word", "source": "黄色い (きいろい)", "target": "노란" },
+        { "id": "c05", "type": "word", "source": "黒い (くろい)", "target": "검은" },
+        { "id": "c06", "type": "word", "source": "白い (しろい)", "target": "하얀" },
+        { "id": "c07", "type": "word", "source": "紫 (むらさき)", "target": "보라색" },
+        { "id": "c08", "type": "word", "source": "茶色 (ちゃいろ)", "target": "갈색" },
+        { "id": "c09", "type": "word", "source": "ピンク", "target": "핑크" },
+        { "id": "c10", "type": "word", "source": "オレンジ", "target": "주황" },
+        { "id": "c11", "type": "phrase", "source": "ネイビー", "target": "네이비" },
+        { "id": "c12", "type": "word", "source": "銀色 (ぎんいろ)", "target": "은색" },
+        { "id": "c13", "type": "word", "source": "金色 (きんいろ)", "target": "금색" },
+        { "id": "s01", "type": "word", "source": "大きい (おおきい)", "target": "크다" },
+        { "id": "s02", "type": "word", "source": "小さい (ちいさい)", "target": "작다" },
+        { "id": "s03", "type": "word", "source": "長い (ながい)", "target": "길다" },
+        { "id": "s04", "type": "word", "source": "短い (みじかい)", "target": "짧다" },
+        { "id": "s05", "type": "word", "source": "広い (ひろい)", "target": "넓다" },
+        { "id": "s06", "type": "word", "source": "狭い (せまい)", "target": "좁다" },
+        { "id": "ex1", "type": "phrase", "source": "青いシャツ", "target": "파란 셔츠" },
+        { "id": "ex2", "type": "phrase", "source": "大きいテーブル", "target": "큰 테이블" },
+        { "id": "ex3", "type": "phrase", "source": "長いスカート", "target": "긴 치마" }
+      ],
+      "dialogs": [
+        {
+          "id": "jad_colors_1",
+          "title": "셔츠 고르기",
+          "roles": [
+            { "who": "A", "lines": ["この青いシャツと白いシャツ、どちらが好きですか。"] },
+            { "who": "B", "lines": ["青いほうが好きです。白いのは短いです。"] },
+            { "who": "A", "lines": ["そうですね。青いのは長いです。"] }
+          ],
+          "translation": [
+            "이 파란 셔츠와 흰 셔츠, 어느 쪽이 좋아요?",
+            "파란 게 좋아요. 흰 것은 짧아요.",
+            "그러네요. 파란 것은 길어요."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "い형용사 현재/부정",
           "forms": {
-            "present": { "plain": "たべる", "polite": "たべます" },
-            "negative": { "plain": "たべない", "polite": "たべません" }
-          },
+            "present": {
+              "大きい": "大きいです / 大きくないです",
+              "長い": "長いです / 長くないです",
+              "黒い": "黒いです / 黒くないです"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ja6_adjectives_people_things",
+      "title": "第6課: 성격 & 성질 (Adjectives for People & Things)",
+      "color": "from-amber-200 to-amber-50",
+      "tips": [
+        { "title": "い형용사/な형용사", "text": "親切(な), 静か(な) 등은 な형용사; 明るい, おもしろい 등은 い형용사." },
+        { "title": "강도 부사", "text": "とても(매우), かなり(꽤), 少し(조금)." }
+      ],
+      "items": [
+        { "id": "a01", "type": "word", "source": "親切 (しんせつ)［な］", "target": "친절한" },
+        { "id": "a02", "type": "word", "source": "まじめ［な］", "target": "성실한/진지한" },
+        { "id": "a03", "type": "word", "source": "明るい (あかるい)", "target": "밝은" },
+        { "id": "a04", "type": "word", "source": "静か (しずか)［な］", "target": "조용한" },
+        { "id": "a05", "type": "word", "source": "にぎやか［な］", "target": "번화한/활기찬" },
+        { "id": "a06", "type": "word", "source": "おもしろい", "target": "재미있는" },
+        { "id": "a07", "type": "word", "source": "つまらない", "target": "지루한" },
+        { "id": "a08", "type": "word", "source": "難しい (むずかしい)", "target": "어려운" },
+        { "id": "a09", "type": "word", "source": "かんたん［な］/ 易しい (やさしい)", "target": "쉬운" },
+        { "id": "a10", "type": "word", "source": "いい / 良い (よい)", "target": "좋은" },
+        { "id": "a11", "type": "word", "source": "悪い (わるい)", "target": "나쁜" },
+        { "id": "a12", "type": "word", "source": "強い (つよい) / 弱い (よわい)", "target": "강한 / 약한" },
+        { "id": "ex1", "type": "phrase", "source": "親切で、まじめです。", "target": "친절하고 성실합니다." },
+        { "id": "ex2", "type": "phrase", "source": "今日は静かです。", "target": "오늘은 조용합니다." }
+      ],
+      "dialogs": [
+        {
+          "id": "jad_adj_1",
+          "title": "동료 묘사",
+          "roles": [
+            { "who": "A", "lines": ["あなたの上司はどんな人ですか。"] },
+            { "who": "B", "lines": ["親切で、まじめです。でも、時々静かです。"] }
+          ],
+          "translation": [
+            "당신의 상사는 어떤 분이에요?",
+            "친절하고 성실해요. 하지만 가끔 조용해요."
+          ]
+        },
+        {
+          "id": "jad_adj_2",
+          "title": "집 묘사",
+          "roles": [
+            { "who": "A", "lines": ["あなたの部屋は明るいですね。"] },
+            { "who": "B", "lines": ["ええ、広いですが、廊下は少し狭いです。"] }
+          ],
+          "translation": [
+            "당신 방은 밝네요.",
+            "네, 넓지만, 복도는 조금 좁아요."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "な형용사 & い형용사",
+          "notes": "명사 수식: 親切な人(친절한 사람), 明るい部屋(밝은 방). 정중체: 親切です/明るいです."
+        }
+      ]
+    },
+    {
+      "id": "ja7_family_people",
+      "title": "第7課: 가족 & 사람 (Family & People)",
+      "color": "from-rose-200 to-rose-50",
+      "tips": [
+        { "title": "자기 가족 vs 남의 가족", "text": "자기 가족: 父/母/兄/姉. 남의 가족(존칭): お父さん/お母さん/お兄さん/お姉さん." },
+        { "title": "호칭 ~さん", "text": "이름 뒤에 ～さん을 붙여 공손하게 부름 (田中さん)." }
+      ],
+      "items": [
+        { "id": "f01", "type": "word", "source": "友達 (ともだち)", "target": "친구" },
+        { "id": "f02", "type": "word", "source": "親友 (しんゆう)", "target": "베스트 프렌드" },
+        { "id": "f03", "type": "word", "source": "同僚 (どうりょう)", "target": "직장 동료" },
+        { "id": "f10", "type": "word", "source": "家族 (かぞく)", "target": "가족" },
+        { "id": "f11", "type": "word", "source": "父 (ちち) / お父さん (おとうさん)", "target": "아버지" },
+        { "id": "f12", "type": "word", "source": "母 (はは) / お母さん (おかあさん)", "target": "어머니" },
+        { "id": "f13", "type": "word", "source": "兄 (あに) / お兄さん (おにいさん)", "target": "형/오빠" },
+        { "id": "f14", "type": "word", "source": "姉 (あね) / お姉さん (おねえさん)", "target": "누나/언니" },
+        { "id": "f15", "type": "word", "source": "弟 (おとうと)", "target": "남동생" },
+        { "id": "f16", "type": "word", "source": "妹 (いもうと)", "target": "여동생" },
+        { "id": "f17", "type": "word", "source": "祖父 (そふ) / おじいさん", "target": "할아버지" },
+        { "id": "f18", "type": "word", "source": "祖母 (そぼ) / おばあさん", "target": "할머니" }
+      ],
+      "dialogs": [
+        {
+          "id": "jad_family_1",
+          "title": "가족 이야기",
+          "roles": [
+            { "who": "A", "lines": ["兄弟はいますか。"] },
+            { "who": "B", "lines": ["はい、姉が一人と弟が一人います。"] }
+          ],
+          "translation": [
+            "형제자매가 있나요?",
+            "네, 언니 한 명과 남동생 한 명이 있어요."
+          ]
+        },
+        {
+          "id": "jad_family_2",
+          "title": "친구 소개",
+          "roles": [
+            { "who": "A", "lines": ["この人は私の親友です。"] },
+            { "who": "B", "lines": ["はじめまして。よろしくお願いします。"] }
+          ],
+          "translation": [
+            "이 사람은 제 베스트 프렌드예요.",
+            "처음 뵙겠습니다. 잘 부탁드립니다."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic": "소유 표현 ～の",
+          "notes": "AのB = A의 B. 田中さんの弟 = 다나카 씨의 남동생.",
           "examples": [
-            { "source": "ごはん을食べます。", "target": "밥을 먹습니다." },
-            { "source": "私はりんごを食べない。", "target": "나는 사과를 먹지 않는다." }
+            { "source": "私の母です。", "target": "제 어머니입니다." },
+            { "source": "山田さんの家族。", "target": "야마다 씨의 가족." }
           ]
         }
       ]
     },
     {
-  "id": "ja3_time",
-  "title": "第3課: 시간 & 날짜 (Time & Dates)",
-  "color": "from-sky-200 to-sky-50",
-  "tips": [
-    { "title": "요일/월 표기", "text": "일본어에서 요일과 달 이름은 보통 소문자 가타카나/한자 표기입니다. 예) 月曜日, 4月。" },
-    { "title": "날짜 말하기", "text": "월은 ～月（がつ）, 일자는 특별한 읽기가 많습니다 (1日 ついたち, 2日 ふつか...). 기본은 숫자＋日（にち）。" }
-  ],
-  "items": [
-    { "id":"t01","type":"word","source":"秒 (びょう)","target":"초" },
-    { "id":"t02","type":"word","source":"分 (ふん/ぷん)","target":"분" },
-    { "id":"t03","type":"word","source":"時間 (じかん)","target":"시간" },
-    { "id":"t04","type":"word","source":"日 (ひ/にち)","target":"날 / 일" },
-    { "id":"t05","type":"word","source":"月 (つき/がつ)","target":"달 / 월" },
-    { "id":"t06","type":"word","source":"年 (とし/ねん)","target":"해 / 년" },
-
-    { "id":"t10","type":"word","source":"月曜日 (げつようび)","target":"월요일" },
-    { "id":"t11","type":"word","source":"火曜日 (かようび)","target":"화요일" },
-    { "id":"t12","type":"word","source":"水曜日 (すいようび)","target":"수요일" },
-    { "id":"t13","type":"word","source":"木曜日 (もくようび)","target":"목요일" },
-    { "id":"t14","type":"word","source":"金曜日 (きんようび)","target":"금요일" },
-    { "id":"t15","type":"word","source":"土曜日 (どようび)","target":"토요일" },
-    { "id":"t16","type":"word","source":"日曜日 (にちようび)","target":"일요일" },
-    { "id":"t17","type":"phrase","source":"平日 (へいじつ)","target":"평일" },
-    { "id":"t18","type":"phrase","source":"週末 (しゅうまつ)","target":"주말" },
-    { "id":"t19","type":"word","source":"祝日 (しゅくじつ)","target":"공휴일" },
-
-    { "id":"t20","type":"word","source":"春 (はる)","target":"봄" },
-    { "id":"t21","type":"word","source":"夏 (なつ)","target":"여름" },
-    { "id":"t22","type":"word","source":"秋 (あき)","target":"가을" },
-    { "id":"t23","type":"word","source":"冬 (ふゆ)","target":"겨울" },
-
-    { "id":"t30","type":"word","source":"1月 (いちがつ)","target":"1월" },
-    { "id":"t31","type":"word","source":"2月 (にがつ)","target":"2월" },
-    { "id":"t32","type":"word","source":"3月 (さんがつ)","target":"3월" },
-    { "id":"t33","type":"word","source":"4月 (しがつ)","target":"4월" },
-    { "id":"t34","type":"word","source":"5月 (ごがつ)","target":"5월" },
-    { "id":"t35","type":"word","source":"6月 (ろくがつ)","target":"6월" },
-    { "id":"t36","type":"word","source":"7月 (しちがつ)","target":"7월" },
-    { "id":"t37","type":"word","source":"8月 (はちがつ)","target":"8월" },
-    { "id":"t38","type":"word","source":"9月 (くがつ)","target":"9월" },
-    { "id":"t39","type":"word","source":"10月 (じゅうがつ)","target":"10월" },
-    { "id":"t40","type":"word","source":"11月 (じゅういちがつ)","target":"11월" },
-    { "id":"t41","type":"word","source":"12月 (じゅうにがつ)","target":"12월" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_time_1",
-      "title":"오늘은 무슨 요일?",
-      "roles":[
-        { "who":"A","lines":["今日は何曜日ですか。"] },
-        { "who":"B","lines":["水曜日です。"] },
-        { "who":"A","lines":["明日は？"] },
-        { "who":"B","lines":["木曜日です。"] }
+      "id": "ja8_work_places",
+      "title": "第8課: 직장 & 장소 (Work & Places)",
+      "color": "from-teal-200 to-teal-50",
+      "tips": [
+        { "title": "장소 묻기", "text": "～はどこですか＝…는 어디에 있습니까? 위치 설명: ～のとなり(옆), ～の前(앞), ～の中(안)." },
+        { "title": "회사/직업", "text": "会社(회사), 会社員(회사원). ‘사무실’은 オフィス/事務所." }
       ],
-      "translation":[
-        "오늘은 무슨 요일이에요?",
-        "수요일이에요.",
-        "그럼 내일은요?",
-        "목요일이에요."
-      ]
-    },
-    {
-      "id":"jad_time_2",
-      "title":"주말 계획",
-      "roles":[
-        { "who":"A","lines":["週末、予定はありますか。"] },
-        { "who":"B","lines":["はい、土曜日に美術館へ行きます。"] },
-        { "who":"A","lines":["いいですね。私は日曜日に仕事があります。"] }
+      "items": [
+        { "id": "p01", "type": "word", "source": "会社 (かいしゃ)", "target": "회사" },
+        { "id": "p02", "type": "word", "source": "会社員 (かいしゃいん)", "target": "회사원" },
+        { "id": "p03", "type": "word", "source": "オフィス / 事務所 (じむしょ)", "target": "사무실" },
+        { "id": "p04", "type": "word", "source": "コンピューター", "target": "컴퓨터" },
+        { "id": "p05", "type": "word", "source": "プリンター", "target": "프린터" },
+        { "id": "p06", "type": "word", "source": "机 (つくえ)", "target": "책상" },
+        { "id": "p07", "type": "word", "source": "ビル", "target": "빌딩" },
+        { "id": "p08", "type": "word", "source": "エレベーター", "target": "엘리베이터" },
+        { "id": "p09", "type": "word", "source": "階段 (かいだん)", "target": "계단" },
+        { "id": "p10", "type": "word", "source": "銀行 (ぎんこう)", "target": "은행" },
+        { "id": "p11", "type": "word", "source": "レストラン", "target": "레스토랑" },
+        { "id": "p12", "type": "word", "source": "ホテル", "target": "호텔" },
+        { "id": "p13", "type": "word", "source": "予約 (よやく)", "target": "예약" },
+        { "id": "p14", "type": "word", "source": "トイレ", "target": "화장실" }
       ],
-      "translation":[
-        "주말에 계획 있어요?",
-        "네, 토요일에 미술관에 가요.",
-        "좋네요. 저는 일요일에 일이 있어요."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"요일/월 말하기",
-      "notes":"요일은 ～曜日, 월은 숫자＋月. 날짜는 1日(ついたち), 2日(ふつか), 3日(みっか)... 등 특수 읽기가 많음."
-    }
-   ]
-  }
- ]
-},
-    {
-  "id": "ja4_weather",
-  "title": "第4課: 날씨 & 계절 (Weather & Seasons)",
-  "color": "from-emerald-200 to-emerald-50",
-  "tips": [
-    { "title": "기본 패턴", "text": "晴れです(맑아요), 曇りです(흐려요), 雨が降っています(비가 오고 있어요). 온도는 ～度（ど）。" },
-    { "title": "지금 상태", "text": "진행은 ～ています: 雪が降っています(눈이 오고 있어요)." }
-  ],
-  "items": [
-    { "id":"w01","type":"word","source":"天気 (てんき)","target":"날씨" },
-    { "id":"w02","type":"phrase","source":"今日は天気はどうですか。","target":"오늘 날씨 어때요?" },
-    { "id":"w03","type":"phrase","source":"晴れです。","target":"맑아요." },
-    { "id":"w04","type":"phrase","source":"寒いです。","target":"추워요." },
-    { "id":"w05","type":"phrase","source":"暑いです。","target":"더워요." },
-    { "id":"w06","type":"phrase","source":"風が強いです。","target":"바람이 강해요." },
-    { "id":"w07","type":"phrase","source":"曇りです。","target":"흐려요." },
-    { "id":"w08","type":"phrase","source":"雨が降っています。","target":"비가 오고 있어요." },
-    { "id":"w09","type":"phrase","source":"雪が降っています。","target":"눈이 오고 있어요." },
-    { "id":"w10","type":"word","source":"気温 (きおん)","target":"기온" },
-    { "id":"w11","type":"phrase","source":"気温は何度ですか。","target":"기온이 몇 도예요?" },
-    { "id":"w12","type":"phrase","source":"今日は20度です。","target":"오늘은 20도예요." },
-    { "id":"w13","type":"phrase","source":"空はすっきりしています。","target":"하늘이 개었어요." },
-    { "id":"w14","type":"phrase","source":"霧があります。","target":"안개가 있어요." }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_weather_1",
-      "title":"날씨 잡담",
-      "roles":[
-        { "who":"A","lines":["今日は天気はどうですか。"] },
-        { "who":"B","lines":["晴れですが、風が強いです。"] },
-        { "who":"A","lines":["明日は？"] },
-        { "who":"B","lines":["雨が降るそうです。"] }
-      ],
-      "translation":[
-        "오늘 날씨 어때요?",
-        "맑지만 바람이 강해요.",
-        "내일은요?",
-        "비가 올 거라고 해요."
-      ]
-    },
-    {
-      "id":"jad_weather_2",
-      "title":"추운 날",
-      "roles":[
-        { "who":"A","lines":["とても寒いですね。"] },
-        { "who":"B","lines":["ええ、曇りです。気温は何度ですか。"] },
-        { "who":"A","lines":["4度です。"] }
-      ],
-      "translation":[
-        "정말 춥네요.",
-        "네, 흐려요. 기온이 몇 도예요?",
-        "4도예요."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"날씨 표현",
-      "notes":"상태는 ～です(晴れです/曇りです), 진행은 ～ています(雨が降っています), 존재는 ～があります/～がいます(霧があります)."
-    }
-   ]
-  }
- ]
-},
-{
-  "id": "ja5_colors_sizes",
-  "title": "第5課: 색 & 크기 (Colors & Sizes)",
-  "color": "from-fuchsia-200 to-fuchsia-50",
-  "tips": [
-    { "title": "색 형용사", "text": "일본어 색은 명사형(あお)과 형용사형(あおい)이 있습니다. 예) 青いシャツ(파란 셔츠)." },
-    { "title": "크기 표현", "text": "大きい(크다) / 小さい(작다) / 長い(길다) / 短い(짧다) 등." }
-  ],
-  "items": [
-    { "id":"c01","type":"word","source":"赤い (あかい)","target":"빨간" },
-    { "id":"c02","type":"word","source":"青い (あおい)","target":"파란" },
-    { "id":"c03","type":"word","source":"緑 (みどり)","target":"초록" },
-    { "id":"c04","type":"word","source":"黄色い (きいろい)","target":"노란" },
-    { "id":"c05","type":"word","source":"黒い (くろい)","target":"검은" },
-    { "id":"c06","type":"word","source":"白い (しろい)","target":"하얀" },
-    { "id":"c07","type":"word","source":"紫 (むらさき)","target":"보라색" },
-    { "id":"c08","type":"word","source":"茶色 (ちゃいろ)","target":"갈색" },
-    { "id":"c09","type":"word","source":"ピンク","target":"핑크" },
-    { "id":"c10","type":"word","source":"オレンジ","target":"주황" },
-    { "id":"c11","type":"phrase","source":"ネイビー","target":"네이비" },
-    { "id":"c12","type":"word","source":"銀色 (ぎんいろ)","target":"은색" },
-    { "id":"c13","type":"word","source":"金色 (きんいろ)","target":"금색" },
-
-    { "id":"s01","type":"word","source":"大きい (おおきい)","target":"크다" },
-    { "id":"s02","type":"word","source":"小さい (ちいさい)","target":"작다" },
-    { "id":"s03","type":"word","source":"長い (ながい)","target":"길다" },
-    { "id":"s04","type":"word","source":"短い (みじかい)","target":"짧다" },
-    { "id":"s05","type":"word","source":"広い (ひろい)","target":"넓다" },
-    { "id":"s06","type":"word","source":"狭い (せまい)","target":"좁다" },
-
-    { "id":"ex1","type":"phrase","source":"青いシャツ","target":"파란 셔츠" },
-    { "id":"ex2","type":"phrase","source":"大きいテーブル","target":"큰 테이블" },
-    { "id":"ex3","type":"phrase","source":"長いスカート","target":"긴 치마" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_colors_1",
-      "title":"셔츠 고르기",
-      "roles":[
-        { "who":"A","lines":["この青いシャツと白いシャツ、どちらが好きですか。"] },
-        { "who":"B","lines":["青いほうが好きです。白いのは短いです。"] },
-        { "who":"A","lines":["そうですね。青いのは長いです。"] }
-      ],
-      "translation":[
-        "이 파란 셔츠와 흰 셔츠, 어느 쪽이 좋아요?",
-        "파란 게 좋아요. 흰 것은 짧아요.",
-        "그러네요. 파란 것은 길어요."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"い형용사 활용 (현재/부정)",
-      "forms":{
-        "present":{
-          "大きい":"大きいです / 大きくないです",
-          "長い":"長いです / 長くないです",
-          "黒い":"黒いです / 黒くないです"
+      "dialogs": [
+        {
+          "id": "jad_places_1",
+          "title": "사무실에서",
+          "roles": [
+            { "who": "A", "lines": ["プリンターはどこですか。"] },
+            { "who": "B", "lines": ["机のとなりにあります。"] },
+            { "who": "A", "lines": ["ありがとうございます。"] }
+          ],
+          "translation": [
+            "프린터는 어디에 있습니까?",
+            "책상 옆에 있습니다.",
+            "감사합니다."
+          ]
+        },
+        {
+          "id": "jad_places_2",
+          "title": "호텔 체크인",
+          "roles": [
+            { "who": "A", "lines": ["すみません、予約があります。"] },
+            { "who": "B", "lines": ["お名前は何ですか。"] },
+            { "who": "A", "lines": ["イ・ウンジュです。"] },
+            { "who": "B", "lines": ["こちらが部屋の鍵です。どうぞ。"] }
+          ],
+          "translation": [
+            "실례합니다, 예약이 있습니다.",
+            "성함이 어떻게 되십니까?",
+            "이은주입니다.",
+            "여기 방 열쇠입니다. 들어가세요."
+          ]
         }
-      },
-      "examples":[
-        { "source":"この部屋は広いです。","target":"이 방은 넓어요." },
-        { "source":"そのズボンは長くないです。","target":"그 바지는 길지 않아요." }
+      ],
+      "grammar": [
+        {
+          "topic": "위치 표현",
+          "notes": "～はどこですか(…는 어디?), ～のとなり(옆), ～の前(앞), ～の中(안).",
+          "examples": [
+            { "source": "銀行はどこですか。", "target": "은행은 어디에 있습니까?" },
+            { "source": "オフィスはビルの中です。", "target": "사무실은 빌딩 안에 있어요." }
+          ]
+        }
       ]
     }
-  ]
-},
-    {
-  "id": "ja6_adjectives_people_things",
-  "title": "第6課: 성격 & 성질 (Adjectives for People & Things)",
-  "color": "from-amber-200 to-amber-50",
-  "tips": [
-    { "title": "い형용사/な형용사", "text": "재미있다 楽しい(い형용사), 친절하다 親切(しんせつ, な형용사). 문장 끝: 楽しいです / 親切です." },
-    { "title": "매우/꽤/조금", "text": "とても(매우), かなり(꽤), 少し(すこし, 조금). 예) とても親切です。" }
-  ],
-  "items": [
-    { "id":"a01","type":"word","source":"親切 (しんせつ)［な］","target":"친절한" },
-    { "id":"a02","type":"word","source":"まじめ［な］","target":"성실한/진지한" },
-    { "id":"a03","type":"word","source":"明るい (あかるい)","target":"밝은" },
-    { "id":"a04","type":"word","source":"静か (しずか)［な］","target":"조용한" },
-    { "id":"a05","type":"word","source":"にぎやか［な］","target":"번화한/활기찬" },
-    { "id":"a06","type":"word","source":"おもしろい","target":"재미있는" },
-    { "id":"a07","type":"word","source":"つまらない","target":"지루한" },
-    { "id":"a08","type":"word","source":"難しい (むずかしい)","target":"어려운" },
-    { "id":"a09","type":"word","source":"かんたん［な］ / 易しい (やさしい)","target":"쉬운" },
-    { "id":"a10","type":"word","source":"いい / 良い (よい)","target":"좋은" },
-    { "id":"a11","type":"word","source":"悪い (わるい)","target":"나쁜" },
-    { "id":"a12","type":"word","source":"強い (つよい) / 弱い (よわい)","target":"강한 / 약한" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_adj_1",
-      "title":"동료 묘사",
-      "roles":[
-        { "who":"A","lines":["あなたの上司はどんな人ですか。"] },
-        { "who":"B","lines":["親切で、まじめです。でも、時々静かです。"] }
-      ],
-      "translation":[
-        "당신의 상사는 어떤 분이에요?",
-        "친절하고 성실해요. 하지만 가끔 조용해요."
-      ]
-    },
-    {
-      "id":"jad_adj_2",
-      "title":"집 묘사",
-      "roles":[
-        { "who":"A","lines":["あなたの部屋は明るいですね。"] },
-        { "who":"B","lines":["ええ、広いですが、廊下は少し狭いです。"] }
-      ],
-      "translation":[
-        "당신 방은 밝네요.",
-        "네, 넓지만, 복도는 조금 좁아요."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"な형용사 & い형용사 기본",
-      "notes":"な형용사는 명사 수식 시 な 필요 (親切な人). い형용사는 바로 명사 수식(明るい部屋). 정중형: 親切です / 明るいです."
-    }
-   ]
-  }
- ]
-},
-    {
-  "id": "ja7_family_people",
-  "title": "第7課: 가족 & 사람 (Family & People)",
-  "color": "from-rose-200 to-rose-50",
-  "tips": [
-    { "title": "자기 가족 vs 남의 가족", "text": "자기 가족: 父/母/兄/姉… 남의 가족(존칭): お父さん/お母さん/お兄さん/お姉さん…" },
-    { "title": "호칭 ~さん", "text": "이름 뒤에 ～さん을 붙여 공손하게 부릅니다. 예) 田中さん。" }
-  ],
-  "items": [
-    { "id":"f01","type":"word","source":"友達 (ともだち)","target":"친구" },
-    { "id":"f02","type":"word","source":"親友 (しんゆう)","target":"베스트 프렌드" },
-    { "id":"f03","type":"word","source":"同僚 (どうりょう)","target":"직장 동료" },
-
-    { "id":"f10","type":"word","source":"家族 (かぞく)","target":"가족" },
-    { "id":"f11","type":"word","source":"父 (ちち) / お父さん (おとうさん)","target":"아버지" },
-    { "id":"f12","type":"word","source":"母 (はは) / お母さん (おかあさん)","target":"어머니" },
-    { "id":"f13","type":"word","source":"兄 (あに) / お兄さん (おにいさん)","target":"형/오빠" },
-    { "id":"f14","type":"word","source":"姉 (あね) / お姉さん (おねえさん)","target":"누나/언니" },
-    { "id":"f15","type":"word","source":"弟 (おとうと)","target":"남동생" },
-    { "id":"f16","type":"word","source":"妹 (いもうと)","target":"여동생" },
-    { "id":"f17","type":"word","source":"祖父 (そふ) / おじいさん","target":"할아버지" },
-    { "id":"f18","type":"word","source":"祖母 (そぼ) / おばあさん","target":"할머니" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_family_1",
-      "title":"가족 이야기",
-      "roles":[
-        { "who":"A","lines":["兄弟はいますか。"] },
-        { "who":"B","lines":["はい、姉が一人と弟が一人います。"] }
-      ],
-      "translation":[
-        "형제자매가 있나요?",
-        "네, 언니 한 명과 남동생 한 명이 있어요."
-      ]
-    },
-    {
-      "id":"jad_family_2",
-      "title":"친구 소개",
-      "roles":[
-        { "who":"A","lines":["この人は私の親友です。"] },
-        { "who":"B","lines":["はじめまして。よろしくお願いします。"] }
-      ],
-      "translation":[
-        "이 사람은 제 베스트 프렌드예요.",
-        "처음 뵙겠습니다. 잘 부탁드립니다."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"소유 표현 ～の",
-      "notes":"AのB = A의 B. 田中さんの弟 = 다나카 씨의 남동생.",
-      "examples":[
-        { "source":"私の母です。","target":"제 어머니입니다." },
-        { "source":"山田さんの家族。","target":"야마다 씨의 가족." }
-      ]
-    }
-  ]
-},
-    {
-  "id": "ja8_work_places",
-  "title": "第8課: 직장 & 장소 (Work & Places)",
-  "color": "from-teal-200 to-teal-50",
-  "tips": [
-    { "title": "장소 묻기", "text": "～はどこですか ＝ …는 어디에 있습니까? 위치 설명에는 ～のとなり(옆), ～の前(앞), ～の中(안) 등을 사용." },
-    { "title": "회사/직업", "text": "会社(회사), 会社員(회사원). ‘사무실’은 オフィス 또는 事務所(じむしょ)." }
-  ],
-  "items": [
-    { "id":"p01","type":"word","source":"会社 (かいしゃ)","target":"회사" },
-    { "id":"p02","type":"word","source":"会社員 (かいしゃいん)","target":"회사원" },
-    { "id":"p03","type":"word","source":"オフィス / 事務所 (じむしょ)","target":"사무실" },
-    { "id":"p04","type":"word","source":"コンピューター","target":"컴퓨터" },
-    { "id":"p05","type":"word","source":"プリンター","target":"프린터" },
-    { "id":"p06","type":"word","source":"机 (つくえ)","target":"책상" },
-    { "id":"p07","type":"word","source":"ビル","target":"빌딩" },
-    { "id":"p08","type":"word","source":"エレベーター","target":"엘리베이터" },
-    { "id":"p09","type":"word","source":"階段 (かいだん)","target":"계단" },
-    { "id":"p10","type":"word","source":"銀行 (ぎんこう)","target":"은행" },
-    { "id":"p11","type":"word","source":"レストラン","target":"레스토랑" },
-    { "id":"p12","type":"word","source":"ホテル","target":"호텔" },
-    { "id":"p13","type":"word","source":"予約 (よやく)","target":"예약" },
-    { "id":"p14","type":"word","source":"トイレ","target":"화장실" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_places_1",
-      "title":"사무실에서",
-      "roles":[
-        { "who":"A","lines":["プリンターはどこですか。"] },
-        { "who":"B","lines":["机のとなりにあります。"] },
-        { "who":"A","lines":["ありがとうございます。"] }
-      ],
-      "translation":[
-        "프린터는 어디에 있습니까?",
-        "책상 옆에 있습니다.",
-        "감사합니다."
-      ]
-    },
-    {
-      "id":"jad_places_2",
-      "title":"호텔 체크인",
-      "roles":[
-        { "who":"A","lines":["すみません、予約があります。"] },
-        { "who":"B","lines":["お名前は何ですか。"] },
-        { "who":"A","lines":["イ・ウンジュです。"] },
-        { "who":"B","lines":["こちらが部屋の鍵です。どうぞ。"] }
-      ],
-      "translation":[
-        "실례합니다, 예약이 있습니다.",
-        "성함이 어떻게 되십니까?",
-        "이은주입니다.",
-        "여기 방 열쇠입니다. 들어가세요."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"위치 표현",
-      "notes":"～はどこですか(…는 어디?), ～のとなり(옆), ～の前(앞), ～の中(안).",
-      "examples":[
-        { "source":"銀行はどこですか。","target":"은행은 어디에 있습니까?" },
-        { "source":"オフィスはビルの中です。","target":"사무실은 빌딩 안에 있어요." }
-      ]
-     }
-    ]
-   }
   ]
 }

@@ -6,64 +6,130 @@
   "translateLang": "ko",
   "chapters": [
     {
-      "id": "ja0_kana_drill",
-      "title": "第0課: ひらがな & カタカナ 練習 (Kana Drill)",
-      "color": "from-violet-300 to-violet-50",
-      "tips": [
-        { "title": "ひらがな vs カタカナ", "text": "ひらがな＝일본어 기본 표기, カタカナ＝외래어, 강조." },
-        { "title": "연습 포인트", "text": "소리 대응을 빠르게 익히세요. し=시, つ=츠, ふ=후." }
-      ],
-      "items": [
-        { "id":"kq1", "type":"quiz", "qtype":"choice", "question":"あ = ?", "options":["아","이","오"], "answer":"아" },
-        { "id":"kq2", "type":"quiz", "qtype":"choice", "question":"‘카’ in Hiragana is…", "options":["か","き","こ"], "answer":"か" },
-        { "id":"kq3", "type":"quiz", "qtype":"choice", "question":"シ = ?", "options":["시","소","스"], "answer":"시" },
-        { "id":"kq4", "type":"quiz", "qtype":"choice", "question":"‘쿠’ in Katakana?", "options":["ク","ケ","カ"], "answer":"ク" },
+     {
+  "id": "ja0_kana_mastery",
+  "title": "第0課: ひらがな & カタカナ 完全マスター (Kana Mastery)",
+  "color": "from-violet-300 to-violet-50",
+  "tips": [
+    { "title": "학습 순서", "text": "1) 모음/기본 행 → 2) 탁점/반탁점 → 3) 작은ゃゅょ(요온) → 4) っ(촉음) → 5) 장음 ー → 6) 단어 읽기." },
+    { "title": "표기 용도", "text": "ひらがな=일본어 고유어, 조사/활용. カタカナ=외래어, 의성어, 강조." }
+  ],
+  "items": [
+    { "id": "h_a",  "type":"word", "source":"あ い う え お", "target":"a i u e o (아 이 우 에 오)" },
+    { "id": "h_k",  "type":"word", "source":"か き く け こ", "target":"ka ki ku ke ko" },
+    { "id": "h_s",  "type":"word", "source":"さ し す せ そ", "target":"sa shi su se so (し=shi)" },
+    { "id": "h_t",  "type":"word", "source":"た ち つ て と", "target":"ta chi tsu te to (ち=chi, つ=tsu)" },
+    { "id": "h_n",  "type":"word", "source":"な に ぬ ね の", "target":"na ni nu ne no" },
+    { "id": "h_h",  "type":"word", "source":"は ひ ふ へ ほ", "target":"ha hi fu he ho (ふ=fu)" },
+    { "id": "h_m",  "type":"word", "source":"ま み む め も", "target":"ma mi mu me mo" },
+    { "id": "h_y",  "type":"word", "source":"や (い) ゆ (え) よ", "target":"ya yu yo (い/え 없음)" },
+    { "id": "h_r",  "type":"word", "source":"ら り る れ ろ", "target":"ra ri ru re ro" },
+    { "id": "h_w",  "type":"word", "source":"わ を ん", "target":"wa (o/조사) n" },
 
-        { "id":"kq5", "type":"quiz", "qtype":"fill", "question":"がっ＿う → 학교", "answer":"こ" },
-        { "id":"kq6", "type":"quiz", "qtype":"fill", "question":"コーヒ＿ → 커피", "answer":"ー" },
+    { "id": "h_daku",  "type":"word", "source":"が ぎ ぐ げ ご / ざ じ ず ぜ ぞ", "target":"ga gi gu ge go / za ji zu ze zo" },
+    { "id": "h_daku2", "type":"word", "source":"だ ぢ づ で ど / ば び ぶ べ ぼ", "target":"da ji(ぢ) zu(づ) de do / ba bi bu be bo" },
+    { "id": "h_hand",  "type":"word", "source":"ぱ ぴ ぷ ぺ ぽ", "target":"pa pi pu pe po (반탁점 ゜)" },
+    { "id": "h_small", "type":"word", "source":"ゃ ゅ ょ / っ / ぁ ぃ ぅ ぇ お", "target":"ya/yu/yo 축약, 촉음, 소모음" },
 
-        { "id":"kq7", "type":"quiz", "qtype":"choice", "question":"탁점 か→ ?", "options":["が","ぱ","ざ"], "answer":"が" },
-        { "id":"kq8", "type":"quiz", "qtype":"choice", "question":"は→ぱ (반탁점). What is the mark?", "options":["゜","゛","っ"], "answer":"゜" },
+    { "id": "k_a",  "type":"word", "source":"ア イ ウ エ オ", "target":"a i u e o" },
+    { "id": "k_k",  "type":"word", "source":"カ キ ク ケ コ", "target":"ka ki ku ke ko" },
+    { "id": "k_s",  "type":"word", "source":"サ シ ス セ ソ", "target":"sa shi su se so" },
+    { "id": "k_t",  "type":"word", "source":"タ チ ツ テ ト", "target":"ta chi tsu te to" },
+    { "id": "k_n",  "type":"word", "source":"ナ ニ ヌ ネ ノ", "target":"na ni nu ne no" },
+    { "id": "k_h",  "type":"word", "source":"ハ ヒ フ ヘ ホ", "target":"ha hi fu he ho" },
+    { "id": "k_m",  "type":"word", "source":"マ ミ ム メ モ", "target":"ma mi mu me mo" },
+    { "id": "k_y",  "type":"word", "source":"ヤ (イ) ユ (エ) ヨ", "target":"ya yu yo" },
+    { "id": "k_r",  "type":"word", "source":"ラ リ ル レ ロ", "target":"ra ri ru re ro" },
+    { "id": "k_w",  "type":"word", "source":"ワ ヲ ン ー", "target":"wa (o/조사) n, long vowel mark ー" },
 
-        { "id":"kq9", "type":"quiz", "qtype":"choice", "question":"Which is the small っ used for?", "options":["장음","자음 겹침","존칭"], "answer":"자음 겹침" }
+    { "id": "sample_words_h", "type":"phrase", "source":"がっこう・きょう・ぎゅうにゅう・ちょっと", "target":"학교/오늘/우유/조금 (촉음/요온 포함)" },
+    { "id": "sample_words_k", "type":"phrase", "source":"コーヒー・アイスクリーム・スーパー・タクシー", "target":"커피/아이스크림/슈퍼/택시 (장음 ー)" }
+  ],
+
+  "dialogs": [
+    {
+      "id":"jad_kana_read_1",
+      "title":"ひらがな 읽기",
+      "roles":[
+        { "who":"A","lines":["これは『がっこう』です。読めますか。"] },
+        { "who":"B","lines":["はい、『がっこう』です。"] }
       ],
-      "dialogs": [
-        {
-          "id":"jad_kana_drill1",
-          "title":"읽기 연습",
-          "roles":[
-            { "who":"A","lines":["これは『すし』です。読めますか。"] },
-            { "who":"B","lines":["はい、『すし』です。"] }
-          ],
-          "translation":[
-            "이것은 ‘すし’입니다. 읽을 수 있나요?",
-            "네, ‘すし’입니다."
-          ]
-        },
-        {
-          "id":"jad_kana_drill2",
-          "title":"외래어 연습",
-          "roles":[
-            { "who":"A","lines":["『コーヒー』を飲みますか。"] },
-            { "who":"B","lines":["はい、飲みます。"] }
-          ],
-          "translation":[
-            "‘커피’를 마시나요?",
-            "네, 마십니다."
-          ]
-        }
+      "translation":[
+        "이것은 ‘がっこう(학교)’입니다. 읽을 수 있나요?",
+        "네, ‘がっこう’입니다."
+      ]
+    },
+    {
+      "id":"jad_kana_loan_1",
+      "title":"カタカナ 읽기",
+      "roles":[
+        { "who":"A","lines":["『コーヒー』を飲みますか。"] },
+        { "who":"B","lines":["はい、飲みます。"] }
       ],
-      "grammar": [
-        {
-          "topic":"작은 っ",
-          "notes":"짧은 정지로 발음 길게. 예: がっこう (학교).",
-          "examples":[ { "source":"がっこう","target":"학교" } ]
-        },
-        {
-          "topic":"장음 ー",
-          "notes":"カタカナ 긴 모음. 예: コーヒー (커피).",
-          "examples":[ { "source":"コーヒー","target":"커피" } ]
-        }
+      "translation":[
+        "‘커피’를 마시나요?",
+        "네, 마십니다."
+      ]
+    }
+  ],
+
+  "grammar": [
+    { "topic":"탁점/반탁점", "notes":"か/さ/た/は 행 + ゛ → が/ざ/だ/ば, は 행 + ゜ → ぱ." },
+    { "topic":"작은 っ(촉음)", "notes":"앞 자음을 짧게 끊어 발음(자음 겹침). 예: がっこう, きって." },
+    { "topic":"요온 (ゃ/ゅ/ょ)", "notes":"きゃ/きゅ/きょ, しゃ/しゅ/しょ 등 축약음." },
+    { "topic":"장음 ー", "notes":"카타카나 장모음. コーヒー, スーパー." }
+  ],
+
+  "items_quiz": [
+    { "id":"q01", "type":"quiz","qtype":"choice","question":"あ = ?", "options":["아","오","에","우"], "answer":"아" },
+    { "id":"q02", "type":"quiz","qtype":"choice","question":"え = ?", "options":["에","아","오","이"], "answer":"에" },
+    { "id":"q03", "type":"quiz","qtype":"choice","question":"し = ?", "options":["시","스","사","쇼"], "answer":"시" },
+    { "id":"q04", "type":"quiz","qtype":"choice","question":"つ = ?", "options":["츠","치","테","토"], "answer":"츠" },
+    { "id":"q05", "type":"quiz","qtype":"choice","question":"ふ = ?", "options":["후","후゛(부)","푸","후(장음)"], "answer":"후" },
+
+    { "id":"q06", "type":"quiz","qtype":"choice","question":"が = ?", "options":["ga","ka","ba","pa"], "answer":"ga" },
+    { "id":"q07", "type":"quiz","qtype":"choice","question":"ぱ = ?", "options":["pa","ba","ha","fa"], "answer":"pa" },
+    { "id":"q08", "type":"quiz","qtype":"choice","question":"きゃ = ?", "options":["캬","샤","챠","쟈"], "answer":"캬" },
+    { "id":"q09", "type":"quiz","qtype":"choice","question":"ちょ = ?", "options":["초","쿄","쇼","쵸ー"], "answer":"초" },
+    { "id":"q10", "type":"quiz","qtype":"choice","question":"’작은 っ’의 용도는?", "options":["장음","자음 겹침/정지","존칭","의문"], "answer":"자음 겹침/정지" },
+
+    { "id":"q11", "type":"quiz","qtype":"fill","question":"がっ＿う → 학교", "answer":"こ" },
+    { "id":"q12", "type":"quiz","qtype":"fill","question":"きっ＿ → 切手(우표) きって", "answer":"て" },
+    { "id":"q13", "type":"quiz","qtype":"fill","question":"に＿ほん → にほん(일본)", "answer":"" },
+    { "id":"q14", "type":"quiz","qtype":"fill","question":"き＿う → きょう(오늘)", "answer":"ょ" },
+    { "id":"q15", "type":"quiz","qtype":"fill","question":"コーヒ＿ → 커피", "answer":"ー" },
+
+    { "id":"q16", "type":"quiz","qtype":"choice","question":"ア = ?", "options":["a","i","u","e"], "answer":"a" },
+    { "id":"q17", "type":"quiz","qtype":"choice","question":"シ = ?", "options":["shi","si","su","sho"], "answer":"shi" },
+    { "id":"q18", "type":"quiz","qtype":"choice","question":"ツ = ?", "options":["tsu","tu","chi","te"], "answer":"tsu" },
+    { "id":"q19", "type":"quiz","qtype":"choice","question":"‘쿠’ in Katakana", "options":["ク","ケ","コ","カ"], "answer":"ク" },
+    { "id":"q20", "type":"quiz","qtype":"choice","question":"長音 기호는?", "options":["ー","っ","゛","゜"], "answer":"ー" },
+
+    { "id":"q21", "type":"quiz","qtype":"fill","question":"き＿ → きゅう(구/급) 첫 축약 모라", "answer":"ゅ" },
+    { "id":"q22", "type":"quiz","qtype":"fill","question":"しゃ＿ → しゃしん(사진) しゃしん의 두 번째", "answer":"し" },
+    { "id":"q23", "type":"quiz","qtype":"fill","question":"スーパーの長音: ス＿パ＿", "answer":"ー,ー" },
+    { "id":"q24", "type":"quiz","qtype":"fill","question":"タ＿シ＿ー → タクシー(택시)", "answer":"ク,ー" },
+    { "id":"q25", "type":"quiz","qtype":"fill","question":"き＿て → きって(우표) 촉음 글자", "answer":"っ" },
+
+    { "id":"q26", "type":"quiz","qtype":"choice","question":"じ/ぢ 발음은 보통?", "options":["ji / ji","zi / di","ji / dji","ji / di"], "answer":"ji / ji" },
+    { "id":"q27", "type":"quiz","qtype":"choice","question":"ず/づ 발음은 보통?", "options":["zu / zu","zu / dzu","zu / du","zu / tsu"], "answer":"zu / zu" },
+    { "id":"q28", "type":"quiz","qtype":"choice","question":"ヲ(を)의 기본 용법", "options":["조사 ‘오’","단어 첫 음절 ‘워’","조사 ‘에’","장음"], "answer":"조사 ‘오’" },
+    { "id":"q29", "type":"quiz","qtype":"choice","question":"와행(や행)에서 없는 것은?", "options":["い, え","あ, お","う, え","や, よ"], "answer":"い, え" },
+    { "id":"q30", "type":"quiz","qtype":"choice","question":"ふ의 탁점/반탁점", "options":["ぶ/ぷ","ぼ/ぽ","ば/ぱ","び/ぴ"], "answer":"ぶ/ぷ" },
+
+    { "id":"q31", "type":"quiz","qtype":"choice","question":"읽기: がっこう", "options":["학교","학교(장음)","학교(반탁)","학교? 모르겠음"], "answer":"학교" },
+    { "id":"q32", "type":"quiz","qtype":"choice","question":"읽기: きょう", "options":["오늘","오늘(장음)","오늘X","교"], "answer":"오늘" },
+    { "id":"q33", "type":"quiz","qtype":"choice","question":"읽기: コーヒー", "options":["커피","코히","코하이","콜라"], "answer":"커피" },
+    { "id":"q34", "type":"quiz","qtype":"choice","question":"읽기: スーパー", "options":["슈퍼","수파","수퍼(짧음)","샤퍼"], "answer":"슈퍼" },
+    { "id":"q35", "type":"quiz","qtype":"choice","question":"읽기: タクシー", "options":["택시","타쿠시","타시","텍시"], "answer":"택시" },
+
+    { "id":"q36", "type":"quiz","qtype":"fill","question":"ひらがな로: kyō = き＿う", "answer":"ょ" },
+    { "id":"q37", "type":"quiz","qtype":"fill","question":"ひらがな로: gakkō = がっこ＿", "answer":"う" },
+    { "id":"q38", "type":"quiz","qtype":"fill","question":"カタカナ로: kōhī = コ＿ヒ＿", "answer":"ー,ー" },
+    { "id":"q39", "type":"quiz","qtype":"fill","question":"カタカナ로: takushī = タ＿シ＿", "answer":"ク,ー" },
+    { "id":"q40", "type":"quiz","qtype":"fill","question":"ひらがな로: chotto = ちょっ＿", "answer":"と" }
+        ]
+       }
       ]
     },
 

@@ -4,68 +4,69 @@
   "learnLang": "ja-JP",
   "uiLang": "ko-KR",
   "translateLang": "ko",
-  {
-  "id": "ja0_kana_drill",
-  "title": "第0課: ひらがな & カタカナ 練習 (Kana Drill)",
-  "color": "from-violet-300 to-violet-50",
-  "tips": [
-    { "title": "ひらがな vs カタカナ", "text": "ひらがな＝일본어 기본 표기, カタカナ＝외래어, 강조." },
-    { "title": "연습 포인트", "text": "소리 대응을 빠르게 익히세요. し=시, つ=츠, ふ=후." }
-  ],
-  "items": [
-    { "id":"kq1", "type":"quiz", "qtype":"choice", "question":"あ = ?", "options":["아","이","오"], "answer":"아" },
-    { "id":"kq2", "type":"quiz", "qtype":"choice", "question":"‘카’ in Hiragana is…", "options":["か","き","こ"], "answer":"か" },
-    { "id":"kq3", "type":"quiz", "qtype":"choice", "question":"シ = ?", "options":["시","소","스"], "answer":"시" },
-    { "id":"kq4", "type":"quiz", "qtype":"choice", "question":"‘쿠’ in Katakana?", "options":["ク","ケ","カ"], "answer":"ク" },
-
-    { "id":"kq5", "type":"quiz", "qtype":"fill", "question":"がっ＿う → 학교", "answer":"こ" },
-    { "id":"kq6", "type":"quiz", "qtype":"fill", "question":"コーヒ＿ → 커피", "answer":"ー" },
-
-    { "id":"kq7", "type":"quiz", "qtype":"choice", "question":"탁점 か→ ?", "options":["が","ぱ","ざ"], "answer":"が" },
-    { "id":"kq8", "type":"quiz", "qtype":"choice", "question":"は→ぱ (반탁점). What is the mark?", "options":["゜","゛","っ"], "answer":"゜" },
-
-    { "id":"kq9", "type":"quiz", "qtype":"choice", "question":"Which is the small っ used for?", "options":["장음","자음 겹침","존칭"], "answer":"자음 겹침" }
-  ],
-  "dialogs": [
-    {
-      "id":"jad_kana_drill1",
-      "title":"읽기 연습",
-      "roles":[
-        { "who":"A","lines":["これは『すし』です。読めますか。"] },
-        { "who":"B","lines":["はい、『すし』です。"] }
-      ],
-      "translation":[
-        "이것은 ‘すし’입니다. 읽을 수 있나요?",
-        "네, ‘すし’입니다."
-      ]
-    },
-    {
-      "id":"jad_kana_drill2",
-      "title":"외래어 연습",
-      "roles":[
-        { "who":"A","lines":["『コーヒー』を飲みますか。"] },
-        { "who":"B","lines":["はい、飲みます。"] }
-      ],
-      "translation":[
-        "‘커피’를 마시나요?",
-        "네, 마십니다."
-      ]
-    }
-  ],
-  "grammar": [
-    {
-      "topic":"작은 っ",
-      "notes":"짧은 정지로 발음 길게. 예: がっこう (학교).",
-      "examples":[ { "source":"がっこう","target":"학교" } ]
-    },
-    {
-      "topic":"장음 ー",
-      "notes":"カタカナ 긴 모음. 예: コーヒー (커피).",
-      "examples":[ { "source":"コーヒー","target":"커피" } ]
-    }
-  ]
-},
   "chapters": [
+    {
+      "id": "ja0_kana_drill",
+      "title": "第0課: ひらがな & カタカナ 練習 (Kana Drill)",
+      "color": "from-violet-300 to-violet-50",
+      "tips": [
+        { "title": "ひらがな vs カタカナ", "text": "ひらがな＝일본어 기본 표기, カタカナ＝외래어, 강조." },
+        { "title": "연습 포인트", "text": "소리 대응을 빠르게 익히세요. し=시, つ=츠, ふ=후." }
+      ],
+      "items": [
+        { "id":"kq1", "type":"quiz", "qtype":"choice", "question":"あ = ?", "options":["아","이","오"], "answer":"아" },
+        { "id":"kq2", "type":"quiz", "qtype":"choice", "question":"‘카’ in Hiragana is…", "options":["か","き","こ"], "answer":"か" },
+        { "id":"kq3", "type":"quiz", "qtype":"choice", "question":"シ = ?", "options":["시","소","스"], "answer":"시" },
+        { "id":"kq4", "type":"quiz", "qtype":"choice", "question":"‘쿠’ in Katakana?", "options":["ク","ケ","カ"], "answer":"ク" },
+
+        { "id":"kq5", "type":"quiz", "qtype":"fill", "question":"がっ＿う → 학교", "answer":"こ" },
+        { "id":"kq6", "type":"quiz", "qtype":"fill", "question":"コーヒ＿ → 커피", "answer":"ー" },
+
+        { "id":"kq7", "type":"quiz", "qtype":"choice", "question":"탁점 か→ ?", "options":["が","ぱ","ざ"], "answer":"が" },
+        { "id":"kq8", "type":"quiz", "qtype":"choice", "question":"は→ぱ (반탁점). What is the mark?", "options":["゜","゛","っ"], "answer":"゜" },
+
+        { "id":"kq9", "type":"quiz", "qtype":"choice", "question":"Which is the small っ used for?", "options":["장음","자음 겹침","존칭"], "answer":"자음 겹침" }
+      ],
+      "dialogs": [
+        {
+          "id":"jad_kana_drill1",
+          "title":"읽기 연습",
+          "roles":[
+            { "who":"A","lines":["これは『すし』です。読めますか。"] },
+            { "who":"B","lines":["はい、『すし』です。"] }
+          ],
+          "translation":[
+            "이것은 ‘すし’입니다. 읽을 수 있나요?",
+            "네, ‘すし’입니다."
+          ]
+        },
+        {
+          "id":"jad_kana_drill2",
+          "title":"외래어 연습",
+          "roles":[
+            { "who":"A","lines":["『コーヒー』を飲みますか。"] },
+            { "who":"B","lines":["はい、飲みます。"] }
+          ],
+          "translation":[
+            "‘커피’를 마시나요?",
+            "네, 마십니다."
+          ]
+        }
+      ],
+      "grammar": [
+        {
+          "topic":"작은 っ",
+          "notes":"짧은 정지로 발음 길게. 예: がっこう (학교).",
+          "examples":[ { "source":"がっこう","target":"학교" } ]
+        },
+        {
+          "topic":"장음 ー",
+          "notes":"カタカナ 긴 모음. 예: コーヒー (커피).",
+          "examples":[ { "source":"コーヒー","target":"커피" } ]
+        }
+      ]
+    },
+
     {
       "id": "ja1_greetings",
       "title": "第1課: 인사 & 자기소개 (Greetings & Introductions)",
@@ -128,6 +129,7 @@
         }
       ]
     },
+
     {
       "id": "ja2_everyday",
       "title": "第2課: 일상 표현 (Everyday & Social Phrases)",
@@ -189,6 +191,7 @@
         }
       ]
     },
+
     {
       "id": "ja3_time",
       "title": "第3課: 시간 & 날짜 (Time & Dates)",
@@ -270,6 +273,7 @@
         }
       ]
     },
+
     {
       "id": "ja4_weather",
       "title": "第4課: 날씨 & 계절 (Weather & Seasons)",
@@ -333,6 +337,7 @@
         }
       ]
     },
+
     {
       "id": "ja5_colors_sizes",
       "title": "第5課: 색 & 크기 (Colors & Sizes)",
@@ -394,6 +399,7 @@
         }
       ]
     },
+
     {
       "id": "ja6_adjectives_people_things",
       "title": "第6課: 성격 & 성질 (Adjectives for People & Things)",
@@ -451,6 +457,7 @@
         }
       ]
     },
+
     {
       "id": "ja7_family_people",
       "title": "第7課: 가족 & 사람 (Family & People)",
@@ -510,6 +517,7 @@
         }
       ]
     },
+
     {
       "id": "ja8_work_places",
       "title": "第8課: 직장 & 장소 (Work & Places)",
@@ -556,7 +564,7 @@
             { "who": "A", "lines": ["すみません、予約があります。"] },
             { "who": "B", "lines": ["お名前は何ですか。"] },
             { "who": "A", "lines": ["イ・ウンジュです。"] },
-            { "who": "B", "lines": ["こちらが部屋の鍵です。どうぞ。"] }
+            { "who": "B", "lines": ["こちらが部屋의 鍵です。どうぞ。"] }
           ],
           "translation": [
             "실례합니다, 예약이 있습니다.",

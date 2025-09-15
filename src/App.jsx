@@ -7,7 +7,7 @@ import {
 /* =========================
    Content version (AUTO-REFRESH)
    ========================= */
-const CONTENT_VERSION = 5;
+const CONTENT_VERSION = 6;
 
 /* =========================
    Load course JSONs

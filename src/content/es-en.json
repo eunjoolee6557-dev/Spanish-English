@@ -744,6 +744,319 @@
       ]
      }
     ]
+  },
+    {
+  "id": "es9_core_verbs_1",
+  "title": "Chapter 9: Core Verbs I (ser/estar/tener/ir/querer/poder/hacer)",
+  "color": "from-indigo-200 to-indigo-50",
+  "tips": [
+    { "title": "ser vs. estar", "text": "ser = identity/essence/time/origin; estar = state/location/ongoing." },
+    { "title": "ir + a + verbo", "text": "Plan/future: Voy a estudiar, Vamos a viajar." }
+  ],
+  "items": [
+    { "id":"w1", "type":"word", "source":"ser", "target":"to be (essence)" },
+    { "id":"w2", "type":"word", "source":"estar", "target":"to be (state/location)" },
+    { "id":"w3", "type":"word", "source":"tener", "target":"to have" },
+    { "id":"w4", "type":"word", "source":"ir", "target":"to go" },
+    { "id":"w5", "type":"word", "source":"querer", "target":"to want/love" },
+    { "id":"w6", "type":"word", "source":"poder", "target":"can/to be able to" },
+    { "id":"w7", "type":"word", "source":"hacer", "target":"to do/make" },
+
+    { "id":"p1", "type":"phrase", "source":"Soy estudiante.", "target":"I am a student." },
+    { "id":"p2", "type":"phrase", "source":"Estoy cansado hoy.", "target":"I am tired today." },
+    { "id":"p3", "type":"phrase", "source":"Tengo una reunión.", "target":"I have a meeting." },
+    { "id":"p4", "type":"phrase", "source":"Voy a trabajar.", "target":"I am going to work." },
+    { "id":"p5", "type":"phrase", "source":"Quiero descansar.", "target":"I want to rest." },
+    { "id":"p6", "type":"phrase", "source":"¿Puedes venir ahora?", "target":"Can you come now?" },
+    { "id":"p7", "type":"phrase", "source":"Hacemos la reservación.", "target":"We make the reservation." },
+
+    { "id":"q1", "type":"quiz", "qtype":"choice", "question":"Choose ser vs. estar: “___ de Corea.”", "options":["Estoy","Soy"], "answer":"Soy" },
+    { "id":"q2", "type":"quiz", "qtype":"choice", "question":"Choose ser vs. estar: “Hoy ___ ocupado.”", "options":["estoy","soy"], "answer":"estoy" },
+    { "id":"q3", "type":"quiz", "qtype":"fill", "question":"Yo ___ (tener) prisa.", "answer":"tengo" },
+    { "id":"q4", "type":"quiz", "qtype":"fill", "question":"Nosotros ___ (poder) viajar mañana.", "answer":"podemos" },
+    { "id":"q5", "type":"quiz", "qtype":"fill", "question":"Ella ___ a estudiar. (ir + a)", "answer":"va" }
+  ],
+  "dialogs": [
+    {
+      "id":"d1",
+      "title":"Planes para hoy",
+      "roles":[
+        { "who":"A", "lines":["Hola, ¿cómo estás?"] },
+        { "who":"B", "lines":["Estoy bien, gracias. ¿Y tú?"] },
+        { "who":"A", "lines":["Bien. Hoy tengo una reunión. Luego voy a estudiar."] },
+        { "who":"B", "lines":["Yo quiero descansar, pero puedo ayudarte después."] }
+      ],
+      "translation":[
+        "Hi, how are you?",
+        "I’m fine, thanks. And you?",
+        "Good. Today I have a meeting. Later I’m going to study.",
+        "I want to rest, but I can help you afterwards."
+      ]
+    },
+    {
+      "id":"d2",
+      "title":"Identidad y estado",
+      "roles":[
+        { "who":"A", "lines":["Soy presidente de una compañía."] },
+        { "who":"B", "lines":["¡Mucho gusto! Estoy muy contento de conocerte."] },
+        { "who":"A", "lines":["Igualmente. ¿Puedes venir a la oficina ahora?"] },
+        { "who":"B", "lines":["Sí, voy en diez minutos."] }
+      ],
+      "translation":[
+        "I am the president of a company.",
+        "Nice to meet you! I’m very happy to meet you.",
+        "Likewise. Can you come to the office now?",
+        "Yes, I’m going in ten minutes."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Present irregulars",
+      "notes":"Key irregular forms (yo) and full paradigms for ser/estar.",
+      "tables":[
+        {
+          "label":"ser (presente)",
+          "rows":[["yo","soy"],["tú","eres"],["él/ella","es"],["nosotros","somos"],["vosotros","sois"],["ellos","son"]]
+        },
+        {
+          "label":"estar (presente)",
+          "rows":[["yo","estoy"],["tú","estás"],["él/ella","está"],["nosotros","estamos"],["vosotros","estáis"],["ellos","están"]]
+        },
+        {
+          "label":"tener (yo irregular)",
+          "rows":[["yo","tengo"],["tú","tienes"],["él/ella","tiene"],["nosotros","tenemos"],["vosotros","tenéis"],["ellos","tienen"]]
+        },
+        {
+          "label":"ir (presente)",
+          "rows":[["yo","voy"],["tú","vas"],["él/ella","va"],["nosotros","vamos"],["vosotros","vais"],["ellos","van"]]
+        },
+        {
+          "label":"querer (e→ie)",
+          "rows":[["yo","quiero"],["tú","quieres"],["él/ella","quiere"],["nosotros","queremos"],["vosotros","queréis"],["ellos","quieren"]]
+        },
+        {
+          "label":"poder (o→ue)",
+          "rows":[["yo","puedo"],["tú","puedes"],["él/ella","puede"],["nosotros","podemos"],["vosotros","podéis"],["ellos","pueden"]]
+        },
+        {
+          "label":"hacer (yo irregular)",
+          "rows":[["yo","hago"],["tú","haces"],["él/ella","hace"],["nosotros","hacemos"],["vosotros","hacéis"],["ellos","hacen"]]
+        }
+      ]
+    }
+  ]
+},
+    {
+  "id": "es10_routine_time",
+  "title": "Chapter 10: Rutina diaria & tiempo",
+  "color": "from-sky-200 to-sky-50",
+  "tips": [
+    { "title": "Reflexivos comunes", "text": "levantarse, acostarse, prepararse." },
+    { "title": "Expresiones de tiempo", "text": "ahora, hoy, mañana, esta semana, este mes, este año." }
+  ],
+  "items": [
+    { "id":"w1", "type":"word", "source":"levantarse", "target":"to get up" },
+    { "id":"w2", "type":"word", "source":"acostarse", "target":"to go to bed" },
+    { "id":"w3", "type":"word", "source":"prepararse", "target":"to get ready" },
+    { "id":"w4", "type":"word", "source":"estudiar", "target":"to study" },
+    { "id":"w5", "type":"word", "source":"trabajar", "target":"to work" },
+    { "id":"w6", "type":"word", "source":"comer", "target":"to eat" },
+    { "id":"w7", "type":"word", "source":"tomar", "target":"to drink/take" },
+    { "id":"w8", "type":"word", "source":"tardar", "target":"to take (time)" },
+    { "id":"w9", "type":"word", "source":"esperar", "target":"to wait/hope" },
+    { "id":"w10", "type":"word", "source":"necesitar", "target":"to need" },
+
+    { "id":"p1", "type":"phrase", "source":"Me levanto a las seis.", "target":"I get up at six." },
+    { "id":"p2", "type":"phrase", "source":"Me preparo y voy a la oficina.", "target":"I get ready and go to the office." },
+    { "id":"p3", "type":"phrase", "source":"Estudio por la tarde.", "target":"I study in the afternoon." },
+    { "id":"p4", "type":"phrase", "source":"Ceno a las ocho.", "target":"I have dinner at eight." },
+    { "id":"p5", "type":"phrase", "source":"Tardo treinta minutos en llegar.", "target":"It takes me thirty minutes to arrive." },
+    { "id":"p6", "type":"phrase", "source":"Esta semana trabajo mucho.", "target":"This week I work a lot." },
+
+    { "id":"q1", "type":"quiz", "qtype":"fill", "question":"Yo ___ (levantarse) a las siete.", "answer":"me levanto" },
+    { "id":"q2", "type":"quiz", "qtype":"fill", "question":"Nosotros ___ (estudiar) por la noche.", "answer":"estudiamos" },
+    { "id":"q3", "type":"quiz", "qtype":"choice", "question":"“tardar” significa…", "options":["to wait","to take (time)","to prepare"], "answer":"to take (time)" }
+  ],
+  "dialogs": [
+    {
+      "id":"d1",
+      "title":"Mañana ocupada",
+      "roles":[
+        { "who":"A", "lines":["¿A qué hora te levantas?"] },
+        { "who":"B", "lines":["Me levanto a las seis. Me preparo y tomo café."] },
+        { "who":"A", "lines":["¿Tardas mucho en llegar al trabajo?"] },
+        { "who":"B", "lines":["Tardo unos treinta minutos."] }
+      ],
+      "translation":[
+        "What time do you get up?",
+        "I get up at six. I get ready and have coffee.",
+        "Do you take long to get to work?",
+        "It takes me about thirty minutes."
+      ]
+    },
+    {
+      "id":"d2",
+      "title":"Plan para hoy y mañana",
+      "roles":[
+        { "who":"A", "lines":["Hoy estudio por la tarde."] },
+        { "who":"B", "lines":["Mañana trabajo todo el día."] },
+        { "who":"A", "lines":["Necesito descansar esta noche."] }
+      ],
+      "translation":[
+        "Today I study in the afternoon.",
+        "Tomorrow I work all day.",
+        "I need to rest tonight."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Reflexivos básicos",
+      "notes":"me/te/se/nos/os/se + verbo: me levanto, te acuestas, se prepara."
+    }
+  ]
+},
+{
+  "id": "es11_shopping_restaurant",
+  "title": "Chapter 11: Compras & Restaurante",
+  "color": "from-emerald-200 to-emerald-50",
+  "tips": [
+    { "title": "Pagar", "text": "efectivo / tarjeta de crédito / tarjeta de débito." },
+    { "title": "Pedir con cortesía", "text": "Quisiera…, ¿Me puede traer…?, Para mí…, Por favor." }
+  ],
+  "items": [
+    { "id":"w1", "type":"word", "source":"comprar", "target":"to buy" },
+    { "id":"w2", "type":"word", "source":"vender", "target":"to sell" },
+    { "id":"w3", "type":"word", "source":"pagar", "target":"to pay" },
+    { "id":"w4", "type":"word", "source":"la tienda / el supermercado", "target":"the store / the supermarket" },
+    { "id":"w5", "type":"word", "source":"el restaurante", "target":"the restaurant" },
+    { "id":"w6", "type":"word", "source":"el efectivo", "target":"cash" },
+    { "id":"w7", "type":"word", "source":"la tarjeta de crédito / débito", "target":"credit / debit card" },
+    { "id":"w8", "type":"word", "source":"el cliente / la cliente", "target":"customer" },
+
+    { "id":"p1", "type":"phrase", "source":"¿Cuánto cuesta?", "target":"How much does it cost?" },
+    { "id":"p2", "type":"phrase", "source":"Quisiera pagar con tarjeta de crédito.", "target":"I’d like to pay with a credit card." },
+    { "id":"p3", "type":"phrase", "source":"¿Me puede traer agua, por favor?", "target":"Could you bring me water, please?" },
+    { "id":"p4", "type":"phrase", "source":"Para mí, pollo a la parrilla.", "target":"For me, grilled chicken." },
+    { "id":"p5", "type":"phrase", "source":"Busco una camisa azul.", "target":"I’m looking for a blue shirt." },
+
+    { "id":"q1", "type":"quiz", "qtype":"choice", "question":"“efectivo” es…", "options":["card","cash","tip"], "answer":"cash" },
+    { "id":"q2", "type":"quiz", "qtype":"fill", "question":"Yo ___ (pagar) con tarjeta.", "answer":"pago" },
+    { "id":"q3", "type":"quiz", "qtype":"fill", "question":"___ traer el menú, por favor.", "answer":"¿Me puede" }
+  ],
+  "dialogs": [
+    {
+      "id":"d1",
+      "title":"En la tienda",
+      "roles":[
+        { "who":"A", "lines":["Buenos días. Busco una camisa azul."] },
+        { "who":"B", "lines":["Tenemos varias. ¿Qué talla?"] },
+        { "who":"A", "lines":["Mediana. ¿Cuánto cuesta esta?"] },
+        { "who":"B", "lines":["Cincuenta dólares."] },
+        { "who":"A", "lines":["Perfecto. Pago con tarjeta de crédito."] }
+      ],
+      "translation":[
+        "Good morning. I’m looking for a blue shirt.",
+        "We have several. What size?",
+        "Medium. How much is this one?",
+        "Fifty dollars.",
+        "Perfect. I’ll pay with a credit card."
+      ]
+    },
+    {
+      "id":"d2",
+      "title":"En el restaurante",
+      "roles":[
+        { "who":"A", "lines":["Buenas tardes. ¿Me puede traer agua, por favor?"] },
+        { "who":"B", "lines":["Claro. ¿Está listo para ordenar?"] },
+        { "who":"A", "lines":["Sí. Para mí, pollo a la parrilla."] },
+        { "who":"B", "lines":["Con gusto."] }
+      ],
+      "translation":[
+        "Good afternoon. Could you bring me water, please?",
+        "Of course. Are you ready to order?",
+        "Yes. For me, grilled chicken.",
+        "With pleasure."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Cortesía para pedir",
+      "notes":"Quisiera…, ¿Me puede + infinitivo…?, Para mí…, Por favor."
+    }
+  ]
+},
+    {
+  "id": "es12_travel_hotel",
+  "title": "Chapter 12: Viajes & Hotel",
+  "color": "from-teal-200 to-teal-50",
+  "tips": [
+    { "title": "Preposiciones útiles", "text": "a, para, en, con, desde, hasta, por, porque." },
+    { "title": "Direcciones", "text": "¿Dónde está…? a la izquierda/derecha, cerca/lejos, arriba/abajo, en frente de, al lado de." }
+  ],
+  "items": [
+    { "id":"w1", "type":"word", "source":"el hotel / la habitación / el baño", "target":"hotel / room / bathroom" },
+    { "id":"w2", "type":"word", "source":"la reservación", "target":"reservation" },
+    { "id":"w3", "type":"word", "source":"el pasaporte / el equipaje", "target":"passport / luggage" },
+    { "id":"w4", "type":"word", "source":"el banco / el museo / el teatro", "target":"bank / museum / theater" },
+    { "id":"w5", "type":"word", "source":"la tarjeta de crédito / el efectivo", "target":"credit card / cash" },
+
+    { "id":"p1", "type":"phrase", "source":"Tengo una reservación a nombre de Iris.", "target":"I have a reservation under the name Iris." },
+    { "id":"p2", "type":"phrase", "source":"¿Dónde está el baño?", "target":"Where is the bathroom?" },
+    { "id":"p3", "type":"phrase", "source":"¿Cómo llego al banco desde aquí?", "target":"How do I get to the bank from here?" },
+    { "id":"p4", "type":"phrase", "source":"Pago en efectivo / con tarjeta.", "target":"I pay in cash / with card." },
+    { "id":"p5", "type":"phrase", "source":"Necesito ayuda con el equipaje.", "target":"I need help with the luggage." },
+
+    { "id":"q1", "type":"quiz", "qtype":"choice", "question":"“reservación” significa…", "options":["reservation","receipt","review"], "answer":"reservation" },
+    { "id":"q2", "type":"quiz", "qtype":"fill", "question":"¿___ está el museo?", "answer":"Dónde" },
+    { "id":"q3", "type":"quiz", "qtype":"fill", "question":"Voy ___ la estación. (preposición)", "answer":"a" }
+  ],
+  "dialogs": [
+    {
+      "id":"d1",
+      "title":"Check-in",
+      "roles":[
+        { "who":"A", "lines":["Buenas noches. Tengo una reservación a nombre de Iris."] },
+        { "who":"B", "lines":["Bienvenida. ¿Me muestra su pasaporte?"] },
+        { "who":"A", "lines":["Sí, aquí está."] },
+        { "who":"B", "lines":["Su habitación está en el tercer piso, a la derecha del ascensor."] }
+      ],
+      "translation":[
+        "Good evening. I have a reservation under the name Iris.",
+        "Welcome. May I see your passport?",
+        "Yes, here it is.",
+        "Your room is on the third floor, to the right of the elevator."
+      ]
+    },
+    {
+      "id":"d2",
+      "title":"Pidiendo direcciones",
+      "roles":[
+        { "who":"A", "lines":["Disculpe, ¿cómo llego al banco desde aquí?"] },
+        { "who":"B", "lines":["Siga recto hasta el parque y gire a la izquierda."] },
+        { "who":"A", "lines":["Gracias. ¿Está lejos?"] },
+        { "who":"B", "lines":["No, está cerca."] }
+      ],
+      "translation":[
+        "Excuse me, how do I get to the bank from here?",
+        "Go straight to the park and turn left.",
+        "Thank you. Is it far?",
+        "No, it’s close."
+      ]
+    }
+  ],
+  "grammar": [
+    {
+      "topic":"Preposiciones",
+      "notes":"a (to), para (for/purpose), en (in/on/at), con (with), desde (from/since), hasta (until/to), por (by/through/because of), porque (because)."
+    },
+    {
+      "topic":"Preguntas de dirección",
+      "notes":"¿Dónde está…?, ¿Cómo llego a…?, cerca/lejos, a la derecha/izquierda, en frente de, al lado de."
+    }
+   ]
   }
  ]
 }

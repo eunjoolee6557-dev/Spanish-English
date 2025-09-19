@@ -1057,6 +1057,156 @@
       "notes":"¿Dónde está…?, ¿Cómo llego a…?, cerca/lejos, a la derecha/izquierda, en frente de, al lado de."
     }
    ]
-  }
+  },
+    {
+  "id": "es13_help_polite",
+  "title": "Chapter 13: Asking for Help & Polite Phrases",
+  "color": "from-cyan-200 to-cyan-50",
+  "tips": [
+    { "title": "Politeness", "text": "Use '¿Podría...?' for polite requests, 'Por supuesto' for 'Of course'." },
+    { "title": "Helping others", "text": "Offer help with 'Déjame ayudarte' or 'Aquí tiene' when handing something over." }
+  ],
+  "items": [
+    { "id":"hp1", "type":"phrase", "source":"Gracias por la ayuda.", "target":"Thanks for the help." },
+    { "id":"hp2", "type":"phrase", "source":"Eres muy amable.", "target":"You are very kind." },
+    { "id":"hp3", "type":"phrase", "source":"No fue nada.", "target":"It was nothing." },
+    { "id":"hp4", "type":"phrase", "source":"Ningún problema.", "target":"No problem." },
+    { "id":"hp5", "type":"phrase", "source":"Es un placer.", "target":"It’s a pleasure." },
+    { "id":"hp6", "type":"phrase", "source":"¿Podría ayudarme?", "target":"Could you help me?" },
+    { "id":"hp7", "type":"phrase", "source":"¿Puedo preguntarle algo?", "target":"Can I ask you something?" },
+    { "id":"hp8", "type":"phrase", "source":"Por supuesto.", "target":"Of course." },
+    { "id":"hp9", "type":"phrase", "source":"¿Puedo tomar esto?", "target":"Can I take this?" },
+    { "id":"hp10", "type":"phrase", "source":"Claro, adelante.", "target":"Sure, go ahead." },
+    { "id":"hp11", "type":"phrase", "source":"Aquí tiene.", "target":"Here you go." },
+    { "id":"hp12", "type":"phrase", "source":"Déjame ayudarte.", "target":"Let me help you." },
+    { "id":"hp13", "type":"phrase", "source":"Sí, ¿cómo puedo ayudarle?", "target":"Yes, how can I help you?" },
+    { "id":"hp14", "type":"phrase", "source":"No, lo siento.", "target":"No, I’m sorry." },
+    { "id":"hp15", "type":"phrase", "source":"No tengo tiempo ahora.", "target":"I don’t have time right now." },
+    { "id":"hp16", "type":"phrase", "source":"Espera un minuto, por favor.", "target":"Wait a minute, please." },
+    { "id":"hp17", "type":"phrase", "source":"Tal vez.", "target":"Maybe." },
+    { "id":"hp18", "type":"phrase", "source":"Está bien.", "target":"It’s okay." }
+  ],
+  "dialogs": [
+    {
+      "id":"esd_help_polite1",
+      "title":"Asking for help",
+      "roles":[
+        { "who":"A","lines":["¿Podría ayudarme con esta maleta?"] },
+        { "who":"B","lines":["Claro, adelante. Aquí tiene."] },
+        { "who":"A","lines":["Muchas gracias, es un placer."] }
+      ],
+      "translation":[
+        "Could you help me with this suitcase?",
+        "Sure, go ahead. Here you go.",
+        "Thank you very much, it’s a pleasure."
+      ]
+    }
+  ]
+},
+{
+  "id": "es14_time_weather2",
+  "title": "Chapter 14: Time, Dates & Weather (Extended)",
+  "color": "from-indigo-200 to-indigo-50",
+  "tips": [
+    { "title": "Time phrases", "text": "Use '¿Qué hora es?' for asking the time. 'Son las cinco menos cuarto' = 'It’s a quarter to five'." },
+    { "title": "Weather talk", "text": "Use 'Hace...' (hace frío, hace calor, hace viento), or 'Está...' (está nublado, está lloviendo)." }
+  ],
+  "items": [
+    { "id":"tw1", "type":"phrase", "source":"¿Qué fecha es hoy?", "target":"What’s the date today?" },
+    { "id":"tw2", "type":"phrase", "source":"Hoy es 9 de marzo.", "target":"Today is March 9th." },
+    { "id":"tw3", "type":"phrase", "source":"¿Qué hora es?", "target":"What time is it?" },
+    { "id":"tw4", "type":"phrase", "source":"Son las cuatro y cinco.", "target":"It’s 4:05." },
+    { "id":"tw5", "type":"phrase", "source":"Son las cinco menos cuarto.", "target":"It’s a quarter to five." },
+    { "id":"tw6", "type":"phrase", "source":"¿Cómo está el clima hoy?", "target":"How’s the weather today?" },
+    { "id":"tw7", "type":"phrase", "source":"Hace un clima hermoso.", "target":"It’s beautiful weather." },
+    { "id":"tw8", "type":"phrase", "source":"Hace frío hoy.", "target":"It’s cold today." },
+    { "id":"tw9", "type":"phrase", "source":"Hace calor.", "target":"It’s hot." },
+    { "id":"tw10", "type":"phrase", "source":"Está lloviendo.", "target":"It’s raining." },
+    { "id":"tw11", "type":"phrase", "source":"Está nevando.", "target":"It’s snowing." },
+    { "id":"tw12", "type":"phrase", "source":"Hace viento.", "target":"It’s windy." }
+  ],
+  "dialogs":[
+    {
+      "id":"esd_time_weather1",
+      "title":"Time & Date",
+      "roles":[
+        { "who":"A","lines":["¿Qué hora es?"] },
+        { "who":"B","lines":["Son las cinco menos cuarto."] },
+        { "who":"A","lines":["Gracias."] }
+      ],
+      "translation":[
+        "What time is it?",
+        "It’s a quarter to five.",
+        "Thanks."
+      ]
+    },
+    {
+      "id":"esd_time_weather2",
+      "title":"Weather chat",
+      "roles":[
+        { "who":"A","lines":["¿Cómo está el clima hoy?"] },
+        { "who":"B","lines":["Hace frío y está nublado."] },
+        { "who":"A","lines":["¿Va a llover?"] },
+        { "who":"B","lines":["Sí, está lloviendo ahora."] }
+      ],
+      "translation":[
+        "How’s the weather today?",
+        "It’s cold and cloudy.",
+        "Is it going to rain?",
+        "Yes, it’s raining now."
+      ]
+    }
+  ]
+},
+{
+  "id": "es15_understanding",
+  "title": "Chapter 15: Understanding & Clarification",
+  "color": "from-orange-200 to-orange-50",
+  "tips": [
+    { "title": "Clarification", "text": "Use 'No entiendo' when you don’t understand. Ask for repetition with '¿Podría repetir eso?'" }
+  ],
+  "items": [
+    { "id":"uc1", "type":"phrase", "source":"¿Qué significa esto?", "target":"What does this mean?" },
+    { "id":"uc2", "type":"phrase", "source":"No entiendo.", "target":"I don’t understand." },
+    { "id":"uc3", "type":"phrase", "source":"¿Me entiendes?", "target":"Do you understand me?" },
+    { "id":"uc4", "type":"phrase", "source":"¿Podría hablar despacio?", "target":"Could you speak slowly?" },
+    { "id":"uc5", "type":"phrase", "source":"¿Podría repetir eso?", "target":"Could you repeat that?" },
+    { "id":"uc6", "type":"phrase", "source":"¿Podría escribirlo?", "target":"Could you write it down?" },
+    { "id":"uc7", "type":"phrase", "source":"¿Podría deletrearlo para mí?", "target":"Could you spell it for me?" },
+    { "id":"uc8", "type":"phrase", "source":"¿Cómo se pronuncia esto?", "target":"How do you pronounce this?" }
+  ],
+  "dialogs":[
+    {
+      "id":"esd_understanding1",
+      "title":"Asking for clarification",
+      "roles":[
+        { "who":"A","lines":["¿Qué significa 'jefe' en inglés?"] },
+        { "who":"B","lines":["Significa 'boss'."] },
+        { "who":"A","lines":["Ah, gracias."] }
+      ],
+      "translation":[
+        "What does 'jefe' mean in English?",
+        "It means 'boss'.",
+        "Ah, thanks."
+      ]
+    },
+    {
+      "id":"esd_understanding2",
+      "title":"Repeat & pronounce",
+      "roles":[
+        { "who":"A","lines":["No entiendo, ¿podría repetir eso?"] },
+        { "who":"B","lines":["Claro, lo repito: 'Nos vemos mañana'."] },
+        { "who":"A","lines":["Gracias, ¿cómo se pronuncia 'mañana'?"] },
+        { "who":"B","lines":["Se pronuncia 'ma-ña-na'."] }
+      ],
+      "translation":[
+        "I don’t understand, could you repeat that?",
+        "Of course, I’ll repeat: 'See you tomorrow'.",
+        "Thanks, how do you pronounce 'mañana'?",
+        "It’s pronounced 'ma-ña-na'."
+      ]
+     }
+    ]
+   }
  ]
 }
